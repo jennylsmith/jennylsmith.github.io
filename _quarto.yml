@@ -1,7 +1,7 @@
 project:
   type: website
   resources: 
-    - "resume/JLSmith_Resume_Jan_2024.pdf"
+    - "resume/resume.pdf"
 
 website:
   page-navigation: true
@@ -21,6 +21,7 @@ website:
       - text: "About"
         href: about.qmd
       - text: "Resume"
+        id: "Resume"
         href: resume/resume.qmd
       - text: "Projects"
         menu: 
@@ -29,18 +30,18 @@ website:
           - text: "data visualization"
             href: projects/data_visualization.qmd
   sidebar:
-    - title: "Resume"
+    - id: "Resume"
     - tools:
       - icon: filetype-pdf
         menu:
-          - text: download pdf resume
-          - href: /resume/resume.pdf
-
+          - text: "download pdf resume"
+            href: resume/resume.pdf
 format:
   html:
     theme: 
       - tables.scss
       - lumen
     toc: true
+    link-external-newwindow: true
 
 
