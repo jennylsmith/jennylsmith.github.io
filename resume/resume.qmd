@@ -232,6 +232,8 @@ Principal Investigator: Terry Bird
 
 -   Nextflow Hackathon, University of Washington, March 2024
 
+-   IGNITE speaker to promote gender equity STEM, Seattle Children's, February 2024
+
 -   International Society for Computational Biology (ISCB) member, 2023 - 2024
 
 -   RLadies event organizer, Seattle, WA, 2018 - 2023
@@ -241,8 +243,6 @@ Principal Investigator: Terry Bird
 -   Mentor, UO Bioinformatics and Genomics Graduate Program, 2021 - 2022
 
 -   SnpReportR package, Carnegie Mellon and DNAnexus Hackathon, January 2021
-
--   RLadies, Seattle, WA 2018-2021
 
 -   Pacific Biosciences Isoseq Transcriptome Analysis Training, July 2020
 
