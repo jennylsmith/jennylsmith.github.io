@@ -8,14 +8,12 @@ website:
     left:
       - text: "Home"
         href: index.qmd
-      - text: "About Me"
-        href: about.qmd
       - text: "Resume"
         href: resume.qmd
       - text: "Projects"
         menu: 
-          - publications.qmd
-          - data_visualization.qmd
+          - projects/publications.qmd
+          - projects/data_visualization.qmd
     tools:
       - icon: github
         menu:

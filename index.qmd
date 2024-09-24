@@ -1,5 +1,22 @@
 ---
 title: "Jenny Leopoldina Smith"
+about: 
+  template: trestles
+  image: "assets/balsamroot_flowers.jpeg"
+  links:
+  - icon: github
+    url: "https://github.com/jennylsmith"
+  - icon: linkedin
+    url: "https://www.linkedin.com/in/jenny-leopoldina-smith/"
+  - icon: book
+    url: "https://orcid.org/0000-0003-0402-2779"
 ---
 
+> Bioinformatician and R programmer applying methods in data science to biomedical research questions with expertise in next generation sequencing (NGS) data.
 
+# About Me
+
+I worked as a computational biologist at [Seattle Children's Research Institute](https://www.seattlechildrens.org/research/) (SCRI) for the last two years in beautiful Seattle, WA. I support collaborative cutting edge computational analysis, as well as providing support to empower researchers to utilize the computational resources at SCRI. A large part of my work includes developing and adapting genomics data pipelines using [Nextflow](https://www.nextflow.io/) and [nf-core](https://nf-co.re/) tools. 
+
+Previously, I supported pediatric acute myeloid leukemia (AML) translational research studies from the [National Cancer Institute's TARGET](https://www.cancer.gov/ccg/research/genome-sequencing/target/studied-cancers/acute-myeloid-leukemia) initiative using genomic and transcriptomic 'big data' from next generation sequencing at Fred Hutchinson Cancer Center (FHCC). 
+ 
