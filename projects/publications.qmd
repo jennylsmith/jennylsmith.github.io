@@ -1,3 +1,39 @@
 ---
-title: "Selected Publications"
+title: "Selected Publications and Presentations"
 ---
+
+::: {.panel-tabset}
+# Selected Publications 
+
+*	Huang, B., **Smith, J. L.**, Wang, J., Taghizadeh, K., … Meshinchi, S. CBFB-MYH11 Fusion Transcripts Distinguish Acute Myeloid Leukemias with Distinct Molecular Landscapes and Outcomes. Blood Advances 2021. [DOI: 10.1182/bloodadvances.2021004965](10.1182/bloodadvances.2021004965)
+
+*	Chisholm, K., Heerema-McKenney, A., Choi, J., **Smith, J.L.** … Kahwash, B. Acute erythroid leukemia is enriched in NUP98 fusions: a report from the Children’s Oncology Group. Blood Advances 2020. [DOI: 10.1182/bloodadvances.2020002712](10.1182/bloodadvances.2020002712)
+
+*	Noort, S., Wander, P., Alonzo, T. A., **Smith, J.L.**, … Meshinchi, S.  The clinical and biological characteristics of NUP98-KDM5A in pediatric acute myeloid leukemia. Haematologica 2020. [DOI: 10.3324/haematol.2019.236745](10.3324/haematol.2019.236745)
+
+*	**Smith, J. L.**, Ries, R. E., Hylkema, T., Alonzo, T. A, … Meshinchi, S. Comprehensive Transcriptome Profiling of Cryptic CBFA2T3-GLIS2 Fusion-positive AML Defines Novel Therapeutic Options – A COG and TARGET Pediatric AML Study. Clinical Cancer Research 2019.  [DOI: 10.1158/1078-0432.CCR-19-1800](10.1158/1078-0432.CCR-19-1800)
+
+*	**Smith, J.L.**, Maden S. K., Lee,  D., Buie, R.,  … Busby, B. Consensus Machine Learning for Gene Target Selection in Pediatric AML Risk. bioRxiv 2019. [DOI: 10.1101/632166](10.1158/1078-0432.CCR-19-1800)
+
+*	Noort, S., Zimmermann, M., Reinhardt, D., Cuccuini, W., Pigazzi, M., **Smith, J.**, … Zwaan, C. M. Prognostic impact of t(16;21)(p11;q22) and t(16;21)(q24;q22) in pediatric AML: a retrospective study by the I-BFM Study Group. Blood 2018. [DOI: 10.1182/blood-2018-05-849059](10.1182/blood-2018-05-849059)
+
+[Additional Publications](https://orcid.org/0000-0003-0402-2779)
+
+# Presentations
+
+*	**American Society for Hematology**, poster on ETS Family Transcription Factor Fusions in Childhood AML: Distinct Expression Networks and Clinical Implications (Virtual, 2021). [DOI](https://doi.org/10.1182/blood-2021-148894).
+
+*	**American Society for Hematology**, poster on The Transcriptomic Landscape of NUP98-Rearranged Pediatric Acute Myeloid Leukemia (Virtual, 2020).[DOI](https://doi.org/10.1182/blood-2020-138935).
+
+*	**Molecular Medicine Tri-conference**, panelist on AI in Genomics and Precision Medicine (San Francisco, CA, 2020).[link](https://www.bio-itworldexpowest.com/20/AI-Drug-Discovery?instrck=eyJhIjoiNjJkYzc3YjUtOWZiYy03NGM2LThmNzktZDA1NDYzZjA1NjVlIiwicyI6bnVsbCwiZCI6IkNJSV9ERUMiLCJ0IjoxNzI3MTU5MzM5NzgzLCJzaSI6IjE3MjcxNTkzMzY1OTAtNGMzODJkMjYtYjVmNS00N2MzLWJhZjItYjMxMjE4NDVkODUxIn0=).
+
+*	**American Society for Hematology**, poster on Long Non-Coding RNAs (lncRNAs) Are Highly Associated with Disease Characteristics and Outcome in Pediatric Acute Myeloid Leukemia - a COG and Tpaml Study (Orlando, FL, 2019). [DOI](https://doi.org/10.1182/blood-2019-127318)
+
+*	**Brotman Baty Pediatric Sequencing Symposium**, oral presentation on Long Non-coding RNAs Associate with Outcome in Pediatric Acute Myeloid Leukemia (Seattle, WA, 2019).
+
+*	**American Society for Hematology**, oral presentation on Comprehensive Transcriptome Profiling of Cryptic CBFA2T3-GLIS2 Fusion-Positive AML Defines Novel Therapeutic Options — a COG and Target Pediatric AML Study (San Diego, CA, 2018). [DOI](https://doi.org/10.1182/blood-2018-99-115544). 
+
+*	**American Society for Hematology**, oral presentation on The LSC17 Leukemic Stem Cell Signature Predicts Outcome in Pediatric Acute Myeloid Leukemia. Abstract Achievement Award Recipient (Atlanta, GA, 2017). [DOI](https://doi.org/10.1182/blood.V130.Suppl_1.24.24).
+
+:::
+
