@@ -1,0 +1,23 @@
+---
+title: "Genomics Pipelines, Tools, and Hackathons"
+---
+
+A list of my genomics pipelines and tools at SCRI, Fred Hutch, and through external collaborations, such as Hackathons. 
+
+# Genomics Data Pipelines
+
+# Hackathon Projects 
+
+* 2024 Nextflow Hackathon
+
+* 2021 Bringing Genomics Data to the Clinic Hackathon
+  * [Project link](https://osf.io/afc7n/)
+  * [Github repository](https://github.com/collaborativebioinformatics/snpReportR)
+
+* 2018 Consensus Machine Learning for Gene Target Selection in Pediatric AML Risk: NCBI Hackathon
+  * [Manuscript](https://doi.org/10.1101/632166)
+  * [Github repository](https://github.com/NCBI-Hackathons/ConsensusML)
+  
+# R Packages
+
+

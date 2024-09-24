@@ -25,10 +25,12 @@ website:
         href: resume/resume.qmd
       - text: "Projects"
         menu: 
-          - text: "select publications"
-            href: projects/publications.qmd
           - text: "data visualization"
             href: projects/data_visualization.qmd
+          - text: "Genomics Pipelines and Tools"
+            href: projects/genomics_applications_pipelines.qmd
+          - text: "select publications"
+            href: projects/publications.qmd
   sidebar:
     - id: "Resume"
     - tools:

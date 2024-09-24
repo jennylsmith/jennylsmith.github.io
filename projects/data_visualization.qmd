@@ -1,3 +1,9 @@
 ---
 title: "Data Viz"
 ---
+
+A selection of data visualizations I generated from genomics/multi-omics and clinical datasets generated using ggplot2, ComplexHeatmap, plotly R, and Gviz. 
+
+## Circos and Heatmaps 
+
+![figure](https://ash.silverchair-cdn.com/ash/content_public/journal/blood/138/supplement%201/10.1182_blood-2021-148894/1/m_2356fig01.png?Expires=1728687015&Signature=WF~-BFQ7Y3Z6njC9cSL4OcLKdH035XzGryOIWoEzY5~Aw3k0L7jovGD88lv22mccdgr5Q6cKnuzIqCiUKtP4VhTp9bMFixFgmpv5FQ1iWNgxfuHUXN0hhj2Bwg41jJwXI3qQ8donuVqgLZJ7FcbTpIdCjvzoX6kVmgPIneeLRos1NeUqSCDFGDLvuzjLROJhrs0q531RLLuLFAtf~qfyB5nzxAY8WnpoXDP~uHhFD06fGMs9yaBJZznPBQGNAG-pGD3h8SWH1GWvqn82GqhTxXvVzQ8lct7XCQ7zn2au0nbZyKfKke~39r5TkBGSobRGmoUZOgMozSnCdE6Cf6GXhA__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
