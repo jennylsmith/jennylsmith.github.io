@@ -1,19 +1,13 @@
 project:
   type: website
+  resources: 
+    - "resume/JLSmith_Resume_Jan_2024.pdf"
 
 website:
   page-navigation: true
   navbar:
     search: true
-    left:
-      - text: "Home"
-        href: index.qmd
-      - text: "Resume"
-        href: resume.qmd
-      - text: "Projects"
-        menu: 
-          - projects/publications.qmd
-          - projects/data_visualization.qmd
+    background: "#008080"
     tools:
       - icon: github
         menu:
@@ -21,12 +15,32 @@ website:
             href:  https://github.com/jennylsmith/jennylsmith.github.io
           - text: Report a Bug
             href:  https://github.com/jennylsmith/jennylsmith.github.io/issues
-            
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Resume"
+        href: resume/resume.qmd
+      - text: "Projects"
+        menu: 
+          - text: "select publications"
+            href: projects/publications.qmd
+          - text: "data visualization"
+            href: projects/data_visualization.qmd
+  sidebar:
+    - title: "Resume"
+    - tools:
+      - icon: filetype-pdf
+        menu:
+          - text: download pdf resume
+          - href: /resume/resume.pdf
+
 format:
   html:
     theme: 
       - tables.scss
-      - darkly
+      - lumen
     toc: true
 
 
