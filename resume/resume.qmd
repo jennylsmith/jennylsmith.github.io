@@ -1,0 +1,173 @@
+---
+title: "Jenny Leopoldina Smith, MSc"
+id: "Resume"
+---
+
+<br>
+
+## <i class="bi bi-mortarboard"></i> Education
+
+**Applied Bioinformatics and Genomics**, MSc
+
+-   University of Oregon, Eugene, OR
+
+**Secondary Education in Science**, MEd
+
+-   Arizona State University, Phoenix, AZ
+
+**Biology**, BA, *magna cum laude*
+
+-   University of San Diego, San Diego, CA
+
+## <i class="bi bi-briefcase"></i> Experience and Skills
+
+::: panel-tabset
+# <i class="bi bi-briefcase-fill"></i> Work Experience
+
+**Computational Biologist, Senior**
+
+Seattle Children’s, Seattle, WA
+
+April 2022 – Sept 2024
+
+Research Scientific Computing Team
+
+-   Developed and adapted reproducible genomics workflows using Nextflow and nf-core tools for RNA-seq quantification, Cut&Run, ATAC-seq, and PacBio Isoseq; enabled use of containerized software with singularity/apptainer and the PBSpro executor on a high-performance compute cluster (HPC).
+
+-   Analysis and visualization of multi-sample scRNA-seq and scATAC-seq datasets with Cellranger quantification, followed by doublet detection, ambient DNA correction, dataset integration (SCANVI and Seurat v4/v5). Production of multi- omics analyses for bulk transcriptomic and single-cell datasets using dplyr and tidyverse principles.
+
+-   Generation of complex visualizations include heatmaps, circos plots, oncoprints, 3D scatter plots, genomic tracks, network graphs, and volcano plots, among others, to identify actionable insights from multivariate biological datasets from NGS and public databases (ensembl, UCSC, Genomic Data Commons).
+
+-   Engagement in bioinformatics support by providing guidance and troubleshooting assistance at office hours and teaching internal courses.
+
+**Bioinformatics Analyst**
+
+Fred Hutchinson Cancer Center, Seattle, WA
+
+January 2017 – March 2022
+
+Principal Investigator: Soheil Meshinchi
+
+-   Development of genomics workflows for cloud computing on AWS using Nextflow for processing raw RNA-seq data for gene expression quantification and fusion detection.
+
+-   Experienced in complex data manipulation and interpretation using dplyr and the principles of tidyverse on large datasets derived from NGS and public database and retrieval of data from public databases using public APIs.
+
+-   Profiled pediatric AML subtypes including gene fusions CBFA2T3-GLIS2, NUP98 fusions, and mutations (FLT3-ITD) using multi-omic data (RNA-sequencing and miRNA-seq) with supervised and unsupervised clustering ML algorithms, as well as statistical regression and classification.
+
+-   Collaborated in a multidisciplinary environment with molecular biologists, bioinformaticians, and lead investigators. These bioinformatics analyses and data visualizations utilized in 11 manuscripts published in peer reviewed journals, as well as grant applications for American Cancer Society, Saint Baldricks Foundation, Gabriella Miller Foundation, and TpAML being funded.
+
+-   Survival analysis of AML variants and application of the LSC17 prognostic score to a pediatric cohort using Kaplan-Meier estimates and Cox proportional hazards regression; resulted in oral presentation at American Society of Hematology (2017) and followed by collaborative analysis with UCSF.
+
+**Postbaccalaureate Fellow**
+
+National Institutes of Health, Bethesda, MD
+
+June 2014 - July 2016
+
+Principal Investigator: Maria Morasso
+
+-   Conducted biomedical research on the function of homeodomain protein DLX3 at NIAMS. Bioinformatics analysis of ATAC-seq and ChIP-seq from murine mouse models using command line tools for genomic alignment, MACS peak calling, motif analysis, NGS.plot, and Deeptools.
+
+**Science Teacher**
+
+Agua Fria High School, Avondale, AZ
+
+June 2012 - May 2014
+
+-   Teach For America Phoenix corps member; certified for secondary biology and chemistry education.
+-   Courses taught: general biology, AP biology, general chemistry and integrated science.
+
+**Research Assistant**
+
+University of San Diego, San Diego, CA
+
+August 2009 - May 2012
+
+Principal Investigator: Terry Bird
+
+-   Investigated the role of CHPT in the cellular differentiation of the bacterium Rhodospirillum centenum by utilizing site-directed mutagenesis and construction of triple knockout mutants of CHPT, CTRA, and CYD2.
+
+# <i class="bi bi-pc-display"></i> Skills
+
+### Experience with Software
+
+-   R programming:
+
+    -   base R, Tidyverse, Bioconductor
+
+    -   R package development
+
+    -   Quarto / Rmarkdown
+
+    -   Posit workbench / Rstudio IDE
+
+-   Bash shell scripting
+
+-   Python programming
+
+-   Git version control
+
+-   Github and Bitbucket
+
+-   Nextflow and nf-core
+
+-   PBS/SLURM HPC schedulers
+
+-   Containerization: docker, singularity, apptainer
+
+-   Amazon Web Services: AWS S3 and Batch
+
+### Bioinformatics and Statistics
+
+-   Unsupervised clustering (dendrograms, PCA, NMDS, and UMAP)
+
+-   Statistical regression, classification, regularization
+
+-   Differential gene expression (Limma and EdgeR)
+
+-   Survival and time-to-event analysis
+
+-   Data visualization (ggplot2, ComplexHeatmap, plotly R, and Gviz)
+
+### Experience with NGS Data
+
+-   scRNA-seq (single-cell RNA-seq)
+
+-   scATAC-seq (single-cell ATAC-seq)
+
+-   RNA-seq (Illumina, PacBio)
+
+-   ATAC-seq
+
+-   miRNA-seq
+
+-   Cut&Run and ChIP-seq
+
+# <i class="bi bi-backpack-fill"></i> Continuing Education and Volunteering
+
+### Continuing Education and Volunteering
+
+-   International Society for Computational Biology (ISCB) member, 2023-2024
+
+-   RLadies event organizer, Seattle, WA, 2018-2023
+
+-   Bioconductor conference organizer, Seattle, WA, 2022
+
+-   Mentor, UO Bioinformatics and Genomics Graduate Program, 2021- 2022
+
+-   SnpReportR package, Carnegie Mellon and DNAnexus Hackathon, January 2021
+
+-   RLadies, Seattle, WA 2018-2021
+
+-   Pacific Biosciences Isoseq Transcriptome Analysis Training, July 2020
+
+-   Nextflow workflow development training, May 2020
+
+-   Women In Biology, MAPS Mentorship Group, 2017-2019
+
+-   ConsensusML, Machine learning classification in AML, NCBI Hackathon February 2018
+
+-   Fred Hutch Summer High School Internship Mentor, June-August 2018
+
+-   Summer Institute in Statistics for Big Data (SISBID), University of Washington, June 2017
+:::
