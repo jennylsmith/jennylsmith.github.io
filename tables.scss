@@ -7,7 +7,7 @@ $nav-tabs-link-active-border-color: black;
 /*-- scss:rules --*/
 table, th, td {
   border: 1px solid black;
-  padding: 15px;
+  padding: 7px;
   text-align: left;
 }
 
@@ -34,6 +34,13 @@ h1.title, .title.h1 {
   nav-tabs-border-width: 2px;
   border-bottom: black;
 }
+
+.sidebar-navigation {
+  padding-left: 10px;
+  margin: 0px;
+  max-width: 125px;
+}
+
 
 /*  --bs-nav-tabs-border-width: 2px;
   --bs-nav-tabs-border-color: black;

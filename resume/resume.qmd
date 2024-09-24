@@ -192,7 +192,9 @@ Principal Investigator: Terry Bird
 |                               |             | -   Google Cloud Platform                                                                           |
 +-------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
 
-# Bioinformatics and Statistics
+# {{< fa solid dna >}} Bioinformatics / Statistics
+
+#### Bioinformatic and Statistical Analysis
 
 -   Unsupervised clustering (dendrograms, PCA, NMDS, and UMAP)
 
@@ -204,7 +206,9 @@ Principal Investigator: Terry Bird
 
 -   Data visualization (ggplot2, ComplexHeatmap, plotly R, and Gviz)
 
-### NGS Data Types
+---
+
+#### NGS Data Types
 
 -   Transcriptomics
 
@@ -224,7 +228,7 @@ Principal Investigator: Terry Bird
 
     -   ChIP-seq
 
-# <i class="bi bi-backpack-fill"></i> Continuing Education and Volunteering
+# <i class="bi bi-backpack-fill"></i> Continuing Ed and Volunteering
 
 ### Continuing Education and Volunteering
 

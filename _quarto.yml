@@ -41,7 +41,13 @@ format:
     theme: 
       - tables.scss
       - lumen
+    grid:
+      sidebar-width:	100px
+      body-width:	950px
+      margin-width:	200px
+      gutter-width:	1em
     toc: true
+    toc-depth: 3
     link-external-newwindow: true
 
 
