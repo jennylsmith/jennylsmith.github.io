@@ -24,8 +24,9 @@ website:
             
 format:
   html:
-    theme: darkly
-    css: styles.css
+    theme: 
+      - tables.scss
+      - darkly
     toc: true
 
 

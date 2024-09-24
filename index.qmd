@@ -16,7 +16,9 @@ about:
 
 # About Me
 
-I worked as a computational biologist at [Seattle Children's Research Institute](https://www.seattlechildrens.org/research/) (SCRI) for the last two years in beautiful Seattle, WA. I support collaborative cutting edge computational analysis, as well as providing support to empower researchers to utilize the computational resources at SCRI. A large part of my work includes developing and adapting genomics data pipelines using [Nextflow](https://www.nextflow.io/) and [nf-core](https://nf-co.re/) tools. 
+I worked as a computational biologist at [Seattle Children's Research Institute](https://www.seattlechildrens.org/research/) (SCRI) for the last two years in beautiful Seattle, WA.
+
+I support collaborative cutting edge computational analysis, as well as providing support to empower researchers to utilize the computational resources at SCRI. A large part of my work includes developing and adapting genomics data pipelines using [Nextflow](https://www.nextflow.io/) and [nf-core](https://nf-co.re/) tools. 
 
 Previously, I supported pediatric acute myeloid leukemia (AML) translational research studies from the [National Cancer Institute's TARGET](https://www.cancer.gov/ccg/research/genome-sequencing/target/studied-cancers/acute-myeloid-leukemia) initiative using genomic and transcriptomic 'big data' from next generation sequencing at Fred Hutchinson Cancer Center (FHCC). 
  
