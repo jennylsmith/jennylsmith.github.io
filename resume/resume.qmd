@@ -44,7 +44,7 @@ Research Scientific Computing Team
 
 -   Engagement in bioinformatics support by providing guidance and troubleshooting assistance at office hours and teaching internal courses.
 
----
+------------------------------------------------------------------------
 
 **Bioinformatics Analyst**
 
@@ -64,7 +64,7 @@ Principal Investigator: Soheil Meshinchi
 
 -   Survival analysis of AML variants and application of the LSC17 prognostic score to a pediatric cohort using Kaplan-Meier estimates and Cox proportional hazards regression; resulted in oral presentation at American Society of Hematology (2017) and followed by collaborative analysis with UCSF.
 
----
+------------------------------------------------------------------------
 
 **Postbaccalaureate Fellow**
 
@@ -78,7 +78,7 @@ Principal Investigator: Maria Morasso
 
 -   Bioinformatics analysis of ATAC-seq and ChIP-seq from murine mouse models using command line tools (CLI) for genomic alignment, MACS2 peak calling, motif analysis with HOMER, and figure generation with NGS.plot and Deeptools.
 
----
+------------------------------------------------------------------------
 
 **Science Teacher**
 
@@ -92,7 +92,7 @@ Teach for America Phoenix Corps
 
 -   Courses taught: general biology, AP biology, general chemistry and integrated science.
 
----
+------------------------------------------------------------------------
 
 **Research Assistant**
 
@@ -108,51 +108,91 @@ Principal Investigator: Terry Bird
 
 # <i class="bi bi-pc-display"></i> Skills
 
-### Experience with Software
++-------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
+| Language or Framework         | Experience  | Tools / Packages                                                                                    |
++===============================+=============+=====================================================================================================+
+| R programming                 | Expert      | -   base R, tidyverse, bioconductor                                                                 |
+|                               |             |                                                                                                     |
+|                               |             | -   R package development                                                                           |
+|                               |             |                                                                                                     |
+|                               |             | -   scripting with`Rscript` CLI and `commandArgs`                                                   |
+|                               |             |                                                                                                     |
+|                               |             | -   quarto / rmarkdown                                                                              |
+|                               |             |                                                                                                     |
+|                               |             | -   posit workbench / Rstudio IDE                                                                   |
++-------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
+| Bash shell scripting          | Advanced    | -   rclone, rsync, scp data copying and management                                                  |
+|                               |             |                                                                                                     |
+|                               |             | -   git and github command line interface (CLI)                                                     |
+|                               |             |                                                                                                     |
+|                               |             | -   regular expressions with `find`, `grep` , `sed`, `tr`, etc                                      |
+|                               |             |                                                                                                     |
+|                               |             | -   control structures and iteration (for, if/else, etc)                                            |
+|                               |             |                                                                                                     |
+|                               |             | -   environment variables                                                                           |
+|                               |             |                                                                                                     |
+|                               |             | -   modifying shell behavior and configurations (.bashrc, `set` built-in, CLI tool configurations)  |
++-------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
+| Nextflow scientific workflows | Advanced    | -   modularized domain-specific language (DSL2)                                                     |
+|                               |             |                                                                                                     |
+|                               |             | -   nf-core and `nf-core tools` CLI                                                                 |
+|                               |             |                                                                                                     |
+|                               |             | -   develop custom workflows using nf-core best practices with `nf-core create`                     |
+|                               |             |                                                                                                     |
+|                               |             | -   adapt nf-core community developed pipelines to meet institutional requirements                  |
++-------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
+| Python programming            | Experienced | -   python scripting using control structures, iteration, etc.                                      |
+|                               |             |                                                                                                     |
+|                               |             | -   scanpy and SCVI-tools                                                                           |
+|                               |             |                                                                                                     |
+|                               |             | -   conda, mamba, and pip package manages                                                           |
+|                               |             |                                                                                                     |
+|                               |             | -   venv virtual environments                                                                       |
+|                               |             |                                                                                                     |
+|                               |             | -   jupyter notebooks                                                                               |
+|                               |             |                                                                                                     |
+|                               |             | -   multi-lingual environments with Reticulate in Rstudio IDE                                       |
++-------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
+| Version Control               | Advanced    | -   Git and github (gh) CLI                                                                         |
+|                               |             |                                                                                                     |
+|                               |             | -   Github and Bitbucket remotes                                                                    |
++-------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
+| HPC schedulers                | Advanced    | -   PBS                                                                                             |
+|                               |             |                                                                                                     |
+|                               |             | -   SLURM                                                                                           |
+|                               |             |                                                                                                     |
+|                               |             | -   array jobs                                                                                      |
+|                               |             |                                                                                                     |
+|                               |             | -   parallelization                                                                                 |
+|                               |             |                                                                                                     |
+|                               |             | -   resource allocation                                                                             |
++-------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
+| Containerization              | Advanced    | -   docker CLI                                                                                      |
+|                               |             |                                                                                                     |
+|                               |             | -   apptainer / singularity CLI                                                                     |
+|                               |             |                                                                                                     |
+|                               |             | -   generation of custom containerized environments                                                 |
+|                               |             |                                                                                                     |
+|                               |             | -   adapt and build containers from existing dockerfiles to meet institutional requirements         |
+|                               |             |                                                                                                     |
+|                               |             | -   utilize scientific software container images from `biocontainers` and `galaxy hub` repositories |
+|                               |             |                                                                                                     |
+|                               |             | -   use quay.io and docker hub repositories                                                         |
++-------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
+| Cloud Platforms               | Competent   | -   Amazon Web Services                                                                             |
+|                               |             |                                                                                                     |
+|                               |             |     -   AWS S3                                                                                      |
+|                               |             |                                                                                                     |
+|                               |             |     -   Batch                                                                                       |
+|                               |             |                                                                                                     |
+|                               |             | -   Azure                                                                                           |
+|                               |             |                                                                                                     |
+|                               |             |     -   blob storage                                                                                |
+|                               |             |                                                                                                     |
+|                               |             | -   Google Cloud Platform                                                                           |
++-------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
 
--   R programming:
-
-    -   base R, Tidyverse, Bioconductor
-
-    -   R package development
-
-    -   Quarto / Rmarkdown
-
-    -   Posit workbench / Rstudio IDE
-
--   Bash shell scripting
-
--   Nextflow and nf-core
-
-    -   Modularized DSL2
-
--   Python programming
-
-    -   Scanpy and SCVI-tools
-
-    -   Multi-lingual environments with Reticulate
-
--   Version control
-
-    -   Git and github (gh) command line utilities
-
-    -   Github and Bitbucket remotes
-
--   HPC schedulers
-
-    -   PBS
-
-    -   SLURM
-
--   Containerization
-
-    -   Docker
-
-    -   Apptainer / Singularity
-
--   Amazon Web Services: AWS S3 and Batch
-
-### Bioinformatics and Statistics
+# Bioinformatics and Statistics
 
 -   Unsupervised clustering (dendrograms, PCA, NMDS, and UMAP)
 
@@ -164,7 +204,7 @@ Principal Investigator: Terry Bird
 
 -   Data visualization (ggplot2, ComplexHeatmap, plotly R, and Gviz)
 
-### Experience with NGS Data
+### NGS Data Types
 
 -   Transcriptomics
 
@@ -215,4 +255,18 @@ Principal Investigator: Terry Bird
 -   Fred Hutch Summer High School Internship Mentor, June-August 2018
 
 -   Summer Institute in Statistics for Big Data (SISBID), University of Washington, June 2017
+:::
+
+### References
+
+::: {.callout-note collapse="true" title="Definitions of Proficiency"}
+Note five levels of skills proficiency are used here. Definitions are listed below:
+
+1.  **Being Developed:** the individual demonstrates a minimal use of the competency and is currently developing it
+2.  **Basic / Competent:** the individual demonstrates use of a competency; can work independently and requires additional experience, but carries out deliberate planning and formulates routines to execute tasks effectively.
+3.  **Intermediate / Experienced:** the individual demonstrates a working or functional proficiency level which enables the competency to be exercised effectively (has working or functional command of the competency)
+4.  **Advanced:** the individual demonstrates in depth proficiency level ; is able to assist, consult or lead others in the application of a competency
+5.  **Expert:** the individual demonstrates broad, in-depth proficiency; is recognized as an authority or mastery in skills and exercising the competency
+
+Adapted from [UBC](https://careerframework.ubc.ca/competencies/) and [Dreyfus](https://www.kaizenko.com/the-dreyfus-model-of-skills-acquisition/)
 :::
