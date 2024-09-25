@@ -41,6 +41,13 @@ h1.title, .title.h1 {
   max-width: 125px;
 }
 
+.hr-dark {
+    margin: 1rem 0;
+    color: black;
+    border: 2px;
+    border-top: 2px dashed;
+    opacity: 0.75;
+}
 
 /*  --bs-nav-tabs-border-width: 2px;
   --bs-nav-tabs-border-color: black;
