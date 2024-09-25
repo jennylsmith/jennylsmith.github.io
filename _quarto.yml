@@ -42,8 +42,8 @@ format:
       - tables.scss
       - lumen
     grid:
-      sidebar-width:	100px
-      body-width:	950px
+      sidebar-width:	150px
+      body-width:	900px
       margin-width:	200px
       gutter-width:	1em
     toc: true
