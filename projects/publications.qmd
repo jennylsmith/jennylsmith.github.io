@@ -5,21 +5,21 @@ title: "Selected Publications and Presentations"
 ::: panel-tabset
 # Selected Publications
 
--   Le, Q., Hadland, B., **Smith, J. L.**,… Meshinchi, S. CBFA2T3-GLIS2 model of pediatric acute megakaryoblastic leukemia identifies FOLR1 as a CAR T cell target. Journal of Clinical Investigation. **2024.** DOI:10.1172/jci184305
+-   Le, Q., Hadland, B., **Smith, J. L.**,… Meshinchi, S. CBFA2T3-GLIS2 model of pediatric acute megakaryoblastic leukemia identifies FOLR1 as a CAR T cell target. *Journal of Clinical Investigation*. **2024.** [DOI:10.1172/JCI157101](https://doi.org/10.1172/JCI157101)
 
--   Bertrums, E. J. M.*, Smith, J. L.*, Harmon, L.\*, … Meshinchi, S. Comprehensive molecular and clinical characterization of NUP98 fusions in pediatric acute myeloid leukemia. Haematologica. **2023.** DOI:10.3324/haematol.2022.281653
+-   Bertrums, E. J. M.\*,**Smith, J. L.\*** , Harmon, L.\*, … Meshinchi, S. Comprehensive molecular and clinical characterization of NUP98 fusions in pediatric acute myeloid leukemia. *Haematologica*. **2023.** [DOI:10.3324/haematol.2022.281653](https://doi.org/10.3324/haematol.2022.281653)
 
--   Farrar, J. E., Smith, J. L., Othus, M., … Meshinchi, S. Long Noncoding RNA Expression Independently Predicts Outcome in Pediatric Acute Myeloid Leukemia. Journal of Clinical Oncology. **2023.** DOI:10.1200/jco.22.01114
+-   Farrar, J. E., **Smith, J. L.**, Othus, M., … Meshinchi, S. Long Noncoding RNA Expression Independently Predicts Outcome in Pediatric Acute Myeloid Leukemia. *Journal of Clinical Oncology*. **2023.** [DOI:10.1200/jco.22.01114](https://doi.org/10.1200/JCO.22.01114)
 
--   Huang, B., **Smith, J. L.**, Wang, J., Taghizadeh, K., … Meshinchi, S. CBFB-MYH11 Fusion Transcripts Distinguish Acute Myeloid Leukemias with Distinct Molecular Landscapes and Outcomes. Blood Advances **2021**. [DOI: 10.1182/bloodadvances.2021004965](10.1182/bloodadvances.2021004965)
+-   Huang, B., **Smith, J. L.**, Wang, J., Taghizadeh, K., … Meshinchi, S. CBFB-MYH11 Fusion Transcripts Distinguish Acute Myeloid Leukemias with Distinct Molecular Landscapes and Outcomes. *Blood Advances* **2021**. [DOI: 10.1182/bloodadvances.2021004965](10.1182/bloodadvances.2021004965)
 
--   Chisholm, K., Heerema-McKenney, A., Choi, J., **Smith, J.L.** … Kahwash, B. Acute erythroid leukemia is enriched in NUP98 fusions: a report from the Children’s Oncology Group. Blood Advances **2020.** [DOI: 10.1182/bloodadvances.2020002712](10.1182/bloodadvances.2020002712)
+-   Chisholm, K., Heerema-McKenney, A., Choi, J., **Smith, J.L.** … Kahwash, B. Acute erythroid leukemia is enriched in NUP98 fusions: a report from the Children’s Oncology Group. *Blood Advances* **2020.** [DOI: 10.1182/bloodadvances.2020002712](10.1182/bloodadvances.2020002712)
 
--   Noort, S., Wander, P., Alonzo, T. A., **Smith, J.L.**, … Meshinchi, S. The clinical and biological characteristics of NUP98-KDM5A in pediatric acute myeloid leukemia. Haematologica **2020.** [DOI: 10.3324/haematol.2019.236745](10.3324/haematol.2019.236745)
+-   Noort, S., Wander, P., Alonzo, T. A., **Smith, J.L.**, … Meshinchi, S. The clinical and biological characteristics of NUP98-KDM5A in pediatric acute myeloid leukemia. *Haematologica* **2020.** [DOI: 10.3324/haematol.2019.236745](10.3324/haematol.2019.236745)
 
--   **Smith, J. L.**, Ries, R. E., Hylkema, T., Alonzo, T. A, … Meshinchi, S. Comprehensive Transcriptome Profiling of Cryptic CBFA2T3-GLIS2 Fusion-positive AML Defines Novel Therapeutic Options – A COG and TARGET Pediatric AML Study. Clinical Cancer Research **2019**. [DOI: 10.1158/1078-0432.CCR-19-1800](10.1158/1078-0432.CCR-19-1800)
+-   **Smith, J. L.**, Ries, R. E., Hylkema, T., Alonzo, T. A, … Meshinchi, S. Comprehensive Transcriptome Profiling of Cryptic CBFA2T3-GLIS2 Fusion-positive AML Defines Novel Therapeutic Options – A COG and TARGET Pediatric AML Study. *Clinical Cancer Research* **2019**. [DOI: 10.1158/1078-0432.CCR-19-1800](10.1158/1078-0432.CCR-19-1800)
 
--   Noort, S., Zimmermann, M., Reinhardt, D., Cuccuini, W., Pigazzi, M., **Smith, J.**, … Zwaan, C. M. Prognostic impact of t(16;21)(p11;q22) and t(16;21)(q24;q22) in pediatric AML: a retrospective study by the I-BFM Study Group. Blood **2018.** [DOI: 10.1182/blood-2018-05-849059](10.1182/blood-2018-05-849059)
+-   Noort, S., Zimmermann, M., Reinhardt, D., Cuccuini, W., Pigazzi, M., **Smith, J.**, … Zwaan, C. M. Prognostic impact of t(16;21)(p11;q22) and t(16;21)(q24;q22) in pediatric AML: a retrospective study by the I-BFM Study Group. *Blood* **2018.** [DOI: 10.1182/blood-2018-05-849059](10.1182/blood-2018-05-849059)
 
 [Additional Publications](https://orcid.org/0000-0003-0402-2779)
 
