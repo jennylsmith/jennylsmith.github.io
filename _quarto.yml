@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   resources: 
-    - "resume/resume.pdf"
+    - "resume/jlsmith_resume.pdf"
 
 website:
   page-navigation: true
@@ -38,7 +38,7 @@ website:
       - icon: filetype-pdf
         menu:
           - text: "download pdf resume"
-            href: resume/resume.pdf
+            href: resume/jlsmith_resume.pdf
 format:
   html:
     theme: 
