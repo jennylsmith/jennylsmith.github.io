@@ -37,7 +37,7 @@ website:
     - tools:
       - icon: filetype-pdf
         menu:
-          - text: "download pdf resume"
+          - text: resume pdf
             href: resume/jlsmith_resume.pdf
 format:
   html:
@@ -45,8 +45,8 @@ format:
       - custom.scss
       - lumen
     grid:
-      sidebar-width:	175px
-      body-width:	900px
+      sidebar-width:	150px
+      body-width:	875px
       margin-width:	200px
       gutter-width:	1em
     toc: true
