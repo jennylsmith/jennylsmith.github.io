@@ -40,7 +40,7 @@ website:
 format:
   html:
     theme: 
-      - tables.scss
+      - custom.scss
       - lumen
     grid:
       sidebar-width:	175px
