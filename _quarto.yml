@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
   resources: 
     - "resume/resume.pdf"
 
@@ -41,9 +42,15 @@ website:
 format:
   html:
     theme: 
-      - tables.scss
+      - custom.scss
       - lumen
+    grid:
+      sidebar-width:	175px
+      body-width:	900px
+      margin-width:	200px
+      gutter-width:	1em
     toc: true
+    toc-depth: 3
     link-external-newwindow: true
 
 

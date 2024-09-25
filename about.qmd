@@ -5,7 +5,7 @@ fig-cap-location: top
 
 I worked as a computational biologist in the Research Scientific Computing team of [Seattle Children's Research Institute](https://www.seattlechildrens.org/research/) (SCRI) for the last two years in beautiful Seattle, WA.
 
-I provide collaborative cutting edge computational analysis, as well as providing guidance on utilizing the high performance compute (HPC) cluster to empower researchers to utilize the computational resources at SCRI. 
+I provide collaborative cutting edge computational analysis, as well as providing guidance on utilizing the high performance compute (HPC) cluster to empower researchers to access the computational resources at SCRI. 
 
 A large part of my work includes developing and adapting scalable genomics data pipelines using [Nextflow](https://www.nextflow.io/) and [nf-core](https://nf-co.re/) tools.
 
