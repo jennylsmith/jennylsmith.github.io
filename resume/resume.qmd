@@ -230,7 +230,7 @@ Principal Investigator: Terry Bird
 
 # <i class="bi bi-backpack-fill"></i> Continuing Ed and Volunteering
 
-### Continuing Education and Volunteering
+#### Continuing Education and Volunteering
 
 -   POSIT Conference, Seattle, WA, August 2024
 
