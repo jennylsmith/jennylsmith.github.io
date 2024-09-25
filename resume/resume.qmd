@@ -234,7 +234,7 @@ Principal Investigator: Terry Bird
 
 -   POSIT Conference, Seattle, WA, August 2024
 
--   Nextflow Hackathon, University of Washington, March 2024
+-   Nextflow NF-Core Hackathon, University of Washington, March 2024
 
 -   IGNITE speaker to promote gender equity in STEM, Seattle Children's, February 2024
 
