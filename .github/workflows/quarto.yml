@@ -41,8 +41,9 @@ jobs:
 
       # install quarto
       - name: install quarto CLI
-        run: wget -O ${{ runner.temp }}/quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb \
-        && sudo dpkg -i ${{ runner.temp }}/quarto.deb
+        run: |
+          wget -O ${{ runner.temp }}/quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/quarto.deb
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout  
@@ -62,8 +63,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs
-      
-        
+          
 # deploy job
   deploy:
     # Add a dependency to the build job
