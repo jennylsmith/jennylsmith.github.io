@@ -2,31 +2,77 @@
 title: "Genomics Pipelines, Tools, and Hackathons"
 ---
 
-A list of my genomics pipelines and tools at SCRI, Fred Hutch, and through external collaborations, such as Hackathons. 
+A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and through external collaborations, such as Hackathons.
 
 # Genomics Data Pipelines
 
+### 1. Cut and Run Nextflow workflow
 
-# Hackathon Projects 
+-   Custom pipeline developed from nf-core workflow template and uses most nf-core best practices
 
-* 2024 NF-Core Nextflow Hackathon
-  
-  * Created institutional profile on nf-core github
-  
-  * Added nf-validation tests to gunzip modules
+-   Bowtie2 alignment, quality trimming of reads with trimgalore, SEACR peak calling, and optionally MACS2 peak calling. MACS2 requires an effective genome size to call peaks, which you can provide directly or call unique-kmers.py to calculate the effective genome size on the fly. Coverage tracks are produced for visualization in IGV.
 
-* 2021 Bringing Genomics Data to the Clinic Hackathon
+-   Performs general QC statistics on the fastqs with fastqc, the alignment, peak calling, and sample similarity using deeptools. Finally, the QC reports are collected into a single file using multiQC.
 
-  * [Project link](https://osf.io/afc7n/)
-  
-  * [Github repository](https://github.com/collaborativebioinformatics/snpReportR)
+-   Fully documented using parameterized Rmd that knits to HTML and github markdown formats.
 
-* 2018 Consensus Machine Learning for Gene Target Selection in Pediatric AML Risk: NCBI Hackathon
-  
-  * [Manuscript](https://doi.org/10.1101/632166)
-  
-  * [Github repository](https://github.com/NCBI-Hackathons/ConsensusML)
-  
+-   Integrated for CI/CD with Atlassian bamboo agent to run functional tests using small toy datasets and re-build documentation.
+
+-   Public version can be found [here](https://github.com/RSC-RP/cutandrun_nf/tree/main), but most recent releases are private repos at SCRI bitbucket.
+
+![](https://github.com/RSC-RP/cutandrun_nf/blob/main/workflow_docs/images/dag.png?raw=true)
+
+### 2. RNA-seq Quantification Nextflow workflow
+
+-   Designed to output gene expression counts from bulk RNA-seq using STAR aligner using --quantmode. It will also perform general QC statistics on the fastqs with fastqc and the alignment using rseqc. Finally, the QC reports are collected into a single file using multiQC.
+
+-   Fully documented using parameterized Rmd that knits to HTML and github markdown formats.
+
+-   Public version can be found [here](https://github.com/RSC-RP/rnaseq_count_nf), but most recent releases are private repos at SCRI bitbucket.
+
+![](https://github.com/RSC-RP/rnaseq_count_nf/raw/main/images/dag.png)
+
+### 3. RNA-seq Fusion Detection Nextflow workflow
+
+-   Bulk RNA-seq fusion detection pipeline with `STAR` aligner, `STAR-Fusion`, and `Fusion-Inspector`. This includes the most relevant output files, such as SJ.out.tab, aligned.bam, and chimeric.junctions.tab, and the fusion inspector HTML report.
+
+-   The workflow also includes the `CICERO` fusion detection algorithm that is run using the aligned.bam from STAR-aligner output.
+
+-   In addition, the fastq files undergo quality control checks and a multiQC report.
+
+-   Configured for SLURM, PBS pro, and AWS batch executors with containerized software. Outputs can be saved locally or configured to upload data to AWS S3 buckets.
+
+-   Public version can be found [here](https://github.com/RSC-RP/bulk_rnaseq_fusion_nf), but most recent releases are private repos at SCRI bitbucket.
+
+# Hackathon Projects
+
+-   2024 NF-Core Nextflow Hackathon
+
+    -   Created institutional profile on [nf-core github](https://github.com/nf-core/configs)
+
+    -   Added nf-validation tests to gunzip modules
+
+-   2021 Bringing Genomics Data to the Clinic Hackathon
+
+    -   [Project link](https://osf.io/afc7n/)
+
+    -   [Github repository](https://github.com/collaborativebioinformatics/snpReportR)
+
+-   2018 Consensus Machine Learning for Gene Target Selection in Pediatric AML Risk: NCBI Hackathon
+
+    -   [Manuscript](https://doi.org/10.1101/632166)
+
+    -   [Github repository](https://github.com/NCBI-Hackathons/ConsensusML)
+
 # R Packages
 
+1.  RNA-seq and multi-omics Data Analysis
 
+-   [DeGSEA](https://github.com/Meshinchi-Lab/DeGSEA)
+
+-   R package was developed for use in the Meshinchi lab to help streamline the association of clinical covariates and RNA-seq and miRNA-seq expression data.
+
+2.  Fusion Breakpoint Data Analysis
+
+-   [fusBreakpoint](https://github.com/jennylsmith/fusBreakpoint)
+-   R package for Sequence Search in BAM files using R Bioconductor
