@@ -35,17 +35,13 @@ jobs:
       QUARTO_VERSION: 1.5.57
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Runs an example command
-      - name: Run a one-line script
-        run: echo Hello, world!
-
       # install quarto
       - name: install quarto CLI
         run: |
           wget -O ${{ runner.temp }}/quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/quarto.deb
       
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout  
         uses: actions/checkout@v4
       
