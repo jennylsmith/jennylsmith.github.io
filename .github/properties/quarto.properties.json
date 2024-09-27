@@ -1,7 +1,6 @@
 {
     "name": "quarto",
-    "description": "Build and test a quarto website project.",
+    "description": "Build a quarto website project.",
     "iconName": "html",
-    "categories": ["Continuous integration", "quarto", "Pages", "HTML", "JavaScript", "CSS"],
-    "labels": ["preview"]
+    "categories": ["Continuous integration", "quarto", "Pages", "HTML", "JavaScript", "CSS"]
 }
