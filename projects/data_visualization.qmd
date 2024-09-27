@@ -8,10 +8,11 @@ A selection of data visualizations I generated from genomics/multi-omics and cli
 ::: panel-tabset
 ## Unsupervised Clustering
 
-![](https://dm5migu4zj3pb.cloudfront.net/manuscripts/157000/157101/large/JCI157101.f3.jpg)
+![](https://haematologica.org/article/download/haematol.2022.281653/75868/81609)
+
 <hr class="hr-dark"></hr>
 
-![](https://haematologica.org/article/download/haematol.2022.281653/75868/81609)
+![](https://dm5migu4zj3pb.cloudfront.net/manuscripts/157000/157101/large/JCI157101.f3.jpg)
 
 <hr class="hr-dark"></hr>
 
@@ -41,11 +42,17 @@ A selection of data visualizations I generated from genomics/multi-omics and cli
 
 <hr class="hr-dark"></hr>
 
+![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10038909/bin/nihms-1870608-f0002.jpg)
+
+<hr class="hr-dark"></hr>
+
 ![](https://www.biorxiv.org/content/biorxiv/early/2023/01/05/2023.01.05.522945/F3.large.jpg?width=800&height=600&carousel=1)
 
 <hr class="hr-dark"></hr>
 
 ![](https://aacr.silverchair-cdn.com/aacr/content_public/journal/clincancerres/26/3/10.1158_1078-0432.ccr-19-1800/2/726fig4.jpeg?Expires=1730262203&Signature=VByPCnZicAOBadSKo-vJAQe-uk5~prlkPmww~fEQLa0zULhNrvwo1AHHnsPATj-UYPNLoV4ZR~Dx-JQVu7jOgkd5gr5dS4NUsN1abycR22tp4j8s76UUue95FkpmJbygEcLLHFWp6FnSTvg4CQmq-77hU7st3jIIrHAJze0Oio0x4t7K2iq8fRKnm6L2yl~o-YRsJrYBvLj5mnSUmp9c9BGf7kWTm0PX4ASTuKBIx1jpEh2DZf5ccOXgqiuUNtZxFYGow0mYcT4V5JQZEz98NnWAiRPXEgoVVeMhe6mcG1cxObBVUS6Q52dMJAvNhdrvDzOAruTYIgzbxX-bQT3EBQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+
+<hr class="hr-dark"></hr>
 
 ![](https://haematologica.org/article/download/haematol.2022.281653/75868/81610)
 
