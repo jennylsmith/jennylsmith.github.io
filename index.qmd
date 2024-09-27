@@ -19,5 +19,4 @@ about:
 
 > Expertise of over 8 years in genomics, transcriptomics, and next generation sequencing (NGS) data.
 
-GH Actions test
 
