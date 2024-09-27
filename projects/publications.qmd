@@ -46,7 +46,9 @@ The [Data Viz](../projects/data_visualization.html) section is an overview some 
 
 -   **American Society for Hematology**, oral presentation on Comprehensive Transcriptome Profiling of Cryptic CBFA2T3-GLIS2 Fusion-Positive AML Defines Novel Therapeutic Options — a COG and Target Pediatric AML Study (San Diego, CA, 2018). [DOI](https://doi.org/10.1182/blood-2018-99-115544).
 
--   **American Society for Hematology**, oral presentation on The LSC17 Leukemic Stem Cell Signature Predicts Outcome in Pediatric Acute Myeloid Leukemia. Abstract Achievement Award Recipient (Atlanta, GA, 2017). [DOI](https://doi.org/10.1182/blood.V130.Suppl_1.24.24).
+-   **American Society for Hematology**, oral presentation on The LSC17 Leukemic Stem Cell Signature Predicts Outcome in Pediatric Acute Myeloid Leukemia. Abstract Achievement Award Recipient (Atlanta, GA, 2017). [link](https://ashpublications.org/blood/article/130/Supplement%201/24/80135/The-LSC17-Leukemic-Stem-Cell-Signature-Predicts)
+
+<!-- (https://doi.org/10.1182/blood.V130.Suppl_1.24.24). the DOI listed is actually broken on ASH website -->
 :::
 
 ### Other Presentations
