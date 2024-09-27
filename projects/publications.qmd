@@ -16,6 +16,10 @@ The [Data Viz](../projects/data_visualization.html) section is an overview some 
 
 -   Farrar, J. E., **Smith, J. L.**, … Meshinchi, S. Long Noncoding RNA Expression Independently Predicts Outcome in Pediatric Acute Myeloid Leukemia. *Journal of Clinical Oncology*. **2023.** [DOI:10.1200/jco.22.01114](https://doi.org/10.1200/JCO.22.01114)
 
+- Chisholm, K. M., **Smith, J.**, Heerema-McKenney, A. E., ... Meshinchi, S., & Kahwash, S. B. Pathologic, cytogenetic, and molecular features of acute myeloid leukemia with megakaryocytic differentiation: A report from the Children's Oncology Group. *Pediatric blood & cancer*. **2023** [DOI:10.1002/pbc.30251](https://doi.org/10.1002/pbc.30251)
+
+- Huang, B.J., **Smith, J.L.**, Farrar, J.E. ... Meshinchi, S. Integrated stem cell signature and cytomolecular risk determination in pediatric acute myeloid leukemia. *Nature Communications*. **2022**. [DOI:10.1038/s41467-022-33244-6](https://doi.org/10.1038/s41467-022-33244-6)
+
 - Le, Q., Hadland, B., **Smith, J. L.**, … Meshinchi, S. CBFA2T3-GLIS2 model of pediatric acute megakaryoblastic leukemia identifies FOLR1 as a CAR T cell target. *Journal of Clinical Investigation*. **2022**. [DOI:10.1172/jci157101](https://doi.org/10.1172/JCI157101)
 
 -   Huang, B., **Smith, J. L.**, Wang, J., … Meshinchi, S. CBFB-MYH11 Fusion Transcripts Distinguish Acute Myeloid Leukemias with Distinct Molecular Landscapes and Outcomes. *Blood Advances* **2021**. [DOI:10.1182/bloodadvances.2021004965](10.1182/bloodadvances.2021004965)
