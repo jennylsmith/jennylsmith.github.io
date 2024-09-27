@@ -1,5 +1,6 @@
 ---
 title: "Data Viz"
+date-modified: "`r Sys.Date()`"
 ---
 
 A selection of data visualizations I generated from genomics/multi-omics and clinical datasets generated using ggplot2, ComplexHeatmap, plotly R, and Gviz.

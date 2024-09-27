@@ -1,5 +1,6 @@
 ---
 title: "Selected Publications and Presentations"
+date-modified: "`r Sys.Date()`"
 ---
 
 ::: panel-tabset

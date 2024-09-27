@@ -1,5 +1,6 @@
 ---
 title: "Genomics Pipelines, Tools, and Hackathons"
+date-modified: "`r Sys.Date()`"
 ---
 
 A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and through external collaborations, such as Hackathons.
@@ -24,6 +25,8 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 
 ### 2. RNA-seq Quantification Nextflow workflow
 
+-   Custom pipeline developed from nf-core workflow template and uses most nf-core best practices
+
 -   Designed to output gene expression counts from bulk RNA-seq using STAR aligner using --quantmode. It will also perform general QC statistics on the fastqs with fastqc and the alignment using rseqc. Finally, the QC reports are collected into a single file using multiQC.
 
 -   Fully documented using parameterized Rmd that knits to HTML and github markdown formats.
@@ -33,6 +36,8 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 ![](https://github.com/RSC-RP/rnaseq_count_nf/raw/main/images/dag.png)
 
 ### 3. RNA-seq Fusion Detection Nextflow workflow
+
+-   Custom pipeline developed using DSL2 syntax with module files. 
 
 -   Bulk RNA-seq fusion detection pipeline with `STAR` aligner, `STAR-Fusion`, and `Fusion-Inspector`. This includes the most relevant output files, such as SJ.out.tab, aligned.bam, and chimeric.junctions.tab, and the fusion inspector HTML report.
 
