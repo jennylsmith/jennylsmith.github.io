@@ -1,9 +1,9 @@
 ---
 title: "Genomics Pipelines, Tools, and Hackathons"
-date-modified: "`r Sys.Date()`"
+date-modified: last-modified
 ---
 
-A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and through external collaborations, such as Hackathons.
+A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and through external collaborations, such as Hackathons. These pipelines and tools were used to reproducibly process data or generate figures for many of the published journal articles on projects I supported.
 
 # Genomics Data Pipelines
 
@@ -49,6 +49,9 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 
 -   Public version can be found [here](https://github.com/RSC-RP/bulk_rnaseq_fusion_nf), but most recent releases are private repos at SCRI bitbucket.
 
+
+Other nextflow pipelines generated with nextflow and nf-core tools include CutandRun heatmaps (AKA tornado plots), VCF variant annotations, and splitting ATAC-seq bams by fragment size.   
+
 # Hackathon Projects
 
 -   2024 NF-Core Nextflow Hackathon
@@ -77,7 +80,17 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 
 -   R package was developed for use in the Meshinchi lab to help streamline the association of clinical covariates and RNA-seq and miRNA-seq expression data.
 
-2.  Fusion Breakpoint Data Analysis
+2.  RNA-seq Fusion Breakpoint Data Analysis
 
 -   [fusBreakpoint](https://github.com/jennylsmith/fusBreakpoint)
+
 -   R package for Sequence Search in BAM files using R Bioconductor
+
+# Bioinformatics / Statistical Analysis Notebooks
+
+The analysis notebooks (primarily Rmarkdown) for all analyses from Fred Hutch can be found at [Meshinchi Lab](https://github.com/Meshinchi-Lab). Selected analysis notebooks and scripts from SCRI are hosted at [Research Scientific Computing](https://github.com/RSC-RP) github repository. 
+
+# References
+
+These pipelines and tools were used to reproducibly process data for many of the published journal articles on projects I supported. See the [publications page](../projects/publications.html) for details.
+

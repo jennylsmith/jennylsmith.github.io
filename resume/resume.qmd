@@ -204,6 +204,8 @@ Principal Investigator: Terry Bird
 |                               |                             |     -   automatic triggers                                                                                                            |
 |                               |                             |                                                                                                                                       |
 |                               |                             |     -   scheduled tasks                                                                                                               |
+|                               |                             |                                                                                                                                       |
+|                               |                             | -   github actions workflow for quarto website                                                                                        |
 +-------------------------------+-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | SQL                           | Competent / Being Developed | -   complex queries and database operations, such as filtering and joins, using tidyverse syntax and conversion to SQL using `dbplyr` |
 |                               |                             |                                                                                                                                       |

@@ -1,7 +1,13 @@
 ---
 title: "Selected Publications and Presentations"
-date-modified: "`r Sys.Date()`"
+date-modified: last-modified
 ---
+
+A list of select publications and presentations that I supported in my work at SCRI and Fred Hutch. I am first author of a research journal article on CBFA2T3-GLIS pediatric AML (pAML) patients and co-first author for a research article on NUP98-rearranged pAML. 
+
+I assisted with a large part of the data analysis/processing, figure generation, and manuscript writing on these publications.
+
+The [Data Viz](../projects/data_visualization.html) section is an overview some of the figures generated for publications I supported. 
 
 ::: panel-tabset
 # Selected Publications
@@ -22,7 +28,7 @@ date-modified: "`r Sys.Date()`"
 
 -   Noort, S., Zimmermann, M., Reinhardt, D., Cuccuini, W., Pigazzi, M., **Smith, J.**, … Zwaan, C. M. Prognostic impact of t(16;21)(p11;q22) and t(16;21)(q24;q22) in pediatric AML: a retrospective study by the I-BFM Study Group. *Blood* **2018.** [DOI:10.1182/blood-2018-05-849059](10.1182/blood-2018-05-849059)
 
-[Additional Publications](https://orcid.org/0000-0003-0402-2779)
+**[Additional Publications](https://orcid.org/0000-0003-0402-2779)**
 
 # Speaker Presentations
 

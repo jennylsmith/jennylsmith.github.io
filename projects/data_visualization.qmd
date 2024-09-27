@@ -1,9 +1,9 @@
 ---
 title: "Data Viz"
-date-modified: "`r Sys.Date()`"
+date-modified: last-modified
 ---
 
-A selection of data visualizations I generated from genomics/multi-omics and clinical datasets generated using ggplot2, ComplexHeatmap, plotly R, and Gviz.
+A selection of data visualizations I generated from genomics/multi-omics and clinical datasets generated using ggplot2, ComplexHeatmap, plotly R, and Gviz among others. Most figures presented here are found in published journal articles for projects I supported. 
 
 ::: panel-tabset
 ## Unsupervised Clustering
@@ -89,3 +89,8 @@ A selection of data visualizations I generated from genomics/multi-omics and cli
 
 ![](https://ascopubs.org/cms/10.1200/JCO.22.01114/asset/2c99b21b-0b78-46c4-ad96-32781bf0299d/assets/images/large/jco.22.01114f3.jpg)
 :::
+
+# References
+
+The majority of figures presented here are found in published journal articles. The [publications page](../projects/data_visualization.html) lists the articles for projects I supported.  
+
