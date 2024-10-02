@@ -254,33 +254,33 @@ Principal Investigator: Terry Bird
 
 #### Continuing Education and Volunteering
 
--   POSIT Conference, DevOps for Data Scientists, Seattle, WA, August 2024
+-   **2024 August**, DevOps for Data Scientists, POSIT Conference, Seattle, WA
 
--   Nextflow NF-Core Hackathon, University of Washington, March 2024
+-   **2024 March**, Nextflow NF-Core Hackathon, University of Washington
 
--   IGNITE speaker to promote gender equity in STEM, Seattle Children's, February 2024
+-   **2024 February**, IGNITE speaker to promote gender equity in STEM, Seattle Children's
 
--   International Society for Computational Biology (ISCB) member, 2023 - 2024
+-   **2023 - 2024,** International Society for Computational Biology (ISCB) member
 
--   RLadies event organizer, Seattle, WA, 2018 - 2023
+-   **2018 - 2023,** RLadies event organizer, Seattle, WA
 
--   Bioconductor conference organizer, Seattle, WA, 2022
+-   **2022 July**, Bioconductor conference organizer, Seattle, WA
 
--   Mentor, UO Bioinformatics and Genomics Graduate Program, 2021 - 2022
+-   **2021 - 2022,** Mentor, UO Bioinformatics and Genomics Graduate Program
 
--   SnpReportR package, Carnegie Mellon and DNAnexus Hackathon, January 2021
+-   **2021 January**, SnpReportR package, Carnegie Mellon and DNAnexus Hackathon
 
--   Pacific Biosciences Isoseq Transcriptome Analysis Training, July 2020
+-   **2020 July**, Pacific Biosciences (PacBio) Isoseq Transcriptome Analysis Training
 
--   Nextflow workflow development training, May 2020
+-   **2020 May**, Nextflow workflow development training, Fred Hutch Cancer Center
 
--   Women In Biology, MAPS Mentorship Group, 2017-2019
+-   **2017 - 2019,** Women In Biology, MAPS Mentorship Group, Seattle, WA
 
--   ConsensusML, Machine learning classification in AML, NCBI Hackathon February 2018
+-   **2018 February**, ConsensusML: Machine learning classification in AML, NCBI Hackathon
 
--   Fred Hutch Summer High School Internship Mentor, June-August 2018
+-   **2018 June,** Mentor, Fred Hutch Summer High School Internship, Seattle, WA
 
--   Summer Institute in Statistics for Big Data (SISBID), University of Washington, June 2017
+-   **2017 June**, Summer Institute in Statistics for Big Data (SISBID), University of Washington
 :::
 
 ### References
