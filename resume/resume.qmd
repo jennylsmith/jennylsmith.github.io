@@ -161,9 +161,9 @@ Principal Investigator: Terry Bird
 |                       |                             |                                                                                                                                       |
 |                       |                             | -   gitpod cloud development environments                                                                                             |
 +-----------------------+-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| HPC schedulers        | Advanced                    | -   PBS                                                                                                                               |
+| HPC                   | Advanced                    | -   SLURM and PBS schedulers                                                                                                          |
 |                       |                             |                                                                                                                                       |
-|                       |                             | -   SLURM                                                                                                                             |
+|                       |                             | -   generation of HPC modules / module files                                                                                          |
 |                       |                             |                                                                                                                                       |
 |                       |                             | -   array jobs                                                                                                                        |
 |                       |                             |                                                                                                                                       |
@@ -216,17 +216,21 @@ Principal Investigator: Terry Bird
 
 # {{< fa solid dna >}} Bioinformatics / Statistics
 
-#### Bioinformatic and Statistical Analysis
+#### Bioinformatics and Statistical Analysis
 
--   Unsupervised clustering (dendrograms, PCA, NMDS, and UMAP)
+-   Unsupervised clustering with dendrograms, PCA, NMDS, and UMAP
 
--   Statistical regression, classification, regularization
-
--   Differential gene expression (Limma and EdgeR)
+-   Statistical regression, classification, and regularization
 
 -   Survival and time-to-event analysis
 
--   Data visualization (ggplot2, ComplexHeatmap, plotly R, and Gviz)
+-   Data visualization
+
+-   Differential gene expression, differential binding, and differential DNA accessibility analysis
+
+-   De novo fusion transcript detection
+
+-   single-cell celltype classification / prediction
 
 ------------------------------------------------------------------------
 
