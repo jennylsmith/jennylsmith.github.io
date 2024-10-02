@@ -21,7 +21,7 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 
 -   Public version can be found [here](https://github.com/RSC-RP/cutandrun_nf/tree/main), but most recent releases are private repos at SCRI bitbucket.
 
-![](https://github.com/RSC-RP/cutandrun_nf/blob/main/workflow_docs/images/dag.png?raw=true)
+![DAG of Cut&Run Pipeline](https://github.com/RSC-RP/cutandrun_nf/blob/main/workflow_docs/images/dag.png?raw=true)
 
 ### 2. RNA-seq Quantification Nextflow workflow
 
@@ -33,7 +33,7 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 
 -   Public version can be found [here](https://github.com/RSC-RP/rnaseq_count_nf), but most recent releases are private repos at SCRI bitbucket.
 
-![](https://github.com/RSC-RP/rnaseq_count_nf/raw/main/images/dag.png)
+![DAG of RNAseq Pipeline](https://github.com/RSC-RP/rnaseq_count_nf/raw/main/images/dag.png)
 
 ### 3. RNA-seq Fusion Detection Nextflow workflow
 
@@ -49,24 +49,35 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 
 -   Public version can be found [here](https://github.com/RSC-RP/bulk_rnaseq_fusion_nf), but most recent releases are private repos at SCRI bitbucket.
 
+![STAR Fusion Algorithm](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs13059-019-1842-9/MediaObjects/13059_2019_1842_Fig1_HTML.png?as=webp){width=40%}
 
-Other nextflow pipelines generated with nextflow and nf-core tools include CutandRun heatmaps (AKA tornado plots), VCF variant annotations, and splitting ATAC-seq bams by fragment size.   
+### Other Pipelines
+
+Other nextflow pipelines generated with nextflow and nf-core tools include:
+
+  - CutandRun and Chip-seq heatmaps (AKA tornado plots - see Figure below)
+  
+  - VCF variant annotation
+  
+  - splitting ATAC-seq bams by fragment size
+  
+![Tornado Plots (Figure C,D,E)](https://ars.els-cdn.com/content/image/1-s2.0-S109727652100753X-gr1.jpg){width=50%}
 
 # Hackathon Projects
 
--   2024 NF-Core Nextflow Hackathon
+-   **2024** NF-Core Nextflow Hackathon
 
     -   Created institutional profile on [nf-core github](https://github.com/nf-core/configs)
 
     -   Added nf-validation tests to gunzip modules
 
--   2021 Bringing Genomics Data to the Clinic Hackathon
+-   **2021** Bringing Genomics Data to the Clinic Hackathon
 
     -   [Project link](https://osf.io/afc7n/)
 
     -   [Github repository](https://github.com/collaborativebioinformatics/snpReportR)
 
--   2018 Consensus Machine Learning for Gene Target Selection in Pediatric AML Risk: NCBI Hackathon
+-   **2018** Consensus Machine Learning for Gene Target Selection in Pediatric AML Risk: NCBI Hackathon
 
     -   [Manuscript](https://doi.org/10.1101/632166)
 
