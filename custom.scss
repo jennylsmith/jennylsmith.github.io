@@ -4,7 +4,6 @@ $nav-tabs-border-color: black;
 $nav-tabs-border-width: 2px;
 $nav-tabs-link-active-border-color: black;
 
-
 /*-- scss:rules --*/
 
 table, th, td {
@@ -39,6 +38,13 @@ h1.title, .title.h1 {
   font-size: medium;
   border-bottom: black;
 }
+
+#data-viz .nav-link.active {
+    display: block;
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
 
 .sidebar-navigation {
   padding-left: 1px;
