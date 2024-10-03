@@ -165,7 +165,7 @@ Distribution plots, such as boxplots, violin plots, histograms and ridge/density
 
 # References
 
-The majority of figures presented here are found in published journal articles. The [publications page](../projects/data_visualization.html) lists the articles for projects I supported.
+The majority of figures presented here are found in published journal articles, referenced here. The [publications page](../projects/data_visualization.html) lists additional articles for projects I supported.
 
 ::: {#refs}
 :::
