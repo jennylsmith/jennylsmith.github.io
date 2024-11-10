@@ -209,13 +209,15 @@ Principal Investigator: Terry Bird
 |                       |                             |                                                                                                     |
 |                       |                             | -   github actions workflow for quarto website                                                      |
 +-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
-| SQL                   | Competent / Being Developed | -   utilization and creation of SQLite databases for genomic reference data                         |
+| SQL                   | Competent / Being Developed | -   complex queries and database operations, such as filtering and joins                            |
 |                       |                             |                                                                                                     |
-|                       |                             | -   complex queries and database operations, such as filtering and joins                            |
+|                       |                             | -   conversion to SQL using `dbplyr` R package                                                      |
 |                       |                             |                                                                                                     |
-|                       |                             | -   conversion to SQL using `dbplyr`                                                                |
+|                       |                             | -   SQL scripting skills being developed                                                            |
 |                       |                             |                                                                                                     |
-|                       |                             | -   SQL scripting and CLI skills being developed                                                    |
+|                       |                             |     -   2024 November - completion of SQL programming course through codecademy                     |
+|                       |                             |                                                                                                     |
+|                       |                             | -   utilization and creation of SQLite databases for genomic reference data                         |
 +-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
 
 # {{< fa solid dna >}} Bioinformatics / Statistics
@@ -261,6 +263,8 @@ Principal Investigator: Terry Bird
 # <i class="bi bi-backpack-fill"></i> Continuing Ed and Volunteering
 
 #### Continuing Education and Volunteering
+
+-   **2024 November**, SQL Programming, Code Academy, Virtual
 
 -   **2024 August**, DevOps for Data Scientists, POSIT Conference, Seattle, WA
 
