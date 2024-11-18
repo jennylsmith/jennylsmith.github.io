@@ -215,7 +215,7 @@ Principal Investigator: Terry Bird
 |                       |                             |                                                                                                     |
 |                       |                             | -   SQL scripting skills being developed                                                            |
 |                       |                             |                                                                                                     |
-|                       |                             |     -   2024 November - completion of SQL programming course through codecademy                     |
+|                       |                             |     -   2024 November - SQL programming course, Codecademy                                          |
 |                       |                             |                                                                                                     |
 |                       |                             | -   utilization and creation of SQLite databases for genomic reference data                         |
 +-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
