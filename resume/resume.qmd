@@ -264,7 +264,7 @@ Principal Investigator: Terry Bird
 
 #### Continuing Education and Volunteering
 
--   **2024 November**, SQL Programming, Code Academy, Virtual
+-   **2024 November**, SQL Programming, Codecademy, Virtual
 
 -   **2024 August**, DevOps for Data Scientists, POSIT Conference, Seattle, WA
 
