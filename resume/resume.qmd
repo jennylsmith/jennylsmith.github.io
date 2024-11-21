@@ -108,117 +108,127 @@ Principal Investigator: Terry Bird
 
 # <i class="bi bi-pc-display"></i> Skills
 
-+-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
-| Language or Framework | Experience                  | Tools / Packages                                                                                    |
-+=======================+=============================+=====================================================================================================+
-| R programming         | Expert                      | -   base R, tidyverse, bioconductor                                                                 |
-|                       |                             |                                                                                                     |
-|                       |                             | -   R package development                                                                           |
-|                       |                             |                                                                                                     |
-|                       |                             | -   scripting with`Rscript` CLI and `commandArgs`                                                   |
-|                       |                             |                                                                                                     |
-|                       |                             | -   quarto / rmarkdown                                                                              |
-|                       |                             |                                                                                                     |
-|                       |                             | -   posit workbench / Rstudio IDE                                                                   |
-+-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
-| Bash / linux          | Advanced                    | -   `rclone`, `rsync`, `scp` data copying and management                                            |
-|                       |                             |                                                                                                     |
-|                       |                             | -   `git` and github command line interface (CLI)                                                   |
-|                       |                             |                                                                                                     |
-|                       |                             | -   regular expressions with `find`, `grep` , `sed`, `tr`, etc                                      |
-|                       |                             |                                                                                                     |
-|                       |                             | -   shell scripting with control structures and iteration (for, if/else, etc)                       |
-|                       |                             |                                                                                                     |
-|                       |                             | -   environment variables                                                                           |
-|                       |                             |                                                                                                     |
-|                       |                             | -   modifying shell behavior and configurations (.bashrc, `set` built-in, CLI tool configurations)  |
-+-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
-| Nextflow              | Advanced                    | -   modularized scientific workflows using domain-specific language (DSL2) syntax                   |
-|                       |                             |                                                                                                     |
-|                       |                             | -   nf-core and `nf-core tools` CLI                                                                 |
-|                       |                             |                                                                                                     |
-|                       |                             | -   invoke Groovy language operators, object oriented methods, and closures in nextflow scripts     |
-|                       |                             |                                                                                                     |
-|                       |                             | -   develop custom workflows using nf-core best practices                                           |
-|                       |                             |                                                                                                     |
-|                       |                             | -   adapt nf-core community developed pipelines to meet institutional requirements                  |
-+-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
-| Python programming    | Experienced                 | -   python scripting using control structures, iteration, etc.                                      |
-|                       |                             |                                                                                                     |
-|                       |                             | -   scanpy and SCVI-tools                                                                           |
-|                       |                             |                                                                                                     |
-|                       |                             | -   `conda`, `mamba`, and `pip` package manages                                                     |
-|                       |                             |                                                                                                     |
-|                       |                             | -   `venv` virtual environments                                                                     |
-|                       |                             |                                                                                                     |
-|                       |                             | -   jupyter notebooks                                                                               |
-|                       |                             |                                                                                                     |
-|                       |                             | -   multi-lingual environments with `reticulate` in Rstudio IDE                                     |
-+-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
-| Version control       | Advanced                    | -   Git and github (gh) CLI                                                                         |
-|                       |                             |                                                                                                     |
-|                       |                             | -   Github and Bitbucket remotes                                                                    |
-|                       |                             |                                                                                                     |
-|                       |                             | -   gitpod cloud development environments                                                           |
-+-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
-| HPC                   | Advanced                    | -   SLURM and PBS schedulers                                                                        |
-|                       |                             |                                                                                                     |
-|                       |                             | -   generation of HPC modules / module files                                                        |
-|                       |                             |                                                                                                     |
-|                       |                             | -   array jobs                                                                                      |
-|                       |                             |                                                                                                     |
-|                       |                             | -   parallelization                                                                                 |
-|                       |                             |                                                                                                     |
-|                       |                             | -   resource allocation                                                                             |
-+-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
-| Containerization      | Advanced                    | -   docker CLI                                                                                      |
-|                       |                             |                                                                                                     |
-|                       |                             | -   apptainer / singularity CLI                                                                     |
-|                       |                             |                                                                                                     |
-|                       |                             | -   generation of custom containerized environments                                                 |
-|                       |                             |                                                                                                     |
-|                       |                             | -   adapt and build containers from existing dockerfiles to meet institutional requirements         |
-|                       |                             |                                                                                                     |
-|                       |                             | -   utilize scientific software container images from `biocontainers` and `galaxy hub` repositories |
-|                       |                             |                                                                                                     |
-|                       |                             | -   use of quay.io and docker hub repositories                                                      |
-+-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
-| Cloud Platforms       | Competent                   | -   Amazon Web Services                                                                             |
-|                       |                             |                                                                                                     |
-|                       |                             |     -   AWS S3                                                                                      |
-|                       |                             |                                                                                                     |
-|                       |                             |     -   Batch                                                                                       |
-|                       |                             |                                                                                                     |
-|                       |                             | -   Azure                                                                                           |
-|                       |                             |                                                                                                     |
-|                       |                             |     -   blob storage                                                                                |
-|                       |                             |                                                                                                     |
-|                       |                             | -   Google Cloud Platform                                                                           |
-+-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
-| CI / CD               | Competent                   | -   development of CI/CD plans using Atlassian `bamboo` agent                                       |
-|                       |                             |                                                                                                     |
-|                       |                             | -   implementation of CI/CD functional tests for Nextflow workflows                                 |
-|                       |                             |                                                                                                     |
-|                       |                             |     -   plan integrated with `bitbucket` remote                                                     |
-|                       |                             |                                                                                                     |
-|                       |                             |     -   plan branches for `main` and `dev`                                                          |
-|                       |                             |                                                                                                     |
-|                       |                             |     -   automatic triggers                                                                          |
-|                       |                             |                                                                                                     |
-|                       |                             |     -   scheduled tasks                                                                             |
-|                       |                             |                                                                                                     |
-|                       |                             | -   github actions workflow for quarto website                                                      |
-+-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
-| SQL                   | Competent / Being Developed | -   complex queries and database operations, such as filtering and joins                            |
-|                       |                             |                                                                                                     |
-|                       |                             | -   conversion to SQL using `dbplyr` R package                                                      |
-|                       |                             |                                                                                                     |
-|                       |                             | -   SQL scripting skills being developed                                                            |
-|                       |                             |                                                                                                     |
-|                       |                             |     -   2024 November - SQL programming course, Codecademy                                          |
-|                       |                             |                                                                                                     |
-|                       |                             | -   utilization and creation of SQLite databases for genomic reference data                         |
-+-----------------------+-----------------------------+-----------------------------------------------------------------------------------------------------+
++-------------------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Language or Framework         | Experience                        | Tools / Packages                                                                                                                         |
++===============================+===================================+==========================================================================================================================================+
+| R programming                 | Expert                            | -   base R, tidyverse, bioconductor                                                                                                      |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   R package development                                                                                                                |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   scripting with`Rscript` CLI and `commandArgs`                                                                                        |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   quarto / rmarkdown                                                                                                                   |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   posit workbench / Rstudio IDE                                                                                                        |
++-------------------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Bash / linux                  | Advanced                          | -   `rclone`, `rsync`, `scp` data copying and management                                                                                 |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   `git` and github command line interface (CLI)                                                                                        |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   regular expressions with `find`, `grep` , `sed`, `tr`, etc                                                                           |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   shell scripting with control structures and iteration (for, if/else, etc)                                                            |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   environment variables                                                                                                                |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   modifying shell behavior and configurations (.bashrc, `set` built-in, CLI tool configurations)                                       |
++-------------------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Nextflow                      | Advanced                          | -   modularized scientific workflows using domain-specific language (DSL2) syntax                                                        |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   nf-core and `nf-core tools` CLI                                                                                                      |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   invoke Groovy language operators, object oriented methods, and closures in nextflow scripts                                          |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   develop custom workflows using nf-core best practices                                                                                |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   adapt nf-core community developed pipelines to meet institutional requirements                                                       |
++-------------------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Python programming            | Experienced                       | -   python scripting using control structures, iteration, etc.                                                                           |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   scanpy and SCVI-tools                                                                                                                |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   `conda`, `mamba`, and `pip` package manages                                                                                          |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   `venv` virtual environments                                                                                                          |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   jupyter notebooks                                                                                                                    |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   multi-lingual environments with `reticulate` in Rstudio IDE                                                                          |
++-------------------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Version control               | Advanced                          | -   Git and github (gh) CLI                                                                                                              |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   Github and Bitbucket remotes                                                                                                         |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   gitpod cloud development environments                                                                                                |
++-------------------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| HPC                           | Advanced                          | -   SLURM and PBS schedulers                                                                                                             |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   generation of HPC modules / module files                                                                                             |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   array jobs                                                                                                                           |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   parallelization                                                                                                                      |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   resource allocation                                                                                                                  |
++-------------------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Containerization              | Advanced                          | -   docker CLI                                                                                                                           |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   apptainer / singularity CLI                                                                                                          |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   generation of custom containerized environments                                                                                      |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   adapt and build containers from existing dockerfiles to meet institutional requirements                                              |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   utilize scientific software container images from `biocontainers` and `galaxy hub` repositories                                      |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   use of quay.io and docker hub repositories                                                                                           |
++-------------------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Cloud Platforms               | Competent                         | -   Amazon Web Services                                                                                                                  |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   |     -   AWS S3                                                                                                                           |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   |     -   Batch                                                                                                                            |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   Azure                                                                                                                                |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   |     -   blob storage                                                                                                                     |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   Google Cloud Platform                                                                                                                |
++-------------------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| CI / CD                       | Competent                         | -   development of CI/CD plans using Atlassian `bamboo` agent                                                                            |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   implementation of CI/CD functional tests for Nextflow workflows                                                                      |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   |     -   plan integrated with `bitbucket` remote                                                                                          |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   |     -   plan branches for `main` and `dev`                                                                                               |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   |     -   automatic triggers                                                                                                               |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   |     -   scheduled tasks                                                                                                                  |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   github actions workflow for quarto website                                                                                           |
++-------------------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SQL                           | Competent / Being Developed       | -   complex queries and database operations, such as filtering and joins                                                                 |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   conversion to SQL using `dbplyr` R package                                                                                           |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   SQL scripting skills being developed                                                                                                 |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   |     -   2024 November - SQL programming course, Codecademy                                                                               |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   utilization and creation of SQLite databases for genomic reference data                                                              |
++-------------------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| IDE                           | Expert                            | -   integrated development environments for analysis projects and development of data pipelines and packages                             |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   VSCode and extensions                                                                                                                |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   RStudio                                                                                                                              |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   Posit workbench                                                                                                                      |
+|                               |                                   |                                                                                                                                          |
+|                               |                                   | -   Jupyter notebooks                                                                                                                    |
++-------------------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
 # {{< fa solid dna >}} Bioinformatics / Statistics
 
