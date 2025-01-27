@@ -17,9 +17,6 @@ about:
     url: "https://orcid.org/0000-0003-0402-2779"
 ---
 
-<!-- <i class="fa-solid fa-road"></i> -->
-<!-- "{{< iconify fa6-brands mastodon >}}" -->
-<!-- "{{< fa envelope title='An envelope' >}}" -->
 >  Computational biologist and R programmer applying methods in data science and data engineering to biomedical research. 
 
 > Expertise of over 8 years in genomics, transcriptomics, and next generation sequencing (NGS) data.
