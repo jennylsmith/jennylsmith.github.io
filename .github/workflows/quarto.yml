@@ -5,6 +5,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the specified branches
   push:
     branches: [ "main", "dev", "pr_actions_test", "dev_pr_test"]
+  ready_for_review:
+    ["main", "dev", "pr_actions_test", "dev_pr_test"]
   # pull_request:
   #   branches: [ "main", "dev" ]
 
@@ -83,7 +85,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
         with:
-          oken: ${{ secrets.PAT }}
+          token: ${{ secrets.PAT }}
           repository: jennylsmith/jennylsmith.github.io
         
       - name: create pull request
