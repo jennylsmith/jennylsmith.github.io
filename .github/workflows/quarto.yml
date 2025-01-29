@@ -33,7 +33,7 @@ concurrency:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
   pull-requests: write
@@ -74,6 +74,7 @@ jobs:
           path: ./docs
 
   # pull request
+  # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
   pull_request:
     if: ${{ vars.RUN_PR_STEP == true }}
     needs: build
@@ -81,6 +82,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          oken: ${{ secrets.PAT }}
+          repository: jennylsmith/jennylsmith.github.io
         
       - name: create pull request
         id: cpr
@@ -89,6 +93,7 @@ jobs:
           commit-message: "merge dev into main"
           base: pr_actions_test 
           branch: dev_pr_test
+          draft: always-true
           assignees: jennylsmith
           reviewers: jennylsmith
         
