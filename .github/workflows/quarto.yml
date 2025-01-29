@@ -4,7 +4,7 @@ name: quarto website
 on:
   # Triggers the workflow on push or pull request events but only for the specified branches
   push:
-    branches: [ "main", "dev" ]
+    branches: [ "main", "dev", "pr_actions_test", "dev_pr_test"]
   # pull_request:
   #   branches: [ "main", "dev" ]
 
@@ -81,13 +81,14 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        
       - name: create pull request
         id: cpr
         uses: peter-evans/create-pull-request@v7
         with:
           commit-message: "merge dev into main"
-          branch: dev
-          base: pr_actions_test
+          base: pr_actions_test 
+          branch: dev_pr_test
           assignees: jennylsmith
           reviewers: jennylsmith
         
