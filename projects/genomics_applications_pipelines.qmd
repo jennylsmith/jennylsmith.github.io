@@ -37,7 +37,7 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 
 ### 3. RNA-seq Fusion Detection Nextflow workflow
 
--   Custom pipeline developed using DSL2 syntax with module files. 
+-   Custom pipeline developed using DSL2 syntax with module files.
 
 -   Bulk RNA-seq fusion detection pipeline with `STAR` aligner, `STAR-Fusion`, and `Fusion-Inspector`. This includes the most relevant output files, such as SJ.out.tab, aligned.bam, and chimeric.junctions.tab, and the fusion inspector HTML report.
 
@@ -49,19 +49,80 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 
 -   Public version can be found [here](https://github.com/RSC-RP/bulk_rnaseq_fusion_nf), but most recent releases are private repos at SCRI bitbucket.
 
-![STAR Fusion Algorithm](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs13059-019-1842-9/MediaObjects/13059_2019_1842_Fig1_HTML.png?as=webp){width=40%}
+![STAR Fusion Algorithm](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs13059-019-1842-9/MediaObjects/13059_2019_1842_Fig1_HTML.png?as=webp){width="40%"}
 
 ### Other Pipelines
 
 Other nextflow pipelines generated with nextflow and nf-core tools include:
 
-  - CutandRun and Chip-seq heatmaps (AKA tornado plots - see Figure below)
-  
-  - VCF variant annotation
-  
-  - splitting ATAC-seq bams by fragment size
-  
-![Tornado Plots (Figure C,D,E)](https://ars.els-cdn.com/content/image/1-s2.0-S109727652100753X-gr1.jpg){width=50%}
+-   CutandRun and Chip-seq heatmaps (AKA tornado plots - see Figure below)
+
+-   VCF variant annotation
+
+-   splitting ATAC-seq bams by fragment size
+
+![Tornado Plots (Figure C,D,E)](https://ars.els-cdn.com/content/image/1-s2.0-S109727652100753X-gr1.jpg){width="50%"}
+
+# CI/CD and Reproducible Development Environments
+
+Use of github actions and Gitpod with DevContainers are able to automate tasks, like testing, as well as create shareable and reproducible development environments. Reproducible development environments allow team members to actively contribute to a shared code repository, including potential data analysis tasks or genomics pipelines.
+
+## Github Actions
+
+Personal website found [here](https://github.com/jennylsmith/jennylsmith.github.io)
+
+-   Uses a commit trigger and github hosted runners to build the website from a clone of the repository
+
+## Gitpod Development Environment
+
+DevOps for Data Science labs [github repository](https://github.com/jennylsmith/do4ds_labs) using
+
+-   environment is generated directly from a clone of the public repository
+-   a containerized environment is then built using Docker, which is orchestrated by GitPod Desktop
+-   automations are used to install required dependencies:
+    -   a reproducible R environment is managed with Renv package to install R packages
+    -   a reproducible Python environment is managed with venv library to install python packages
+-   the entire project and identical compute environment can be collaboratively developed using this [link](https://app.gitpod.io/projects?project=01934c12-4d07-7185-bcb1-cce2999becda)
+
+
+# Technical Skills and Courses
+
+Additional details about technical skills, including course completion or course progress:
+
+-   [**roadmap.sh**](https://roadmap.sh/u/jennylsmith)
+
+    -   Git and Github
+
+    -   Docker
+
+    -   Linux
+
+    -   Python
+
+    -   SQL
+
+    -   AI and Data Scientist
+
+    -   Data Analyst
+
+-   [**freecodecamp**](https://www.freecodecamp.org/jennylsmith)
+
+    -   [Postgres SQL Database](https://github.com/jennylsmith/worldcup_database) for Toy Worldcup Data
+
+    -   [Postgres SQL Database](https://github.com/jennylsmith/student_database) for Toy Student Data
+
+    -   [Postgres SQL Database](https://github.com/jennylsmith/celestial_bodies_db) for Toy Intergalactic Data
+
+    -   Additional course/module completions listed in my profile
+
+-   [**codecademy**](https://www.codecademy.com/users/jennylsmith/achievements)
+
+    -   SQL programming course
+        -   Completed: Nov 2024
+    -   Introduction to Linux: Users and Permissions
+        -   A review for me
+        -   Completed: Jan 2025
+
 
 # Hackathon Projects
 
@@ -99,9 +160,8 @@ Other nextflow pipelines generated with nextflow and nf-core tools include:
 
 # Bioinformatics / Statistical Analysis Notebooks
 
-The analysis notebooks (primarily Rmarkdown) for all analyses from Fred Hutch can be found at [Meshinchi Lab](https://github.com/Meshinchi-Lab). Selected analysis notebooks and scripts from SCRI are hosted at [Research Scientific Computing](https://github.com/RSC-RP) github repository. 
+The analysis notebooks (primarily Rmarkdown) for all analyses from Fred Hutch can be found at [Meshinchi Lab](https://github.com/Meshinchi-Lab). Selected analysis notebooks and scripts from SCRI are hosted at [Research Scientific Computing](https://github.com/RSC-RP) github repository.
 
 # References
 
 These pipelines and tools were used to reproducibly process data for many of the published journal articles on projects I supported. See the [publications page](../projects/publications.html) for details.
-
