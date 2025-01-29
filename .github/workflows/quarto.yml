@@ -53,11 +53,11 @@ jobs:
       - name: render website
         run: quarto render
         
-      # upload the rendered website (artifact)
-      - name: upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./docs
+      # # upload the rendered website (artifact)
+      # - name: upload artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: ./docs
 
   # pull request 
   pull_request:
