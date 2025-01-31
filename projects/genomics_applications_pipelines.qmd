@@ -65,17 +65,24 @@ Other nextflow pipelines generated with nextflow and nf-core tools include:
 
 # CI/CD and Reproducible Development Environments
 
-Use of github actions and Gitpod with DevContainers are able to automate tasks, like testing, as well as create shareable and reproducible development environments. Reproducible development environments allow team members to actively contribute to a shared code repository, including potential data analysis tasks or genomics pipelines.
+Use of [Github actions](https://github.com/features/actions) and [Gitpod](https://www.gitpod.io/) with DevContainers to automate tasks, like testing and building of applications or websites, as well as create shareable and reproducible development environments.
+
+Reproducible development environments allow team members to actively contribute to a shared code repository, each each team member using an identical compute environment by enabling the use of a containerized environment with [devcontainers](https://containers.dev/).
 
 ## Github Actions
 
 Personal website found [here](https://github.com/jennylsmith/jennylsmith.github.io)
 
--   Uses a commit trigger and github hosted runners to build the website from a clone of the repository
+-   Uses a 'on push' trigger with github hosted runners
+    1. the repository is checked out and cloned on the remote the ubuntu build machine (a gh hosted runner)
+    2. install `quarto` on the ubuntu build machine
+    3. use `quarto render` to build the website 
+    4. the workflow artifacts (a tar archive of the rendered website files) are uploaded to a temporary server
+    4. deploy the artifacts (rendered website) to the github pages URL
 
 ## Gitpod Development Environment
 
-DevOps for Data Science labs [github repository](https://github.com/jennylsmith/do4ds_labs) using
+I am working on the [DevOps for Data Science](https://do4ds.com/) lab exercises and recording the work in a [github repository](https://github.com/jennylsmith/do4ds_labs) using
 
 -   environment is generated directly from a clone of the public repository
 -   a containerized environment is then built using Docker, which is orchestrated by GitPod Desktop
