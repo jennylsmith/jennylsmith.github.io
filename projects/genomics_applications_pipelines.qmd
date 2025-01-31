@@ -125,9 +125,10 @@ Additional details about technical skills, including course completion or course
 -   [**codecademy**](https://www.codecademy.com/users/jennylsmith/achievements)
 
     -   SQL programming course
+        -   Introduction to SQL Queries and relational databases
         -   Completed: Nov 2024
     -   Introduction to Linux: Users and Permissions
-        -   A review for me
+        -   Useful refresher course 
         -   Completed: Jan 2025
 
 
