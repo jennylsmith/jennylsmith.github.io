@@ -13,10 +13,11 @@ on:
 
 # Debugging log info
 # https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows/enabling-debug-logging
+
+# temporarily use conditional statement to skip PR while troubleshooting
 env:
-  ACTIONS_STEP_DEBUG: true
-  
-  
+  RUN_PR_STEP: false
+
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
@@ -65,12 +66,13 @@ jobs:
         with:
           path: ./docs
 
-  # pull request 
+  # pull request
   pull_request:
+    if: ${{ env.RUN_PR_STEP }}
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: checkout  
+      - name: checkout
         uses: actions/checkout@v4
       - name: create pull request
         id: cpr
@@ -82,20 +84,20 @@ jobs:
           assignees: jennylsmith
           reviewers: jennylsmith
         
-  # # deploy job
-  # deploy:
-  #   # Add a dependency to the job
-  #   needs: build
-  #   # add and if statement later? ${{ github.event.repository.default_branch }}
-  #   # Deploy to the github-pages environment
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  # 
-  #   # Specify runner 
-  #   runs-on: ubuntu-latest
-  #   # deploy to gh pages
-  #   steps:
-  #     - name: deploy to GitHub pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4 
+  # deploy job
+  deploy:
+    # Add a dependency to the job
+    needs: build
+    # add and if statement later? ${{ github.event.repository.default_branch }}
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # Specify runner
+    runs-on: ubuntu-latest
+    # deploy to gh pages
+    steps:
+      - name: deploy to GitHub pages
+        id: deployment
+        uses: actions/deploy-pages@v4
