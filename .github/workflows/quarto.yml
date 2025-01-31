@@ -15,8 +15,15 @@ on:
 # https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows/enabling-debug-logging
 
 # temporarily use conditional statement to skip PR while troubleshooting
-env:
-  RUN_PR_STEP: ${{ false }}
+# env: A map of variables that are available to the steps of all jobs in the workflow. 
+    # The env context contains variables that have been set in a workflow, job, or step.
+# env:
+#   RUN_PR_STEP: "${{ false }}"
+
+# The vars context contains custom configuration variables set at the organization, repository, and environment levels. 
+# repository or environment variables can be set on Github or the GH Actions extension in VSCode
+# https://github.com/jennylsmith/jennylsmith.github.io/settings/variables/actions
+# if statements can only access thse expression contexts: github, inputs, vars, needs
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -68,7 +75,7 @@ jobs:
 
   # pull request
   pull_request:
-    if: ${{ env.RUN_PR_STEP }}
+    if: ${{ vars.RUN_PR_STEP }}
     needs: build
     runs-on: ubuntu-latest
     steps:
