@@ -34,7 +34,7 @@ The [Data Viz](../projects/data_visualization.html) section is an overview some 
 
 -   Noort, S., Zimmermann, M., Reinhardt, D., Cuccuini, W., Pigazzi, M., **Smith, J.**, … Zwaan, C. M. Prognostic impact of t(16;21)(p11;q22) and t(16;21)(q24;q22) in pediatric AML: a retrospective study by the I-BFM Study Group. *Blood* **2018.** [DOI:10.1182/blood-2018-05-849059](10.1182/blood-2018-05-849059)
 
-\* Indicate co-first authorship 
+\* Indicates co-first authorship 
 
 **[Additional Publications](https://orcid.org/0000-0003-0402-2779)**
 
