@@ -51,7 +51,7 @@ format:
       margin-width:	200px
       gutter-width:	1em
     toc: true
-    toc-depth: 3
+    toc-depth: 1
     link-external-newwindow: true
 
 
