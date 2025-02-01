@@ -75,7 +75,7 @@ jobs:
 
   # pull request
   pull_request:
-    if: ${{ vars.RUN_PR_STEP }}
+    if: ${{ vars.RUN_PR_STEP == true }}
     needs: build
     runs-on: ubuntu-latest
     steps:
