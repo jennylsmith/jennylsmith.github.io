@@ -7,7 +7,7 @@ about:
   - icon: github
     text: github
     url: "https://github.com/jennylsmith"
-  - text: "{{< fa solid road title='An envelope' >}} roadmap.sh"
+  - text: "{{< fa solid road title='' >}} roadmap.sh"
     url: "https://roadmap.sh/u/jennylsmith"
   - icon: linkedin
     text: linkedin
@@ -15,6 +15,9 @@ about:
   - icon: book
     text: publications
     url: "https://orcid.org/0000-0003-0402-2779"
+  - icon: journal-album
+    text: Web of Science
+    url: "https://www.webofscience.com/wos/author/record/MDT-4599-2025"
 ---
 
 >  Computational biologist and R programmer applying methods in data science and data engineering to biomedical research. 
