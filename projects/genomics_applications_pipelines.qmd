@@ -9,15 +9,34 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 
 ### 1. Cut and Run Nextflow workflow
 
--   Custom pipeline developed from nf-core workflow template and uses most nf-core best practices
+-   Custom pipeline developed from nf-core workflow template and uses most nf-core best practices.
 
--   Bowtie2 alignment, quality trimming of reads with trimgalore, SEACR peak calling, and optionally MACS2 peak calling. MACS2 requires an effective genome size to call peaks, which you can provide directly or call unique-kmers.py to calculate the effective genome size on the fly. Coverage tracks are produced for visualization in IGV.
+
+::: {.a class=details data-bs-toggle="collapse" data-bs-target="#CNR" }
+<!-- the syntax above  `::: {.a class=details data-bs-toggle="collapse" data-bs-target="#CNR" } Show Details :::` is equivalent to the the html below -->
+<!-- <a class=details data-bs-toggle="collapse" data-bs-target="#CNR">Show Details</a> -->
+Show Details
+:::
+
+
+::: {.collapse id="CNR"}
+
+<!-- the syntax above from `::: {.[html class name] [html attribute id]="XYZ" } TEXT HERE :::` is equivalent to the html below -->
+<!-- <div class="collapse" id="CNR"> </div>  -->
+
+-   Performs Bowtie2 alignment, quality trimming of reads with trimgalore, SEACR peak calling, and optionally MACS2 peak calling. 
+
+-   MACS2 requires an effective genome size to call peaks, which can be provided directly in `nextflow.config` or use `unique-kmers.py` to calculate the effective genome size on the fly. 
+
+-   Coverage tracks are produced for visualization in IGV.
 
 -   Performs general QC statistics on the fastqs with fastqc, the alignment, peak calling, and sample similarity using deeptools. Finally, the QC reports are collected into a single file using multiQC.
 
--   Fully documented using parameterized Rmd that knits to HTML and github markdown formats.
+::: 
 
--   Integrated for CI/CD with Atlassian bamboo agent to run functional tests using small toy datasets and re-build documentation.
+-    Documented using parameterized Rmd that knits to HTML and github markdown formats.
+
+-   CI/CD with Atlassian bamboo agent for functional tests using small toy datasets and to re-build documentation.
 
 -   Public version can be found [here](https://github.com/RSC-RP/cutandrun_nf/tree/main), but most recent releases are private repos at SCRI bitbucket.
 
@@ -25,25 +44,47 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 
 ### 2. RNA-seq Quantification Nextflow workflow
 
--   Custom pipeline developed from nf-core workflow template and uses most nf-core best practices
+-   Custom RNA-seq alignment and quantification pipeline developed using nf-core tools and uses most nf-core best practices.
 
--   Designed to output gene expression counts from bulk RNA-seq using STAR aligner using --quantmode. It will also perform general QC statistics on the fastqs with fastqc and the alignment using rseqc. Finally, the QC reports are collected into a single file using multiQC.
+::: {.a class=details data-bs-toggle="collapse" data-bs-target="#QUANT" }
+Show Details
+:::
 
--   Fully documented using parameterized Rmd that knits to HTML and github markdown formats.
+::: {.collapse id="QUANT"}
+
+-   Designed to output gene expression counts from bulk RNA-seq using `STAR` aligner using `--quantmode`.
+
+-   Performs general QC statistics on the fastqs with `fastqc` and the alignment using `rseqc`. 
+
+-   Finally, the QC reports are collected into a single file using `multiQC`.
+
+:::
+
+-  Documented using parameterized Rmd that knits to HTML and github markdown formats.
 
 -   Public version can be found [here](https://github.com/RSC-RP/rnaseq_count_nf), but most recent releases are private repos at SCRI bitbucket.
 
 ![DAG of RNAseq Pipeline](https://github.com/RSC-RP/rnaseq_count_nf/raw/main/images/dag.png)
 
+
+
 ### 3. RNA-seq Fusion Detection Nextflow workflow
 
--   Custom pipeline developed using DSL2 syntax with module files.
+-   Custom RNA-seq pipeline to detect fusion transcripts developed using Nextflow DSL2 syntax.
+
+::: {.a class=details data-bs-toggle="collapse" data-bs-target="#FUSIONS" }
+Show Details
+:::
+
+::: {.collapse id="FUSIONS"}
 
 -   Bulk RNA-seq fusion detection pipeline with `STAR` aligner, `STAR-Fusion`, and `Fusion-Inspector`. This includes the most relevant output files, such as SJ.out.tab, aligned.bam, and chimeric.junctions.tab, and the fusion inspector HTML report.
 
 -   The workflow also includes the `CICERO` fusion detection algorithm that is run using the aligned.bam from STAR-aligner output.
 
 -   In addition, the fastq files undergo quality control checks and a multiQC report.
+
+:::
 
 -   Configured for SLURM, PBS pro, and AWS batch executors with containerized software. Outputs can be saved locally or configured to upload data to AWS S3 buckets.
 
