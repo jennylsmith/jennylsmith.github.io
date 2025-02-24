@@ -32,14 +32,14 @@ website:
             href: projects/genomics_applications_pipelines.qmd
           - text: "Select publications"
             href: projects/publications.qmd
-  sidebar:
-    - text: "Resume"
-      id: "Resume"
-    - tools:
-      - icon: filetype-pdf
-        menu:
-          - text: resume pdf
-            href: resume/jlsmith_resume.pdf
+  # sidebar:
+  #   - text: "Resume"
+  #     id: "Resume"
+  #   - tools:
+  #     - icon: filetype-pdf
+  #       menu:
+  #         - text: resume pdf
+  #           href: resume/jlsmith_resume.pdf
 format:
   html:
     theme: 
@@ -51,7 +51,7 @@ format:
       margin-width:	200px
       gutter-width:	1em
     toc: true
-    toc-depth: 3
+    toc-depth: 1
     link-external-newwindow: true
 
 

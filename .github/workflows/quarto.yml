@@ -5,11 +5,25 @@ on:
   # Triggers the workflow on push or pull request events but only for the specified branches
   push:
     branches: [ "main", "dev" ]
-  pull_request:
-    branches: [ "main", "dev" ]
+  # pull_request:
+  #   branches: [ "main", "dev" ]
 
   # # Allows you to run this workflow manually from the Actions tab
   # workflow_dispatch:
+
+# Debugging log info
+# https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows/enabling-debug-logging
+
+# temporarily use conditional statement to skip PR while troubleshooting
+# env: A map of variables that are available to the steps of all jobs in the workflow. 
+    # The env context contains variables that have been set in a workflow, job, or step.
+# env:
+#   RUN_PR_STEP: "${{ false }}"
+
+# The vars context contains custom configuration variables set at the organization, repository, and environment levels. 
+# repository or environment variables can be set on Github or the GH Actions extension in VSCode
+# https://github.com/jennylsmith/jennylsmith.github.io/settings/variables/actions
+# if statements can only access thse expression contexts: github, inputs, vars, needs
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -22,6 +36,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  pull-requests: write
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -57,10 +72,28 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs
-          
-# deploy job
+
+  # pull request
+  pull_request:
+    if: ${{ vars.RUN_PR_STEP == true }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: create pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "merge dev into main"
+          branch: dev
+          base: pr_actions_test
+          assignees: jennylsmith
+          reviewers: jennylsmith
+        
+  # deploy job
   deploy:
-    # Add a dependency to the build job
+    # Add a dependency to the job
     needs: build
     # add and if statement later? ${{ github.event.repository.default_branch }}
     # Deploy to the github-pages environment
@@ -68,10 +101,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    # Specify runner 
+    # Specify runner
     runs-on: ubuntu-latest
     # deploy to gh pages
     steps:
       - name: deploy to GitHub pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4

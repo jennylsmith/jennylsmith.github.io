@@ -9,35 +9,74 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 
 ### 1. Cut and Run Nextflow workflow
 
--   Custom pipeline developed from nf-core workflow template and uses most nf-core best practices
+-   Custom pipeline developed from nf-core workflow template and uses most nf-core best practices.
 
--   Bowtie2 alignment, quality trimming of reads with trimgalore, SEACR peak calling, and optionally MACS2 peak calling. MACS2 requires an effective genome size to call peaks, which you can provide directly or call unique-kmers.py to calculate the effective genome size on the fly. Coverage tracks are produced for visualization in IGV.
+
+::: {.a class=details data-bs-toggle="collapse" data-bs-target="#CNR" }
+<!-- the syntax above  `::: {.a class=details data-bs-toggle="collapse" data-bs-target="#CNR" } Show Details :::` is equivalent to the the html below -->
+<!-- <a class=details data-bs-toggle="collapse" data-bs-target="#CNR">Show Details</a> -->
+Show Details
+:::
+
+
+::: {.collapse id="CNR"}
+
+<!-- the syntax above from `::: {.[html class name] [html attribute id]="XYZ" } TEXT HERE :::` is equivalent to the html below -->
+<!-- <div class="collapse" id="CNR"> </div>  -->
+
+-   Performs Bowtie2 alignment, quality trimming of reads with trimgalore, SEACR peak calling, and optionally MACS2 peak calling. 
+
+-   MACS2 requires an effective genome size to call peaks, which can be provided directly in `nextflow.config` or use `unique-kmers.py` to calculate the effective genome size on the fly. 
+
+-   Coverage tracks are produced for visualization in IGV.
 
 -   Performs general QC statistics on the fastqs with fastqc, the alignment, peak calling, and sample similarity using deeptools. Finally, the QC reports are collected into a single file using multiQC.
 
--   Fully documented using parameterized Rmd that knits to HTML and github markdown formats.
+::: 
 
--   Integrated for CI/CD with Atlassian bamboo agent to run functional tests using small toy datasets and re-build documentation.
+-    Documented using parameterized Rmd that knits to HTML and github markdown formats.
+
+-   CI/CD with Atlassian bamboo agent for functional tests using small toy datasets and to re-build documentation.
 
 -   Public version can be found [here](https://github.com/RSC-RP/cutandrun_nf/tree/main), but most recent releases are private repos at SCRI bitbucket.
 
-![](https://github.com/RSC-RP/cutandrun_nf/blob/main/workflow_docs/images/dag.png?raw=true)
+![DAG of Cut&Run Pipeline](https://github.com/RSC-RP/cutandrun_nf/blob/main/workflow_docs/images/dag.png?raw=true)
 
 ### 2. RNA-seq Quantification Nextflow workflow
 
--   Custom pipeline developed from nf-core workflow template and uses most nf-core best practices
+-   Custom RNA-seq alignment and quantification pipeline developed using nf-core tools and uses most nf-core best practices.
 
--   Designed to output gene expression counts from bulk RNA-seq using STAR aligner using --quantmode. It will also perform general QC statistics on the fastqs with fastqc and the alignment using rseqc. Finally, the QC reports are collected into a single file using multiQC.
+::: {.a class=details data-bs-toggle="collapse" data-bs-target="#QUANT" }
+Show Details
+:::
 
--   Fully documented using parameterized Rmd that knits to HTML and github markdown formats.
+::: {.collapse id="QUANT"}
+
+-   Designed to output gene expression counts from bulk RNA-seq using `STAR` aligner using `--quantmode`.
+
+-   Performs general QC statistics on the fastqs with `fastqc` and the alignment using `rseqc`. 
+
+-   Finally, the QC reports are collected into a single file using `multiQC`.
+
+:::
+
+-  Documented using parameterized Rmd that knits to HTML and github markdown formats.
 
 -   Public version can be found [here](https://github.com/RSC-RP/rnaseq_count_nf), but most recent releases are private repos at SCRI bitbucket.
 
-![](https://github.com/RSC-RP/rnaseq_count_nf/raw/main/images/dag.png)
+![DAG of RNAseq Pipeline](https://github.com/RSC-RP/rnaseq_count_nf/raw/main/images/dag.png)
+
+
 
 ### 3. RNA-seq Fusion Detection Nextflow workflow
 
--   Custom pipeline developed using DSL2 syntax with module files. 
+-   Custom RNA-seq pipeline to detect fusion transcripts developed using Nextflow DSL2 syntax.
+
+::: {.a class=details data-bs-toggle="collapse" data-bs-target="#FUSIONS" }
+Show Details
+:::
+
+::: {.collapse id="FUSIONS"}
 
 -   Bulk RNA-seq fusion detection pipeline with `STAR` aligner, `STAR-Fusion`, and `Fusion-Inspector`. This includes the most relevant output files, such as SJ.out.tab, aligned.bam, and chimeric.junctions.tab, and the fusion inspector HTML report.
 
@@ -45,28 +84,110 @@ A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and thr
 
 -   In addition, the fastq files undergo quality control checks and a multiQC report.
 
+:::
+
 -   Configured for SLURM, PBS pro, and AWS batch executors with containerized software. Outputs can be saved locally or configured to upload data to AWS S3 buckets.
 
 -   Public version can be found [here](https://github.com/RSC-RP/bulk_rnaseq_fusion_nf), but most recent releases are private repos at SCRI bitbucket.
 
+![STAR Fusion Algorithm](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs13059-019-1842-9/MediaObjects/13059_2019_1842_Fig1_HTML.png?as=webp){width="40%"}
 
-Other nextflow pipelines generated with nextflow and nf-core tools include CutandRun heatmaps (AKA tornado plots), VCF variant annotations, and splitting ATAC-seq bams by fragment size.   
+### Other Pipelines
+
+Other nextflow pipelines generated with nextflow and nf-core tools include:
+
+-   CutandRun and Chip-seq heatmaps (AKA tornado plots - see Figure below)
+
+-   VCF variant annotation
+
+-   splitting ATAC-seq bams by fragment size
+
+![Tornado Plots (Figure C,D,E)](https://ars.els-cdn.com/content/image/1-s2.0-S109727652100753X-gr1.jpg){width="50%"}
+
+# CI/CD and Reproducible Development Environments
+
+Use of [Github actions](https://github.com/features/actions) and [Gitpod](https://www.gitpod.io/) with DevContainers to automate tasks, like testing and building of applications or websites, as well as create shareable and reproducible development environments.
+
+Reproducible development environments allow team members to actively contribute to a shared code repository, each each team member using an identical compute environment by enabling the use of a containerized environment with [devcontainers](https://containers.dev/).
+
+## Github Actions
+
+Personal website found [here](https://github.com/jennylsmith/jennylsmith.github.io)
+
+-   Uses a 'on push' trigger with github hosted runners
+    1. the repository is checked out and cloned on the remote the ubuntu build machine (a gh hosted runner)
+    2. install `quarto` on the ubuntu build machine
+    3. use `quarto render` to build the website 
+    4. the workflow artifacts (a tar archive of the rendered website files) are uploaded to a temporary server
+    4. deploy the artifacts (rendered website) to the github pages URL
+
+## Gitpod Development Environment
+
+I am working on the [DevOps for Data Science](https://do4ds.com/) lab exercises and recording the work in a [github repository](https://github.com/jennylsmith/do4ds_labs) using
+
+-   environment is generated directly from a clone of the public repository
+-   a containerized environment is then built using Docker, which is orchestrated by GitPod Desktop
+-   automations are used to install required dependencies:
+    -   a reproducible R environment is managed with Renv package to install R packages
+    -   a reproducible Python environment is managed with venv library to install python packages
+-   the entire project and identical compute environment can be collaboratively developed using this [link](https://app.gitpod.io/projects?project=01934c12-4d07-7185-bcb1-cce2999becda)
+
+
+# Technical Skills and Courses
+
+Additional details about technical skills, including course completion or course progress:
+
+-   [**roadmap.sh**](https://roadmap.sh/u/jennylsmith)
+
+    -   Git and Github
+
+    -   Docker
+
+    -   Linux
+
+    -   Python
+
+    -   SQL
+
+    -   AI and Data Scientist
+
+    -   Data Analyst
+
+-   [**freecodecamp**](https://www.freecodecamp.org/jennylsmith)
+
+    -   [Postgres SQL Database](https://github.com/jennylsmith/worldcup_database) for Toy Worldcup Data
+
+    -   [Postgres SQL Database](https://github.com/jennylsmith/student_database) for Toy Student Data
+
+    -   [Postgres SQL Database](https://github.com/jennylsmith/celestial_bodies_db) for Toy Intergalactic Data
+
+    -   Additional course/module completions listed in my profile
+
+-   [**codecademy**](https://www.codecademy.com/users/jennylsmith/achievements)
+
+    -   SQL programming course
+        -   Introduction to SQL Queries and relational databases
+        -   Completed: Nov 2024
+    -   Introduction to Linux: Users and Permissions
+        -   Useful refresher course 
+        -   Completed: Jan 2025
+
 
 # Hackathon Projects
 
--   2024 NF-Core Nextflow Hackathon
+-   **2024** NF-Core Nextflow Hackathon
 
     -   Created institutional profile on [nf-core github](https://github.com/nf-core/configs)
 
     -   Added nf-validation tests to gunzip modules
 
--   2021 Bringing Genomics Data to the Clinic Hackathon
+-   **2021** Bringing Genomics Data to the Clinic Hackathon
 
     -   [Project link](https://osf.io/afc7n/)
 
     -   [Github repository](https://github.com/collaborativebioinformatics/snpReportR)
 
--   2018 Consensus Machine Learning for Gene Target Selection in Pediatric AML Risk: NCBI Hackathon
+-   **2018** Consensus Machine Learning for Gene Target Selection in Pediatric AML Risk: NCBI Hackathon
 
     -   [Manuscript](https://doi.org/10.1101/632166)
 
@@ -88,9 +209,8 @@ Other nextflow pipelines generated with nextflow and nf-core tools include Cutan
 
 # Bioinformatics / Statistical Analysis Notebooks
 
-The analysis notebooks (primarily Rmarkdown) for all analyses from Fred Hutch can be found at [Meshinchi Lab](https://github.com/Meshinchi-Lab). Selected analysis notebooks and scripts from SCRI are hosted at [Research Scientific Computing](https://github.com/RSC-RP) github repository. 
+The analysis notebooks (primarily Rmarkdown) for all analyses from Fred Hutch can be found at [Meshinchi Lab](https://github.com/Meshinchi-Lab). Selected analysis notebooks and scripts from SCRI are hosted at [Research Scientific Computing](https://github.com/RSC-RP) github repository.
 
 # References
 
 These pipelines and tools were used to reproducibly process data for many of the published journal articles on projects I supported. See the [publications page](../projects/publications.html) for details.
-

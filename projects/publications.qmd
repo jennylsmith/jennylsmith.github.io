@@ -12,9 +12,15 @@ The [Data Viz](../projects/data_visualization.html) section is an overview some 
 ::: panel-tabset
 # Selected Publications
 
+-   Zanghí, G.\*, Patel, H.\*, **Smith, J.L.\***, .. Vaughan, A. M. and  Kappe, S. H. I.. Genome-wide gene expression profiles throughout human malaria parasite liver stage development in humanized mice. *Nature Microbiology*. **2025**. [DOI:https://doi.org/10.1038/s41564-024-01905-5](https://doi.org/10.1038/s41564-024-01905-5)
+
 -   Bertrums, E. J. M.\*,**Smith, J. L.\*** , Harmon, L.\*, … Meshinchi, S. Comprehensive molecular and clinical characterization of NUP98 fusions in pediatric acute myeloid leukemia. *Haematologica*. **2023.** [DOI:10.3324/haematol.2022.281653](https://doi.org/10.3324/haematol.2022.281653)
 
 -   Farrar, J. E., **Smith, J. L.**, … Meshinchi, S. Long Noncoding RNA Expression Independently Predicts Outcome in Pediatric Acute Myeloid Leukemia. *Journal of Clinical Oncology*. **2023.** [DOI:10.1200/jco.22.01114](https://doi.org/10.1200/JCO.22.01114)
+
+- Chisholm, K. M., **Smith, J.**, Heerema-McKenney, A. E., ... Meshinchi, S., & Kahwash, S. B. Pathologic, cytogenetic, and molecular features of acute myeloid leukemia with megakaryocytic differentiation: A report from the Children's Oncology Group. *Pediatric blood & cancer*. **2023** [DOI:10.1002/pbc.30251](https://doi.org/10.1002/pbc.30251)
+
+- Huang, B.J., **Smith, J.L.**, Farrar, J.E. ... Meshinchi, S. Integrated stem cell signature and cytomolecular risk determination in pediatric acute myeloid leukemia. *Nature Communications*. **2022**. [DOI:10.1038/s41467-022-33244-6](https://doi.org/10.1038/s41467-022-33244-6)
 
 - Le, Q., Hadland, B., **Smith, J. L.**, … Meshinchi, S. CBFA2T3-GLIS2 model of pediatric acute megakaryoblastic leukemia identifies FOLR1 as a CAR T cell target. *Journal of Clinical Investigation*. **2022**. [DOI:10.1172/jci157101](https://doi.org/10.1172/JCI157101)
 
@@ -27,6 +33,8 @@ The [Data Viz](../projects/data_visualization.html) section is an overview some 
 -   **Smith, J. L.**, Ries, R. E., Hylkema, T., Alonzo, T. A, … Meshinchi, S. Comprehensive Transcriptome Profiling of Cryptic CBFA2T3-GLIS2 Fusion-positive AML Defines Novel Therapeutic Options – A COG and TARGET Pediatric AML Study. *Clinical Cancer Research* **2019**. [DOI:10.1158/1078-0432.CCR-19-1800](10.1158/1078-0432.CCR-19-1800)
 
 -   Noort, S., Zimmermann, M., Reinhardt, D., Cuccuini, W., Pigazzi, M., **Smith, J.**, … Zwaan, C. M. Prognostic impact of t(16;21)(p11;q22) and t(16;21)(q24;q22) in pediatric AML: a retrospective study by the I-BFM Study Group. *Blood* **2018.** [DOI:10.1182/blood-2018-05-849059](10.1182/blood-2018-05-849059)
+
+\* Indicates co-first authorship 
 
 **[Additional Publications](https://orcid.org/0000-0003-0402-2779)**
 
@@ -42,7 +50,9 @@ The [Data Viz](../projects/data_visualization.html) section is an overview some 
 
 -   **American Society for Hematology**, oral presentation on Comprehensive Transcriptome Profiling of Cryptic CBFA2T3-GLIS2 Fusion-Positive AML Defines Novel Therapeutic Options — a COG and Target Pediatric AML Study (San Diego, CA, 2018). [DOI](https://doi.org/10.1182/blood-2018-99-115544).
 
--   **American Society for Hematology**, oral presentation on The LSC17 Leukemic Stem Cell Signature Predicts Outcome in Pediatric Acute Myeloid Leukemia. Abstract Achievement Award Recipient (Atlanta, GA, 2017). [DOI](https://doi.org/10.1182/blood.V130.Suppl_1.24.24).
+-   **American Society for Hematology**, oral presentation on The LSC17 Leukemic Stem Cell Signature Predicts Outcome in Pediatric Acute Myeloid Leukemia. Abstract Achievement Award Recipient (Atlanta, GA, 2017). [link](https://ashpublications.org/blood/article/130/Supplement%201/24/80135/The-LSC17-Leukemic-Stem-Cell-Signature-Predicts)
+
+<!-- (https://doi.org/10.1182/blood.V130.Suppl_1.24.24). the DOI listed is actually broken on ASH website -->
 :::
 
 ### Other Presentations

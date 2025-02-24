@@ -5,10 +5,16 @@ $nav-tabs-border-width: 2px;
 $nav-tabs-link-active-border-color: black;
 
 /*-- scss:rules --*/
+
 table, th, td {
   border: 1px solid black;
   padding: 7px;
   text-align: left;
+}
+
+/*https://stackoverflow.com/questions/17584132/css-styling-for-all-cells-in-a-table*/
+#tabset-1-2 p, ul {
+  margin-bottom: 0.3rem;
 }
 
 .bi-filetype-pdf {
@@ -30,15 +36,20 @@ h1.title, .title.h1 {
   font-style: italic;
   font-weight: 900;
   font-size: medium;
-  nav-tabs-border-color: black;
-  nav-tabs-border-width: 2px;
   border-bottom: black;
 }
 
+#data-viz .nav-link.active {
+    display: block;
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+
 .sidebar-navigation {
-  padding-left: 10px;
+  padding-left: 1px;
   margin: 0px;
-  max-width: 125px;
+  /*max-width: 125px;*/
 }
 
 .hr-dark {
@@ -49,13 +60,17 @@ h1.title, .title.h1 {
     opacity: 0.75;
 }
 
+.details {
+  color: cornflowerblue;
+  padding-inline-start: 40px;
+}
+
+// .collapse-details {
+//   margin: 1rem 0;
+// }
+
 /*.sidebar-navigation li a {
     text-decoration: none;
     position: relative;
 }*/
 
-/*  --bs-nav-tabs-border-width: 2px;
-  --bs-nav-tabs-border-color: black;
-  --bs-nav-tabs-link-hover-border-color: black;
-  --bs-nav-tabs-link-active-border-color: black;*/
-  
