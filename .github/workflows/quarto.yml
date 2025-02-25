@@ -48,14 +48,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       QUARTO_VERSION: 1.5.57
+      OUTPUT_DIR: docs
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Cache Artifacts
-        id: cache-artifacts
-        uses: actions/cache@v4
-        with:
-          path: ./docs
-          key: ${{ steps.artifact.outputs.artifact_id }}-key
       
       # checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout  
@@ -65,7 +60,14 @@ jobs:
       - name: setup pages
         id: pages
         uses: actions/configure-pages@v5
-        
+      
+      - name: Cache Artifacts
+        id: cache-artifacts
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.OUTPUT_DIR }}
+          key: ${{ hashFiles(**/*.*) }}-key
+
       # install quarto
       - name: install quarto CLI
         if: steps.cache-artifacts.outputs.cache-hit != 'true'
@@ -80,15 +82,16 @@ jobs:
         
       # upload the rendered website (artifact)
       - name: upload artifact
-        if: steps.cache-artifacts.outputs.cache-hit != 'true'
         id: artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs
+          path: ${{ env.OUTPUT_DIR }}
       
-      - name: generate cache key 
-        id: cache-key
-        run: echo ${{ steps.artifact.outputs.artifact_id }} > ./docs/${{ steps.artifact.outputs.artifact_id }}-key
+      # - name: generate cache key 
+      #   if: steps.cache-artifacts.outputs.cache-hit != 'true'
+      #   id: cache-key
+      #   run: echo ${{ steps.artifact.outputs.artifact_id }} > ./$OUTPUT_DIR/${{ steps.artifact.outputs.artifact_id }}-key
+      
 
   # pull request
   # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
