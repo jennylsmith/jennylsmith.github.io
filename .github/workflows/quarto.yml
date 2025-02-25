@@ -50,53 +50,73 @@ jobs:
       QUARTO_VERSION: 1.5.57
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # install quarto
-      - name: install quarto CLI
-        run: |
-          wget -O ${{ runner.temp }}/quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/quarto.deb
+      - name: Cache Artifacts
+        id: cache-artifacts
+        uses: actions/cache@v4
+        with:
+          path: ./docs
+          key: ${{ steps.artifact.outputs.artifact_id }}-key
       
       # checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout  
         uses: actions/checkout@v4
-      
+    
       # setup gh pages
       - name: setup pages
         id: pages
         uses: actions/configure-pages@v5
+        
+      # install quarto
+      - name: install quarto CLI
+        if: steps.cache-artifacts.outputs.cache-hit != 'true'
+        run: |
+          wget -O ${{ runner.temp }}/quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/quarto.deb
       
       # render the website 
       - name: render website
+        if: steps.cache-artifacts.outputs.cache-hit != 'true'
         run: quarto render
         
       # upload the rendered website (artifact)
       - name: upload artifact
+        if: steps.cache-artifacts.outputs.cache-hit != 'true'
+        id: artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs
+      
+      - name: generate cache key 
+        id: cache-key
+        run: echo ${{ steps.artifact.outputs.artifact_id }} > ./docs/${{ steps.artifact.outputs.artifact_id }}-key
 
   # pull request
   # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
-  pull_request:
-    if: ${{ github.ref_name == 'dev_pr_test' }}
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: dev
-    steps:
-      - name: checkout
-        uses: actions/checkout@v4
-        with:
-          ssh-key: ${{ secrets.SSH_WEBSITE_KEY }}
-          ref: main_pr_test
-      - name: create-pull-request
-        id: cpr
-        uses: peter-evans/create-pull-request@v7
-        with:
-          commit-message: merge dev into main
-          title: PR from ${{ github.run_id }}
-          draft: always-true
-          branch: ${{ github.ref }}
+  # pull_request:
+  #   if: ${{ github.ref_name == 'dev_pr_test' }}
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   environment:
+  #     name: dev
+  #   steps:
+  #     - name: checkout
+  #       uses: actions/checkout@v4
+  #       with:
+  #         ssh-key: ${{ secrets.SSH_WEBSITE_KEY }}
+  #         ref: main_pr_test
+  #     - name: gh-cli-auth
+  #       run: gh --version
+      # - name: gh-cli-pr
+      #   run:
+
+      # - name: create-pull-request
+      #   id: cpr
+      #   uses: peter-evans/create-pull-request@v7
+      #   with:
+      #     commit-message: merge dev into main
+      #     title: PR from ${{ github.run_id }}
+      #     draft: always-true
+      #     branch: ${{ github.ref }}
 
   # deploy job
   deploy:
