@@ -77,8 +77,8 @@ jobs:
 
   # pull request
   # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
+  # if: ${{ vars.RUN_PR_STEP == 'true' }}
   pull_request:
-    if: ${{ vars.RUN_PR_STEP == 'true' }}
     needs: build
     runs-on: ubuntu-latest
     environment:
