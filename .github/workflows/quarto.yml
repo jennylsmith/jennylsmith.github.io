@@ -63,18 +63,6 @@ jobs:
       - name: setup pages
         id: pages
         uses: actions/configure-pages@v5
-      
-      # cache rendered website artifacts
-      - name: Cache Artifacts
-        id: cache-artifacts
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.OUTPUT_DIR }}
-          key: ${{ github.ref_name }}-${{ hashFiles(env.CACHE_PATH) }}-key
-
-      - name: check outputs
-        run: |
-          echo the cache hit output is: ${{ steps.cache-artifacts.outputs.cache-hit }}
 
       # install quarto
       - name: install quarto CLI
@@ -94,12 +82,14 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ env.OUTPUT_DIR }}
-      
-      # - name: generate cache key 
-      #   if: steps.cache-artifacts.outputs.cache-hit != 'true'
-      #   id: cache-key
-      #   run: echo ${{ steps.artifact.outputs.artifact_id }} > ./$OUTPUT_DIR/${{ steps.artifact.outputs.artifact_id }}-key
-      
+        
+      # cache rendered website artifacts
+      - name: Cache Artifacts
+        id: cache-artifacts
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ env.OUTPUT_DIR }}
+          key: ${{ github.ref_name }}-${{ hashFiles(env.CACHE_PATH) }}-key
 
   # pull request
   # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
