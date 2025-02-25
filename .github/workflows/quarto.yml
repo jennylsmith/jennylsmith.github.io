@@ -47,7 +47,6 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
-      ACTIONS_RUNNER_DEBUG: "true"
       QUARTO_VERSION: 1.5.57
       OUTPUT_DIR: docs
       CACHE_PATH: '**/docs/*.*'
@@ -63,6 +62,13 @@ jobs:
       - name: setup pages
         id: pages
         uses: actions/configure-pages@v5
+      
+      - name: restore artifacts
+        id: cache-artifacts
+        uses: actions/cache/restore@v4
+        with: 
+          path: ${{ env.OUTPUT_DIR }}
+          key: ${{ github.ref_name }}-${{ hashFiles(env.CACHE_PATH) }}-key
 
       # install quarto
       - name: install quarto CLI
@@ -85,7 +91,7 @@ jobs:
         
       # cache rendered website artifacts
       - name: Cache Artifacts
-        id: cache-artifacts
+        id: create-cache
         uses: actions/cache/save@v4
         with:
           path: ${{ env.OUTPUT_DIR }}
@@ -93,20 +99,20 @@ jobs:
 
   # pull request
   # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
-  # pull_request:
-  #   if: ${{ github.ref_name == 'dev_pr_test' }}
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   environment:
-  #     name: dev
-  #   steps:
-  #     - name: checkout
-  #       uses: actions/checkout@v4
-  #       with:
-  #         ssh-key: ${{ secrets.SSH_WEBSITE_KEY }}
-  #         ref: main_pr_test
-  #     - name: gh-cli-auth
-  #       run: gh --version
+  pull_request:
+    if: ${{ github.ref_name == 'dev_pr_test' }}
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.SSH_WEBSITE_KEY }}
+          ref: main_pr_test
+      - name: gh-cli-auth
+        run: gh --version
       # - name: gh-cli-pr
       #   run:
 
