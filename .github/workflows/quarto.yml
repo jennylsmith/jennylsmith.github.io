@@ -86,10 +86,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.PAT }}
-          repository: jennylsmith/jennylsmith.github.io
-      
+
       - name: vars_example
         run: |
             echo the vars context value is ${{ vars.RUN_PR_STEP }}
