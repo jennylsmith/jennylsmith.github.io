@@ -88,6 +88,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ssh-key: ${{ secrets.SSH_WEBSITE_KEY }}
+          ref: main_pr_test
       - name: create-pull-request
         id: cpr
         uses: peter-evans/create-pull-request@v7
@@ -95,7 +96,7 @@ jobs:
           commit-message: merge dev into main
           title: PR from ${{ github.run_id }}
           draft: always-true
-          branch: main_pr_test
+          branch: dev_pr_test
 
         
   # deploy job
