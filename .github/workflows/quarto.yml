@@ -101,6 +101,7 @@ jobs:
         
   # deploy job
   deploy:
+    if: ${{ github.ref_name == "dev_pr_test" }}
     # Add a dependency to the job
     needs: build
     # define env vars
