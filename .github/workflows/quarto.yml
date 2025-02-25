@@ -81,23 +81,32 @@ jobs:
     if: ${{ vars.RUN_PR_STEP == true }}
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: dev
+    env:
+      CREATE_PR: ${{ vars.RUN_PR_STEP }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.PAT }}
           repository: jennylsmith/jennylsmith.github.io
+      
+      - name: "vars example"
+          run: |
+            echo the vars context value is ${{ vars.RUN_PR_STEP }}
+            echo the env context value is $CREATE_PR
         
-      - name: create pull request
-        id: cpr
-        uses: peter-evans/create-pull-request@v7
-        with:
-          commit-message: "merge dev into main"
-          base: main_pr_test 
-          branch: dev_pr_test
-          draft: always-true
-          assignees: jennylsmith
-          reviewers: jennylsmith
+      # - name: create pull request
+      #   id: cpr
+      #   uses: peter-evans/create-pull-request@v7
+      #   with:
+      #     commit-message: "merge dev into main"
+      #     base: main_pr_test 
+      #     branch: dev_pr_test
+      #     draft: always-true
+      #     assignees: jennylsmith
+      #     reviewers: jennylsmith
         
   # deploy job
   deploy:
