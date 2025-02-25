@@ -83,8 +83,6 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: dev
-    env:
-      CREATE_PR: ${{ vars.RUN_PR_STEP }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -92,10 +90,12 @@ jobs:
           token: ${{ secrets.PAT }}
           repository: jennylsmith/jennylsmith.github.io
       
-      - name: "vars example"
+      - name: vars_example
         run: |
             echo the vars context value is ${{ vars.RUN_PR_STEP }}
             echo the env context value is $CREATE_PR
+        env:
+          CREATE_PR: ${{ vars.RUN_PR_STEP }}
         
       # - name: create pull request
       #   id: cpr
