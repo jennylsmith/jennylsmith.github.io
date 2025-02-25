@@ -78,7 +78,7 @@ jobs:
   # pull request
   # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
   pull_request:
-    if: ${{ vars.RUN_PR_STEP == 'true' }}
+    if: ${{ github.ref_name == 'dev_pr_test' }}
     needs: build
     runs-on: ubuntu-latest
     environment:
@@ -86,24 +86,18 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.SSH_WEBSITE_KEY }}
+      - name: create-pull-request
+        id: cpr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: merge dev into main
+          title: PR from ${{ github.run_id }}
+          base: main_pr_test 
+          branch: dev_pr_test
+          draft: always-true
 
-      - name: vars_example
-        run: |
-            echo the vars context value is ${{ vars.RUN_PR_STEP }}
-            echo the env context value is $CREATE_PR
-        env:
-          CREATE_PR: ${{ vars.RUN_PR_STEP }}
-        
-      # - name: create pull request
-      #   id: cpr
-      #   uses: peter-evans/create-pull-request@v7
-      #   with:
-      #     commit-message: "merge dev into main"
-      #     base: main_pr_test 
-      #     branch: dev_pr_test
-      #     draft: always-true
-      #     assignees: jennylsmith
-      #     reviewers: jennylsmith
         
   # deploy job
   deploy:
