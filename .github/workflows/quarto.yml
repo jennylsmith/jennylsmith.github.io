@@ -105,8 +105,8 @@ jobs:
     needs: build
     # define env vars
     # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables#default-environment-variables
+    # default env vars are not accessible through the env context
     env:
-      BRANCH: ${{ github.HEAD_REF }}
       ACTIONS_RUNNER_DEBUG: true
     # Deploy to the github-pages environment
     # Settings and variables here: https://github.com/jennylsmith/jennylsmith.github.io/settings/environments
@@ -121,7 +121,7 @@ jobs:
     steps:
       - name: "vars example"
         run: |
-          echo "the gh branch that triggered the workflow is $BRANCH"
+          echo "the gh branch that triggered the workflow is $GITHUB_REF_NAME"
           echo "debug set to $ACTIONS_RUNNER_DEBUG"
       # - name: deploy to GitHub pages
       #   id: deployment
