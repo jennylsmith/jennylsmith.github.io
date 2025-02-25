@@ -5,27 +5,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the specified branches
   push:
     branches: [ "main", "dev", "main_pr_test", "dev_pr_test"]
-  # ready_for_review:
-  #   ["main", "dev", "pr_actions_test", "dev_pr_test"]
-  # pull_request:
-  #   branches: [ "main", "dev" ]
-
   # Allows you to run this workflow manually from the Actions tab or gh CLI
   workflow_dispatch:
-
-# Debugging log info
-# https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows/enabling-debug-logging
-
-# temporarily use conditional statement to skip PR while troubleshooting
-# env: A map of variables that are available to the steps of all jobs in the workflow. 
-    # The env context contains variables that have been set in a workflow, job, or step.
-# env:
-#   RUN_PR_STEP: "${{ false }}"
-
-# The vars context contains custom configuration variables set at the organization, repository, and environment levels. 
-# repository or environment variables can be set on Github or the GH Actions extension in VSCode
-# https://github.com/jennylsmith/jennylsmith.github.io/settings/variables/actions
-# if statements can only access thse expression contexts: github, inputs, vars, needs
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -68,7 +49,7 @@ jobs:
         uses: actions/cache/restore@v4
         with: 
           path: ${{ env.OUTPUT_DIR }}
-          key: ${{ github.ref_name }}-${{ hashFiles(env.CACHE_PATH) }}-key
+          key: ${{ github.ref_name }}-${{ github.sha }}-key
 
       # install quarto
       - name: install quarto CLI
@@ -95,7 +76,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: ${{ env.OUTPUT_DIR }}
-          key: ${{ github.ref_name }}-${{ hashFiles(env.CACHE_PATH) }}-key
+          key: ${{ github.ref_name }}-${{ github.sha }}-key
 
   # pull request
   # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
@@ -105,14 +86,19 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: dev
+    env:
+      BASE: main_pr_test
     steps:
       - name: checkout
         uses: actions/checkout@v4
         with:
-          ssh-key: ${{ secrets.SSH_WEBSITE_KEY }}
+          token: ${{ secrets.GH_PAT }}
           ref: main_pr_test
-      - name: gh-cli-auth
-        run: gh --version
+      - name: gh-cli-pr
+        run: | 
+          gh auth login --with-token < $( echo ${{ secrets.GH_PAT }} ) && \
+          gh pr create -B $BASE -H ${{ github.ref_name }} --title "PR for ${github.sha::7} on RUN_ID ${{ github.run_id }}" --draft && \
+          gh auth logout
       # - name: gh-cli-pr
       #   run:
 
@@ -130,11 +116,6 @@ jobs:
     if: ${{ github.ref_name == 'main' }}
     # Add a dependency to the job
     needs: build
-    # define env vars
-    # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables#default-environment-variables
-    # default env vars are not accessible through the env context
-    env:
-      ACTIONS_RUNNER_DEBUG: true
     # Deploy to the github-pages environment
     # Settings and variables here: https://github.com/jennylsmith/jennylsmith.github.io/settings/environments
     # environment:
@@ -153,3 +134,20 @@ jobs:
       # - name: deploy to GitHub pages
       #   id: deployment
       #   uses: actions/deploy-pages@v4
+
+
+#### NOTES
+
+# Debugging log info
+# https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows/enabling-debug-logging
+
+# temporarily use conditional statement to skip PR while troubleshooting
+# env: A map of variables that are available to the steps of all jobs in the workflow. 
+    # The env context contains variables that have been set in a workflow, job, or step.
+# env:
+#   RUN_PR_STEP: "${{ false }}"
+
+# The vars context contains custom configuration variables set at the organization, repository, and environment levels. 
+# repository or environment variables can be set on Github or the GH Actions extension in VSCode
+# https://github.com/jennylsmith/jennylsmith.github.io/settings/variables/actions
+# if statements can only access thse expression contexts: github, inputs, vars, needs
