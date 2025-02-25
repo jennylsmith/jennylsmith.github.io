@@ -47,8 +47,11 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
+      ACTIONS_RUNNER_DEBUG: true
       QUARTO_VERSION: 1.5.57
       OUTPUT_DIR: docs
+      CACHE_PATH: 'docs/*.*'
+      
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       
@@ -67,7 +70,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.OUTPUT_DIR }}
-          key: ${{ hashFiles('**/$OUTPUT_DIR') }}-key
+          key: ${{ hashFiles(env.CACHE_PATH) }}-key
 
       - name: check outputs
         run: |
