@@ -61,12 +61,17 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       
+      # cache rendered website artifacts
       - name: Cache Artifacts
         id: cache-artifacts
         uses: actions/cache@v4
         with:
           path: ${{ env.OUTPUT_DIR }}
-          key: ${{ hashFiles('**/*.*') }}-key
+          key: ${{ hashFiles('**/$OUTPUT_DIR') }}-key
+
+      - name: check outputs
+        run: |
+          echo the cache hit output is: ${{ steps.cache-artifacts.outputs.cache-hit }}
 
       # install quarto
       - name: install quarto CLI
