@@ -96,8 +96,8 @@ jobs:
           commit-message: merge dev into main
           title: PR from ${{ github.run_id }}
           draft: always-true
+          branch: ${{ github.ref }}
 
-        
   # deploy job
   deploy:
     if: ${{ github.ref_name == 'main' }}
