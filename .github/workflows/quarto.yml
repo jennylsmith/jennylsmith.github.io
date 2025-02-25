@@ -94,8 +94,6 @@ jobs:
         with:
           commit-message: merge dev into main
           title: PR from ${{ github.run_id }}
-          base: main_pr_test 
-          branch: dev_pr_test
           draft: always-true
 
         
