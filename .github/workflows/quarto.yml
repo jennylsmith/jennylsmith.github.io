@@ -97,7 +97,7 @@ jobs:
       - name: gh-cli-pr
         run: | 
           echo ${{ secrets.GH_PAT }} | gh auth login --with-token && \
-          gh pr create -B $BASE -H ${{ github.ref_name }} --title "PR for ${{ github.sha }} on RUN_ID ${{ github.run_id }}" --draft && \
+          gh pr create -B $BASE -H ${{ github.ref_name }} --title "PR for ${{ github.sha }} on RUN_ID ${{ github.run_id }}" --body "PR for ${{ github.sha }}" --draft && \
           gh auth logout
       # - name: gh-cli-pr
       #   run:
