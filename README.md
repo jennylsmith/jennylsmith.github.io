@@ -16,7 +16,7 @@ using the following command in a terminal:
 quarto preview --render all --no-watch-inputs --no-browse
 ```
 
-For new features or fixes, create an issue on github and create a new branch with the changes.
+For new features or fixes, create an issue on github in a new branch.
 
 Then open a pull request using `gh` commandline utility to merge changes into the `dev` branch, like the example below for issue #4.
 
