@@ -55,7 +55,7 @@ jobs:
       - name: install quarto CLI
         if: steps.cache-artifacts.outputs.cache-hit != 'true'
         run: |
-          wget -O ${{ runner.temp }}/quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb \
+          wget -O ${{ runner.temp }}/quarto.deb --quiet https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/quarto.deb
       
       # render the website 
@@ -96,8 +96,8 @@ jobs:
           ref: main_pr_test
       - name: gh-cli-pr
         run: | 
-          gh auth login --with-token < $( echo ${{ secrets.GH_PAT }} ) && \
-          gh pr create -B $BASE -H ${{ github.ref_name }} --title "PR for ${github.sha::7} on RUN_ID ${{ github.run_id }}" --draft && \
+          echo ${{ secrets.GH_PAT }} | gh auth login --with-token && \
+          gh pr create -B $BASE -H ${{ github.ref_name }} --title "PR for ${{ github.sha }} on RUN_ID ${{ github.run_id }}" --draft && \
           gh auth logout
       # - name: gh-cli-pr
       #   run:
