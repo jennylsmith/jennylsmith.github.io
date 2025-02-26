@@ -108,7 +108,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_PAT }}
-          ref: ${{ env.BASE }}-key
+          ref: ${{ env.BASE }}
         
       - name: gh-cli-pr
         run: | 
