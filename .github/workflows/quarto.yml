@@ -74,13 +74,6 @@ jobs:
         if: steps.cache-artifacts.outputs.cache-hit != 'true'
         run: quarto render
         
-      # upload the rendered website (artifact)
-      - name: upload artifact
-        id: artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ${{ env.OUTPUT_DIR }}
-        
       # cache rendered website artifacts
       - name: Cache Artifacts
         id: create-cache
@@ -128,7 +121,7 @@ jobs:
 
     # Specify runner
     runs-on: ubuntu-latest
-    # deploy to gh pages
+    
     steps: 
       - name: restore artifacts
         id: cache-artifacts
@@ -140,7 +133,14 @@ jobs:
       - name: check-vars
         run: |
           ls -alh
-         
+      
+      # upload the rendered website (artifact)
+      # - name: upload artifact
+      #   id: artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: ${{ env.OUTPUT_DIR }}
+      # deploy to gh pages
       # - name: deploy to GitHub pages
       #   id: deployment
       #   uses: actions/deploy-pages@v4
