@@ -61,6 +61,7 @@ jobs:
 
       # check if the artifacts exist already
       - name: restore artifacts
+        if: github.event_name != 'pull_request_target'
         id: artifacts
         uses: actions/cache/restore@v4
         with: 
@@ -81,6 +82,7 @@ jobs:
         
       # cache rendered website artifacts
       - name: Cache Artifacts
+        if: steps.artifacts.outputs.cache-hit != 'true'
         id: create-cache
         uses: actions/cache/save@v4
         with:
@@ -90,7 +92,7 @@ jobs:
   # pull request
   # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
   create_pull_request:
-    # if: ${{ github.ref_name == 'dev_pr_test' }}
+    if: github.event_name != 'pull_request_target'
     needs: build
     runs-on: ubuntu-latest
     environment:
@@ -152,7 +154,7 @@ jobs:
       - name: check-vars
         run: |
           echo event: ${{ github.event_name }} merged: ${{ github.event.pull_request.merged }}
-          env | grep -Ei actions
+          env | grep -Ei "actions|GITHUB_ENV"
           ls -alh 
           ls -alh ${{ env.OUTPUT_DIR }}
       
