@@ -4,7 +4,13 @@ name: quarto-website
 on:
   # Triggers the workflow on push or pull request events but only for the specified branches
   push:
-    branches: [ "main", "dev", "main_pr_test", "dev_pr_test"]
+    branches: 
+      - dev_pr_test
+      - dev*
+      - feat/*
+  pull_request_target: 
+    branches: 
+      - main_pr_test
   # Allows you to run this workflow manually from the Actions tab or gh CLI
   workflow_dispatch:
 
@@ -21,16 +27,24 @@ permissions:
   id-token: write
   pull-requests: write
   
+env:
+  QUARTO_VERSION: 1.5.57
+  OUTPUT_DIR: docs
+  CACHE_PATH: '**/docs/*.*'
+  CACHE_KEY: ${{ github.ref_name }}-key
+  BASE: dev_pr_test
+
+# IDEA: want any push from a feat branch to open PR into dev. that will get merged into dev (2 steps build --> pr):
+# then once PR is merged into dev, want 3 steps build --> pr --> deploy. 
+# but can I / do I want to make the PR automatically merge?
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  # if: github.event_name == 'push'
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    env:
-      QUARTO_VERSION: 1.5.57
-      OUTPUT_DIR: docs
-      CACHE_PATH: '**/docs/*.*'
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -43,13 +57,14 @@ jobs:
       - name: setup pages
         id: pages
         uses: actions/configure-pages@v5
-      
+
+      # check if the artifacts for that commit exist already
       - name: restore artifacts
         id: cache-artifacts
         uses: actions/cache/restore@v4
         with: 
           path: ${{ env.OUTPUT_DIR }}
-          key: ${{ github.ref_name }}-${{ github.sha }}-key
+          key: ${{ env.CACHE_KEY }}
 
       # install quarto
       - name: install quarto CLI
@@ -63,59 +78,43 @@ jobs:
         if: steps.cache-artifacts.outputs.cache-hit != 'true'
         run: quarto render
         
-      # upload the rendered website (artifact)
-      - name: upload artifact
-        id: artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ${{ env.OUTPUT_DIR }}
-        
       # cache rendered website artifacts
       - name: Cache Artifacts
         id: create-cache
         uses: actions/cache/save@v4
         with:
           path: ${{ env.OUTPUT_DIR }}
-          key: ${{ github.ref_name }}-${{ github.sha }}-key
+          key: ${{ env.CACHE_KEY }}
 
   # pull request
   # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
-  pull_request:
-    if: ${{ github.ref_name == 'dev_pr_test' }}
+  create_pull_request:
+    # if: ${{ github.ref_name == 'dev_pr_test' }}
     needs: build
     runs-on: ubuntu-latest
     environment:
       name: dev
-    env:
-      BASE: main_pr_test
+
     steps:
       - name: checkout
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_PAT }}
-          ref: main_pr_test
+          ref: ${{ env.BASE }}
+        
       - name: gh-cli-pr
         run: | 
           echo ${{ secrets.GH_PAT }} | gh auth login --with-token && \
-          gh pr create -B $BASE -H ${{ github.ref_name }} --title "PR for ${{ github.sha }} on RUN_ID ${{ github.run_id }}" --body "PR for ${{ github.sha }}" --draft && \
+          gh pr create -B $BASE -H ${{ github.ref_name }} --title "PR for RUN_ID ${{ github.run_id }}" --body "PR for ${{ github.sha }}" --draft && \
           gh auth logout
-      # - name: gh-cli-pr
-      #   run:
-
-      # - name: create-pull-request
-      #   id: cpr
-      #   uses: peter-evans/create-pull-request@v7
-      #   with:
-      #     commit-message: merge dev into main
-      #     title: PR from ${{ github.run_id }}
-      #     draft: always-true
-      #     branch: ${{ github.ref }}
 
   # deploy job
   deploy:
-    if: ${{ github.ref_name == 'main' }}
+    # if: ${{ github.event_name == 'pull_request_target' && github.ref_name == 'dev_pr_test' }}
+
     # Add a dependency to the job
-    needs: build
+    needs: create_pull_request
+
     # Deploy to the github-pages environment
     # Settings and variables here: https://github.com/jennylsmith/jennylsmith.github.io/settings/environments
     # environment:
@@ -123,17 +122,33 @@ jobs:
     #   url: ${{ steps.deployment.outputs.page_url }}
     environment:
       name: dev
+
     # Specify runner
     runs-on: ubuntu-latest
-    # deploy to gh pages
-    steps:
-      - name: "vars example"
+    
+    steps: 
+      - name: restore artifacts
+        id: cache-artifacts
+        uses: actions/cache/restore@v4
+        with: 
+          path: ${{ env.OUTPUT_DIR }}
+          key: ${{ env.CACHE_KEY }}
+
+      - name: check-vars
         run: |
-          echo "the gh branch that triggered the workflow is $GITHUB_REF_NAME"
-          echo "debug set to $ACTIONS_RUNNER_DEBUG"
+          ls -alh
+      
+      # upload the rendered website (artifact)
+      # - name: upload artifact
+      #   id: artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: ${{ env.OUTPUT_DIR }}
+      # deploy to gh pages
       # - name: deploy to GitHub pages
       #   id: deployment
       #   uses: actions/deploy-pages@v4
+
 
 
 #### NOTES
@@ -151,3 +166,37 @@ jobs:
 # repository or environment variables can be set on Github or the GH Actions extension in VSCode
 # https://github.com/jennylsmith/jennylsmith.github.io/settings/variables/actions
 # if statements can only access thse expression contexts: github, inputs, vars, needs
+
+## OUTPUTS and gh CLI 
+
+# FIELDS=$(gh pr view 8 --json closed,state | sed -E 's/{|}//g' | tr -d '"')
+# echo $FIELDS | while IFS=':|,' read CLOSED CL_STATUS STATE MERGED
+# do;
+# CLOSED_STATUS=$(test "$CL_STATUS" = "true" | echo $?)
+# MERGED_STATUS=$(test "$MERGED" = "MERGED" | echo $?)
+# done; 
+
+
+# gh pr view --repo nf-core/demultiplex 315 --json closed,state | sed -E 's/{|}//g'
+
+# # .github/workflows/reusable-workflow.yml
+# name: Reusable Workflow
+# on:
+#   workflow_call:
+#     outputs:
+#       example_output:
+#         description: "An example output"
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Set output
+#         id: set_output
+#         run: echo "::set-output name=example_output::Hello, World!"
+
+#     outputs:
+#       example_output: ${{ steps.set_output.outputs.example_output }}
+
+
