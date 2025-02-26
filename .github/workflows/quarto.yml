@@ -6,7 +6,7 @@ on:
   push:
     branches: 
       - dev_pr_test
-      # - dev*
+      - dev*
       - feat/*
   pull_request_target: 
     branches: 
@@ -33,6 +33,10 @@ env:
   CACHE_PATH: '**/docs/*.*'
   CACHE_KEY: ${{ github.ref_name }}-key
   BASE: dev_pr_test
+
+# IDEA: want any push from a feat branch to open PR into dev. that will get merged into dev (2 steps build --> pr):
+# then once PR is merged into dev, want 3 steps build --> pr --> deploy. 
+# but can I / do I want to make the PR automatically merge?
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
