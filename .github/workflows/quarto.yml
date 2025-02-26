@@ -5,12 +5,13 @@ on:
   # Triggers the workflow on push or pull request events but only for the specified branches
   push:
     branches: 
-      - dev_pr_test
       - dev*
       - feat/*
   pull_request_target: 
     branches: 
       - main_pr_test
+    types:
+      - closed
   # Allows you to run this workflow manually from the Actions tab or gh CLI
   workflow_dispatch:
 
@@ -41,8 +42,7 @@ env:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # if: github.event_name == 'push'
-  # This workflow contains a single job called "build"
+  # a job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -59,7 +59,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      # check if the artifacts for that commit exist already
+      # check if the artifacts exist already
       - name: restore artifacts
         id: artifacts
         uses: actions/cache/restore@v4
@@ -110,18 +110,18 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           ref: ${{ env.BASE }}
         
-      # - name: gh-cli-pr
-      #   run: | 
-      #     echo ${{ secrets.GH_PAT }} | gh auth login --with-token && \
-      #     gh pr create -B $BASE -H ${{ github.ref_name }} --title "PR for RUN_ID ${{ github.run_id }}" --body "PR for ${{ github.sha }}" --draft && \
-      #     gh auth logout
+      - name: gh-cli-pr
+        run: | 
+          echo ${{ secrets.GH_PAT }} | gh auth login --with-token && \
+          gh pr create -B $BASE -H ${{ github.ref_name }} --title "PR for RUN_ID ${{ github.run_id }}" --body "PR for ${{ github.sha }}" --draft && \
+          gh auth logout
 
   # deploy job
   deploy:
-    # if: ${{ github.event_name == 'pull_request_target' && github.ref_name == 'dev_pr_test' }}
+    if: github.event_name == 'pull_request_target' && github.event.pull_request.merged == true
 
-    # Add a dependency to the job
-    needs: create_pull_request
+    # # Add a dependency to the job
+    # needs: create_pull_request
 
     # Deploy to the github-pages environment
     # Settings and variables here: https://github.com/jennylsmith/jennylsmith.github.io/settings/environments
@@ -135,7 +135,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps: 
-      - name: restore artifacts
+      - name: restore-artifacts
         id: artifacts
         uses: actions/cache/restore@v4
         with: 
@@ -144,6 +144,7 @@ jobs:
 
       - name: check-vars
         run: |
+          echo event: ${{ github.event_name }} merged: ${{ github.event.pull_request.merged }}
           ls -alh 
           ls -alh ${{ env.OUTPUT_DIR }}
       
