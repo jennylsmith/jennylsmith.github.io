@@ -31,6 +31,7 @@ env:
   QUARTO_VERSION: 1.5.57
   OUTPUT_DIR: docs
   CACHE_PATH: '**/docs/*.*'
+  CACHE_KEY: ${{ github.ref_name }}-key
   BASE: dev_pr_test
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -59,7 +60,7 @@ jobs:
         uses: actions/cache/restore@v4
         with: 
           path: ${{ env.OUTPUT_DIR }}
-          key: ${{ github.ref_name }}-${{ github.sha }}-key
+          key: ${{ env.CACHE_KEY }}
 
       # install quarto
       - name: install quarto CLI
@@ -86,7 +87,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: ${{ env.OUTPUT_DIR }}
-          key: ${{ github.ref_name }}-${{ github.sha }}-key
+          key: ${{ env.CACHE_KEY }}
 
   # pull request
   # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
@@ -109,15 +110,6 @@ jobs:
           echo ${{ secrets.GH_PAT }} | gh auth login --with-token && \
           gh pr create -B $BASE -H ${{ github.ref_name }} --title "PR for RUN_ID ${{ github.run_id }}" --body "PR for ${{ github.sha }}" --draft && \
           gh auth logout
-
-      - name: gh-cli-check
-        run: |
-          gh auth status
-
-      - name: pr-info
-        run: |
-          echo the PR number is ${{ github.event.pull_request.number }}
-
 
   # deploy job
   deploy:
@@ -143,7 +135,7 @@ jobs:
         uses: actions/cache/restore@v4
         with: 
           path: ${{ env.OUTPUT_DIR }}
-          key: ${{ github.ref_name }}-${{ github.sha }}-key
+          key: ${{ env.CACHE_KEY }}
 
       - name: check-vars
         run: |
@@ -152,6 +144,7 @@ jobs:
       # - name: deploy to GitHub pages
       #   id: deployment
       #   uses: actions/deploy-pages@v4
+
 
 
 #### NOTES
