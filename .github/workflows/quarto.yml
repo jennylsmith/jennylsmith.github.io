@@ -44,6 +44,7 @@ env:
 jobs:
   # a job called "build"
   build:
+    if: ${{ github.event_name != 'pull_request' }}
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -54,14 +55,8 @@ jobs:
       - name: checkout  
         uses: actions/checkout@v4
     
-      # setup gh pages
-      - name: setup pages
-        id: pages
-        uses: actions/configure-pages@v5
-
       # check if the artifacts exist already
       - name: restore-artifacts
-        if: ${{ github.event_name != 'pull_request' }}
         id: artifacts
         uses: actions/cache/restore@v4
         with: 
@@ -118,12 +113,28 @@ jobs:
           gh pr create -B $BASE -H ${{ github.ref_name }} --title "PR for RUN_ID ${{ github.run_id }}" --body "PR for ${{ github.sha }}" --draft && \
           gh auth logout
 
+  configure:
+    if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      
+      # checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: checkout  
+        uses: actions/checkout@v4
+    
+      # setup gh pages
+      - name: setup pages
+        id: pages
+        uses: actions/configure-pages@v5
+
   # deploy job
   deploy:
     if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
 
-    # # Add a dependency to the job
-    # needs: create_pull_request
+    # Add a dependency to the job
+    needs: configure
 
     # Deploy to the github-pages environment
     # Settings and variables here: https://github.com/jennylsmith/jennylsmith.github.io/settings/environments
@@ -150,11 +161,11 @@ jobs:
         with: 
           path: ${{ env.OUTPUT_DIR }}
           key: ${{ env.CACHE_KEY }}
+          fail-on-cache-miss: true
 
       - name: check-vars
         run: |
-          echo event: ${{ github.event_name }} merged: ${{ github.event.pull_request.merged }}
-          env | grep -Ei "actions|GITHUB_ENV"
+          env
           ls -alh 
           ls -alh ${{ env.OUTPUT_DIR }}
       
