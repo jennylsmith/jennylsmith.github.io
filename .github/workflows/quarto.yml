@@ -1,15 +1,177 @@
-name: quarto website
+name: quarto-website
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the specified branches
   push:
-    branches: [ "main", "dev" ]
-  # pull_request:
-  #   branches: [ "main", "dev" ]
+    branches: 
+      - dev*
+      - feat/*
+  pull_request: 
+    branches: 
+      - main_pr_test
+    types:
+      - closed
+  # Allows you to run this workflow manually from the Actions tab or gh CLI
+  workflow_dispatch:
 
-  # # Allows you to run this workflow manually from the Actions tab
-  # workflow_dispatch:
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  pull-requests: write
+  
+env:
+  QUARTO_VERSION: 1.5.57
+  OUTPUT_DIR: docs
+  CACHE_PATH: '**/docs/*.*'
+  CACHE_KEY: ${{ github.ref_name }}-key
+  BASE: dev_pr_test
+  MAIN: main_pr_test
+
+# IDEA: want any push from a feat branch to open PR into dev. that will get merged into dev (2 steps build --> pr):
+# then once PR is merged into dev, want 3 steps build --> pr --> deploy. 
+# but can I / do I want to make the PR automatically merge?
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # a job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      
+      # checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: checkout  
+        uses: actions/checkout@v4
+    
+      # setup gh pages
+      - name: setup pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      # check if the artifacts exist already
+      - name: restore-artifacts
+        if: ${{ github.event_name != 'pull_request' }}
+        id: artifacts
+        uses: actions/cache/restore@v4
+        with: 
+          path: ${{ env.OUTPUT_DIR }}
+          key: ${{ env.CACHE_KEY }}
+
+      # install quarto
+      - name: install quarto CLI
+        if: steps.artifacts.outputs.cache-hit != 'true'
+        run: |
+          wget -O ${{ runner.temp }}/quarto.deb --quiet https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/quarto.deb
+      
+      # render the website 
+      - name: render website
+        if: steps.artifacts.outputs.cache-hit != 'true'
+        run: quarto render
+        
+      # cache rendered website artifacts
+      - name: Cache Artifacts
+        if: steps.artifacts.outputs.cache-hit != 'true'
+        id: create-cache
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ env.OUTPUT_DIR }}
+          key: ${{ env.CACHE_KEY }}
+
+  # pull request
+  # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
+  create_pull_request:
+    if: ${{ github.event_name != 'pull_request' }}
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+
+    steps:
+      - name: select-base-branch
+        run: |
+          if [[ "${{ github.ref_name }}" == "${{ env.BASE }}" ]]
+          then
+            echo "BASE=${{ env.MAIN }}" >> $GITHUB_ENV
+          fi
+
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+          ref: ${{ env.BASE }}
+        
+      - name: gh-cli-pr
+        run: | 
+          echo ${{ secrets.GH_PAT }} | gh auth login --with-token && \
+          gh pr create -B $BASE -H ${{ github.ref_name }} --title "PR for RUN_ID ${{ github.run_id }}" --body "PR for ${{ github.sha }}" --draft && \
+          gh auth logout
+
+  # deploy job
+  deploy:
+    if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
+
+    # # Add a dependency to the job
+    # needs: create_pull_request
+
+    # Deploy to the github-pages environment
+    # Settings and variables here: https://github.com/jennylsmith/jennylsmith.github.io/settings/environments
+    # environment:
+    #   name: github-pages
+    #   url: ${{ steps.deployment.outputs.page_url }}
+    environment:
+      name: dev
+
+    # Specify runner
+    runs-on: ubuntu-latest
+    
+    steps: 
+      - name: define-cache-key
+        run: |
+          if [[ "${{ github.ref_name }}" == "main" ]]
+          then
+            echo "CACHE_KEY=${{ github.event.pull_request.head.ref }}-key" >> $GITHUB_ENV
+          fi
+  
+      - name: restore-artifacts
+        id: artifacts
+        uses: actions/cache/restore@v4
+        with: 
+          path: ${{ env.OUTPUT_DIR }}
+          key: ${{ env.CACHE_KEY }}
+
+      - name: check-vars
+        run: |
+          echo event: ${{ github.event_name }} merged: ${{ github.event.pull_request.merged }}
+          env | grep -Ei "actions|GITHUB_ENV"
+          ls -alh 
+          ls -alh ${{ env.OUTPUT_DIR }}
+      
+      # upload the rendered website (artifact)
+      # - name: upload artifact
+      #   id: artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: ${{ env.OUTPUT_DIR }}
+      # deploy to gh pages
+      # - name: deploy to GitHub pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v4
+
+
+
+#### NOTES
 
 # Debugging log info
 # https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows/enabling-debug-logging
@@ -25,86 +187,36 @@ on:
 # https://github.com/jennylsmith/jennylsmith.github.io/settings/variables/actions
 # if statements can only access thse expression contexts: github, inputs, vars, needs
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+## OUTPUTS and gh CLI 
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-  pull-requests: write
-  
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    env:
-      QUARTO_VERSION: 1.5.57
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # install quarto
-      - name: install quarto CLI
-        run: |
-          wget -O ${{ runner.temp }}/quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/quarto.deb
-      
-      # checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: checkout  
-        uses: actions/checkout@v4
-      
-      # setup gh pages
-      - name: setup pages
-        id: pages
-        uses: actions/configure-pages@v5
-      
-      # render the website 
-      - name: render website
-        run: quarto render
-        
-      # upload the rendered website (artifact)
-      - name: upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./docs
+# FIELDS=$(gh pr view 8 --json closed,state | sed -E 's/{|}//g' | tr -d '"')
+# echo $FIELDS | while IFS=':|,' read CLOSED CL_STATUS STATE MERGED
+# do;
+# CLOSED_STATUS=$(test "$CL_STATUS" = "true" | echo $?)
+# MERGED_STATUS=$(test "$MERGED" = "MERGED" | echo $?)
+# done; 
 
-  # pull request
-  pull_request:
-    if: ${{ vars.RUN_PR_STEP == true }}
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v4
-      - name: create pull request
-        id: cpr
-        uses: peter-evans/create-pull-request@v7
-        with:
-          commit-message: "merge dev into main"
-          branch: dev
-          base: pr_actions_test
-          assignees: jennylsmith
-          reviewers: jennylsmith
-        
-  # deploy job
-  deploy:
-    # Add a dependency to the job
-    needs: build
-    # add and if statement later? ${{ github.event.repository.default_branch }}
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
-    # Specify runner
-    runs-on: ubuntu-latest
-    # deploy to gh pages
-    steps:
-      - name: deploy to GitHub pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+# gh pr view --repo nf-core/demultiplex 315 --json closed,state | sed -E 's/{|}//g'
+
+# # .github/workflows/reusable-workflow.yml
+# name: Reusable Workflow
+# on:
+#   workflow_call:
+#     outputs:
+#       example_output:
+#         description: "An example output"
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Set output
+#         id: set_output
+#         run: echo "::set-output name=example_output::Hello, World!"
+
+#     outputs:
+#       example_output: ${{ steps.set_output.outputs.example_output }}
+
+
