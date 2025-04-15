@@ -1,0 +1,6 @@
+tasks:
+  rpackages:
+    name: Render quarto website
+    command: "quarto render ."
+    triggeredBy:
+      - manual
