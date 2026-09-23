@@ -1,8 +1,6 @@
 project:
   type: website
   output-dir: docs
-  resources: 
-    - "resume/jlsmith_resume.pdf"
   # render the site pages only; assets/notes.md is a working file, not a page
   render:
     - "**/*.qmd"
@@ -10,6 +8,12 @@ project:
 
 website:
   page-navigation: true
+  site-url: "https://jennylsmith.github.io"
+  repo-url: "https://github.com/jennylsmith/jennylsmith.github.io"
+  description: "Jenny Leopoldina Smith, MSc. Computational biologist working in cancer genomics, Nextflow pipeline development, and next generation sequencing (NGS) data analysis."
+  image: "assets/balsamroot_flowers.jpeg"
+  open-graph: true
+  twitter-card: true
   navbar:
     search: true
     background: "#008080"
@@ -36,14 +40,6 @@ website:
             href: projects/genomics_applications_pipelines.qmd
           - text: "Select publications"
             href: projects/publications.qmd
-  # sidebar:
-  #   - text: "Resume"
-  #     id: "Resume"
-  #   - tools:
-  #     - icon: filetype-pdf
-  #       menu:
-  #         - text: resume pdf
-  #           href: resume/jlsmith_resume.pdf
 format:
   html:
     theme: 

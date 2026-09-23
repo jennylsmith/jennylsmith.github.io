@@ -1,5 +1,6 @@
 ---
 title: "About Me"
+description: "Computational biologist at Ospedale Pediatrico Bambino Gesu in Rome, working in pediatric cancer genomics and CAR-T cell therapy development."
 fig-cap-location: top
 ---
 

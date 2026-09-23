@@ -1,5 +1,6 @@
 ---
 title: "Jenny Leopoldina Smith, MSc"
+description: "Over 9 years of experience in genomics and NGS data analysis across pediatric oncology, CAR-T therapy development, and translational research."
 id: "Resume"
 ---
 
