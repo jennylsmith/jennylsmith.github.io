@@ -20,8 +20,10 @@ about:
     url: "https://www.webofscience.com/wos/author/record/MDT-4599-2025"
 ---
 
->  Computational biologist and R programmer applying methods in data science and data engineering to biomedical research. 
+> Computational biologist and R programmer applying methods in data science to biomedical and translational research.
 
-> Expertise of over 8 years in genomics, transcriptomics, and next generation sequencing (NGS) data.
+> Expertise of over 9 years in cancer genomics, transcriptomics, and next generation sequencing (NGS) data.
+
+> Developing and adapting scalable [Nextflow](https://www.nextflow.io/) pipelines for RNA-seq quantification and gene fusion analysis, as well as, somatic and structural variant analysis from long-read whole genome sequencing.
 
 

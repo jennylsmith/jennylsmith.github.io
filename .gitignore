@@ -3,6 +3,7 @@
 .RData
 .Ruserdata
 renv/
+**notes.md
 
 .DS_Store
 /.quarto/

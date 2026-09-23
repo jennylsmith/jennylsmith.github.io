@@ -3,6 +3,10 @@ project:
   output-dir: docs
   resources: 
     - "resume/jlsmith_resume.pdf"
+  # render the site pages only; assets/notes.md is a working file, not a page
+  render:
+    - "**/*.qmd"
+    - "!assets/notes.md"
 
 website:
   page-navigation: true
