@@ -37,15 +37,11 @@ Quintarelli Laboratory, Oncohematology
 
 -   Evaluated and benchmarked long-read structural variant callers (Severus, SAVANA, and MINDA ensemble calling), then integrated the strongest into a somatic variant annotation and clinical filtering pipeline for T-cell acute lymphoblastic leukemia (T-ALL).
 
--   Built unit-tested Python and command line tools that transform variant calls into interactive genomic reports (IGV/JSON), replacing manual curation of three variant detection methods (SV, SNV, CNA) across two sequencing technologies for a retrospective cohort of over 100 T-ALL patients.
+-   Built interactive Quarto reports and dashboards that surface variant calls through IGV genomic tracks and ProteinPaint visualizations, giving investigators a single place to review and act on results. Replaced manual curation of three variant detection methods (SV, SNV, CNA) across two sequencing technologies for a retrospective cohort of over 100 T-ALL patients.
 
--   Single cell and bulk RNA-seq analysis for rhabdomyosarcoma (RMS) therapeutic target discovery, using the Developmental Human Limb Cell Atlas as a reference for cell type classification with Seurat RPCA label transfer and SingleR, followed by Leiden clustering, UMAP, and multi-sample integration of PDX and patient cohorts.
+-   Single cell and bulk RNA-seq analysis for rhabdomyosarcoma (RMS) therapeutic target discovery, with cell type classification using Seurat RPCA label transfer and SingleR, followed by Leiden clustering, UMAP, and multi-sample integration of PDX and patient cohorts.
 
 -   Transcriptome profiling of armored CAR.GD2.mbIL15 T cells in a neuroblastoma model; differential expression across inter- and intra-timepoint comparisons with interaction effect models, followed by GSEA pathway enrichment and publication quality figure generation.
-
--   Deployed an on-premise compute cluster (3 Ubuntu servers, NFS shared file system, HyperQueue scheduler, and containerized software), increasing compute and storage capacity by over 3x and cutting cohort processing time by 12+ hours.
-
--   Coordinated evaluation of 4 cloud providers (AWS, Azure, Google Cloud, and GARR) to establish test environments compliant with Italian and GDPR health data privacy requirements.
 
 -   Established bi-weekly cross-functional meetings with clinical and wet-lab collaborators, and led team learning sessions to support the emerging bioinformatics initiative.
 
@@ -184,7 +180,7 @@ Principal Investigator: Terry Bird
 |                       |                             |                                                                                                              |
 |                       |                             | -   gene fusion detection with `STAR-Fusion`, `FusionInspector`, and `CICERO`                                |
 |                       |                             |                                                                                                              |
-|                       |                             | -   interactive variant reports (IGV and JSON) from unit-tested python command line tools                    |
+|                       |                             | -   interactive variant reporting with Quarto dashboards, IGV tracks, and ProteinPaint                       |
 +-----------------------+-----------------------------+--------------------------------------------------------------------------------------------------------------+
 | Single cell analysis  | Experienced                 | -   `Seurat` v4/v5, including RPCA integration and reference based label transfer                            |
 |                       |                             |                                                                                                              |
@@ -286,7 +282,7 @@ Principal Investigator: Terry Bird
 |                       |                             |                                                                                                              |
 |                       |                             | -   `nf-test` unit and functional tests for Nextflow DSL2 modules and workflows                              |
 |                       |                             |                                                                                                              |
-|                       |                             | -   unit-tested python CLI tools with automated test runs                                                    |
+|                       |                             | -   automated rendering of Quarto analysis reports as part of the pipeline run                               |
 +-----------------------+-----------------------------+--------------------------------------------------------------------------------------------------------------+
 | SQL                   | Competent / Being Developed | -   complex queries and database operations, such as filtering and joins                                     |
 |                       |                             |                                                                                                              |
