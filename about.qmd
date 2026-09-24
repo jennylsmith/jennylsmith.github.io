@@ -6,7 +6,7 @@ fig-cap-location: top
 
 I am a computational biologist working as a consultant with the Quintarelli Laboratory in Oncohematology at [Ospedale Pediatrico Bambino Gesù](https://www.ospedalebambinogesu.it/) (OPBG) in Rome, Italy.
 
-My current work is in pediatric cancer genomics and CAR-T cell therapy development. I analyze long-read Nanopore whole genome sequencing (WGS) and bulk RNA-seq to characterize T-cell acute lymphoblastic leukemia (T-ALL), covering structural variant, single nucleotide variant, and DNA methylation detection. I also work on therapeutic target discovery for rhabdomyosarcoma (RMS) using single cell and bulk RNA-seq from patient derived xenograft models and patient cohorts, and on transcriptome profiling of armored CAR.GD2.mbIL15 T cells in a neuroblastoma model.
+My current work is in pediatric cancer genomics and CAR-T cell therapy development. I analyze long-read Nanopore whole genome sequencing (WGS) and bulk RNA-seq to characterize T-cell acute lymphoblastic leukemia (T-ALL), covering structural variant and single nucleotide variant detection. I also work on therapeutic target discovery for rhabdomyosarcoma (RMS) using single cell and bulk RNA-seq from patient derived xenograft models and patient cohorts, and on transcriptome profiling of armored CAR.GD2.mbIL15 T cells in a neuroblastoma model.
 
 Alongside the analysis work, I built the laboratory's compute infrastructure. This included an on-premise Ubuntu cluster with a HyperQueue job scheduler and containerized scientific software, and a comparative evaluation of AWS, Azure, Google Cloud, and GARR for genomic workloads that meet Italian and GDPR health data privacy requirements.
 
