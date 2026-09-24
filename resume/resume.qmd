@@ -1,5 +1,6 @@
 ---
 title: "Jenny Leopoldina Smith, MSc"
+description: "Over 9 years of experience in genomics and NGS data analysis across pediatric oncology, CAR-T therapy development, and translational research."
 id: "Resume"
 ---
 
@@ -32,7 +33,7 @@ Quintarelli Laboratory, Oncohematology
 
 **June 2025 – Present**
 
--   Developed, deployed, and maintained scalable Nextflow DSL2 pipelines for long-read Nanopore WGS, bulk RNA-seq, and exome-enriched RNA-seq, producing QC reports, gene expression matrices, fusion calls, SNVs, CNVs, structural variants, and DNA methylation quantification.
+-   Developed, deployed, and maintained scalable Nextflow DSL2 pipelines for long-read Nanopore WGS, bulk RNA-seq, and exome-enriched RNA-seq, producing QC reports, gene expression matrices, fusion calls, SNVs, CNVs, and structural variants.
 
 -   Evaluated and benchmarked long-read structural variant callers (Severus, SAVANA, and MINDA ensemble calling), then integrated the strongest into a somatic variant annotation and clinical filtering pipeline for T-cell acute lymphoblastic leukemia (T-ALL).
 
@@ -41,8 +42,6 @@ Quintarelli Laboratory, Oncohematology
 -   Single cell and bulk RNA-seq analysis for rhabdomyosarcoma (RMS) therapeutic target discovery, using the Developmental Human Limb Cell Atlas as a reference for cell type classification with Seurat RPCA label transfer and SingleR, followed by Leiden clustering, UMAP, and multi-sample integration of PDX and patient cohorts.
 
 -   Transcriptome profiling of armored CAR.GD2.mbIL15 T cells in a neuroblastoma model; differential expression across inter- and intra-timepoint comparisons with interaction effect models, followed by GSEA pathway enrichment and publication quality figure generation.
-
--   Integrated an Ensembl SQLite relational database into automated cohort reports, using SQL to join variant calls with gene annotations.
 
 -   Deployed an on-premise compute cluster (3 Ubuntu servers, NFS shared file system, HyperQueue scheduler, and containerized software), increasing compute and storage capacity by over 3x and cutting cohort processing time by 12+ hours.
 
@@ -161,7 +160,7 @@ Principal Investigator: Terry Bird
 |                       |                             |                                                                                                              |
 |                       |                             | -   modifying shell behavior and configurations (.bashrc, `set` built-in, CLI tool configurations)           |
 +-----------------------+-----------------------------+--------------------------------------------------------------------------------------------------------------+
-| Nextflow              | Advanced                    | -   modularized scientific workflows using domain-specific language (DSL2) syntax                            |
+| Nextflow / Snakemake  | Advanced                    | -   modularized scientific workflows using domain-specific language (DSL2) syntax                            |
 |                       |                             |                                                                                                              |
 |                       |                             | -   nf-core and `nf-core tools` CLI                                                                          |
 |                       |                             |                                                                                                              |
@@ -170,6 +169,44 @@ Principal Investigator: Terry Bird
 |                       |                             | -   develop custom workflows using nf-core best practices                                                    |
 |                       |                             |                                                                                                              |
 |                       |                             | -   adapt nf-core community developed pipelines to meet institutional requirements                           |
+|                       |                             |                                                                                                              |
+|                       |                             | `Snakemake` workflows for prototype and exploratory analyses                                                 |
++-----------------------+-----------------------------+--------------------------------------------------------------------------------------------------------------+
+| Variant analysis      | Experienced                 | -   somatic SNV, CNV, and structural variant detection from short and long-read sequencing                   |
+|                       |                             |                                                                                                              |
+|                       |                             | -   ensemble structural variant calling with `Severus`, `SAVANA`, and `MINDA`                                |
+|                       |                             |                                                                                                              |
+|                       |                             | -   small variant calling with `CLAIR3`                                                                      |
+|                       |                             |                                                                                                              |
+|                       |                             | -   annotation and clinical filtering with Ensembl `VEP`, `AnnotSV`, `ClinVar`, and `gnomAD`                 |
+|                       |                             |                                                                                                              |
+|                       |                             | -   alignment and variant file manipulation with `samtools` and `bcftools`                                   |
+|                       |                             |                                                                                                              |
+|                       |                             | -   gene fusion detection with `STAR-Fusion`, `FusionInspector`, and `CICERO`                                |
+|                       |                             |                                                                                                              |
+|                       |                             | -   interactive variant reports (IGV and JSON) from unit-tested python command line tools                    |
++-----------------------+-----------------------------+--------------------------------------------------------------------------------------------------------------+
+| Single cell analysis  | Experienced                 | -   `Seurat` v4/v5, including RPCA integration and reference based label transfer                            |
+|                       |                             |                                                                                                              |
+|                       |                             | -   `SingleR` and marker gene based cell type classification                                                 |
+|                       |                             |                                                                                                              |
+|                       |                             | -   `scanpy`, `SCVI-tools`, and `SCANVI`                                                                     |
+|                       |                             |                                                                                                              |
+|                       |                             | -   `CellRanger` quantification for scRNA-seq and scATAC-seq                                                 |
+|                       |                             |                                                                                                              |
+|                       |                             | -   doublet detection, ambient RNA correction, and multi-sample integration                                  |
++-----------------------+-----------------------------+--------------------------------------------------------------------------------------------------------------+
+| Statistics / ML       | Advanced                    | -   differential expression analysis followed by GSEA pathway enrichment                                     |
+|                       |                             |                                                                                                              |
+|                       |                             | -   unsupervised clustering: PCA, UMAP, hierarchical clustering, and Leiden                                  |
+|                       |                             |                                                                                                              |
+|                       |                             | -   survival analysis with Kaplan-Meier estimates and Cox proportional hazards regression                    |
+|                       |                             |                                                                                                              |
+|                       |                             | -   supervised classification and regression for expression based risk stratification                        |
+|                       |                             |                                                                                                              |
+|                       |                             | -   interaction effect models and multi-factor experimental designs                                          |
+|                       |                             |                                                                                                              |
+|                       |                             | -   batch effect investigation and assessment of the need for correction                                     |
 +-----------------------+-----------------------------+--------------------------------------------------------------------------------------------------------------+
 | Python programming    | Experienced                 | -   python scripting using control structures, iteration, etc.                                               |
 |                       |                             |                                                                                                              |
@@ -198,6 +235,10 @@ Principal Investigator: Terry Bird
 |                       |                             | -   parallelization                                                                                          |
 |                       |                             |                                                                                                              |
 |                       |                             | -   resource allocation                                                                                      |
+|                       |                             |                                                                                                              |
+|                       |                             | `HyperQueue` scheduler deployed for concurrent multi-sample batch processing                                 |
+|                       |                             |                                                                                                              |
+|                       |                             | NFS shared file system configured across on-premise cluster nodes                                            |
 +-----------------------+-----------------------------+--------------------------------------------------------------------------------------------------------------+
 | Containerization      | Advanced                    | -   docker CLI                                                                                               |
 |                       |                             |                                                                                                              |
@@ -222,8 +263,14 @@ Principal Investigator: Terry Bird
 |                       |                             |     -   blob storage                                                                                         |
 |                       |                             |                                                                                                              |
 |                       |                             | -   Google Cloud Platform                                                                                    |
+|                       |                             |                                                                                                              |
+|                       |                             |     -   HPC test environments benchmarked for genomic pipeline execution                                     |
+|                       |                             |                                                                                                              |
+|                       |                             | -   evaluation of providers against GDPR and national health data privacy requirements                       |
+|                       |                             |                                                                                                              |
+|                       |                             | -   hybrid on-premise to cloud data transfer validation                                                      |
 +-----------------------+-----------------------------+--------------------------------------------------------------------------------------------------------------+
-| CI / CD               | Competent                   | -   development of CI/CD plans using Atlassian `bamboo` agent                                                |
+| CI / CD               | Advanced                    | -   development of CI/CD plans using Atlassian `bamboo` agent                                                |
 |                       |                             |                                                                                                              |
 |                       |                             | -   implementation of CI/CD functional tests for Nextflow workflows                                          |
 |                       |                             |                                                                                                              |
@@ -236,6 +283,10 @@ Principal Investigator: Terry Bird
 |                       |                             |     -   scheduled tasks                                                                                      |
 |                       |                             |                                                                                                              |
 |                       |                             | -   github actions workflow for quarto website                                                               |
+|                       |                             |                                                                                                              |
+|                       |                             | -   `nf-test` unit and functional tests for Nextflow DSL2 modules and workflows                              |
+|                       |                             |                                                                                                              |
+|                       |                             | -   unit-tested python CLI tools with automated test runs                                                    |
 +-----------------------+-----------------------------+--------------------------------------------------------------------------------------------------------------+
 | SQL                   | Competent / Being Developed | -   complex queries and database operations, such as filtering and joins                                     |
 |                       |                             |                                                                                                              |

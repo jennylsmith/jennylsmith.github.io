@@ -3,11 +3,53 @@ title: "Genomics Pipelines, Tools, and Hackathons"
 date-modified: last-modified
 ---
 
-A list of my genomics pipelines and tools developed at SCRI, Fred Hutch, and through external collaborations, such as Hackathons. These pipelines and tools were used to reproducibly process data or generate figures for many of the published journal articles on projects I supported.
+A list of my genomics pipelines and tools developed at OPBG, SCRI, Fred Hutch, and through external collaborations, such as Hackathons. These pipelines and tools were used to reproducibly process data or generate figures for many of the published journal articles on projects I supported.
 
 # Genomics Data Pipelines
 
-### 1. Cut and Run Nextflow workflow
+### 1. Somatic Variant Detection and Clinical Filtering
+
+-   Nextflow DSL2 pipeline developed at OPBG to detect and annotate somatic variants from long-read whole genome sequencing for a retrospective cohort of over 100 T-cell acute lymphoblastic leukemia (T-ALL) patients.
+
+::: {.a class=details data-bs-toggle="collapse" data-bs-target="#SOMATIC" }
+Show Details
+:::
+
+::: {.collapse id="SOMATIC"}
+
+-   Structural variants are called with an ensemble of `Severus`, `SAVANA`, and `MINDA`. Each caller was benchmarked against the others before integration to select the strongest method for the sample type.
+
+-   Single nucleotide variants are called with `CLAIR3`, and copy number alterations are detected from the same aligned reads, so that SV, SNV, and CNA evidence is produced in a single pass.
+
+-   Annotation and clinical filtering use Ensembl `VEP`, `AnnotSV`, `ClinVar`, and `gnomAD` to prioritize variants of interest and remove common population variation.
+
+-   Replaced manual curation of three variant detection methods across two sequencing technologies (DNA WGS and RNA-seq fusions).
+
+:::
+
+-   Unit-tested Python and command line tools transform the variant calls into interactive genomic reports (IGV and JSON), following software development best practices and FAIR principles.
+
+-   Automated QC and reporting workflows built with Quarto curate the variant and expression outputs and flag outliers or inconsistent samples and batches.
+
+### 2. Long-read Nanopore WGS Processing
+
+-   Nextflow pipeline for Oxford Nanopore PromethION whole genome sequencing, deployed on the OPBG on-premise cluster and on the PromethION instrument server.
+
+::: {.a class=details data-bs-toggle="collapse" data-bs-target="#ONT" }
+Show Details
+:::
+
+::: {.collapse id="ONT"}
+
+-   Produces structural variants and single nucleotide variants from a single long-read run, enabling rapid turnaround compared to short-read workflows.
+
+-   Also used to characterize CAR-T vector integration sites in transduced human cell lines, aligning reads to a composite reference and parsing supplementary alignments to identify chimeric read junctions that mark genomic insertion loci.
+
+-   Software dependency stack (containers and python virtual environments) configured to run the same pipeline reproducibly on both the compute cluster and the sequencing instrument server.
+
+:::
+
+### 3. Cut and Run Nextflow workflow
 
 -   Custom pipeline developed from nf-core workflow template and uses most nf-core best practices.
 
@@ -42,7 +84,7 @@ Show Details
 
 ![DAG of Cut&Run Pipeline](https://github.com/RSC-RP/cutandrun_nf/blob/main/workflow_docs/images/dag.png?raw=true)
 
-### 2. RNA-seq Quantification Nextflow workflow
+### 4. RNA-seq Quantification Nextflow workflow
 
 -   Custom RNA-seq alignment and quantification pipeline developed using nf-core tools and uses most nf-core best practices.
 
@@ -68,7 +110,7 @@ Show Details
 
 
 
-### 3. RNA-seq Fusion Detection Nextflow workflow
+### 5. RNA-seq Fusion Detection Nextflow workflow
 
 -   Custom RNA-seq pipeline to detect fusion transcripts developed using Nextflow DSL2 syntax.
 
@@ -104,6 +146,88 @@ Other nextflow pipelines generated with nextflow and nf-core tools include:
 
 ![Tornado Plots (Figure C,D,E)](https://ars.els-cdn.com/content/image/1-s2.0-S109727652100753X-gr1.jpg){width="50%"}
 
+# Transcriptomics and Single Cell Analyses
+
+### Therapeutic Target Discovery in Rhabdomyosarcoma
+
+-   Single cell and bulk RNA-seq analysis of pediatric rhabdomyosarcoma (RMS) patient derived xenograft models and OPBG patient cohorts, to identify and prioritize surface antigen targets for CAR-T cell therapy development.
+
+::: {.a class=details data-bs-toggle="collapse" data-bs-target="#RMS" }
+Show Details
+:::
+
+::: {.collapse id="RMS"}
+
+-   Used the Developmental Human Limb Cell Atlas (over 125,000 cells) as a reference for cell type classification, iteratively optimizing label transfer with updated reference PCA dimensions and loadings, `Seurat` RPCA based dimensionality reduction for query projection, and marker gene expression with `SingleR`.
+
+-   Tertiary analysis of the RMS single cell data included UMAP dimension reduction, Leiden unsupervised clustering, and multi-sample integration with RPCA.
+
+-   Candidate therapeutic target gene expression visualized at single cell resolution across both PDX and healthy limb development samples.
+
+-   Bulk RNA-seq from primary RMS tumors analyzed alongside the single cell data, using curated metadata including fusion status and clinical covariates, with unsupervised clustering by PCA and heatmaps.
+
+:::
+
+### Armored CAR-T Transcriptome Profiling
+
+-   Bulk RNA-seq analysis investigating whether a membrane bound IL-15 enhances persistence and infiltration of CAR-T cells directed against the ganglioside GD2 in a neuroblastoma model.
+
+::: {.a class=details data-bs-toggle="collapse" data-bs-target="#CART" }
+Show Details
+:::
+
+::: {.collapse id="CART"}
+
+-   Processed and analyzed the full sample set to deliver QC reports, normalized gene expression matrices, PCA, and unsupervised hierarchical clustering.
+
+-   Executed over 24 differential expression comparisons, including inter- and intra-timepoint contrasts and interaction effect models, followed by GSEA pathway enrichment analysis.
+
+-   Generated publication quality figures across all primary analyses (PCA, clustering heatmaps, volcano plots, and GSEA enrichment panels), formatted to journal submission standards.
+
+:::
+
+# Compute Infrastructure
+
+### On-premise Cluster
+
+-   Designed, configured, and deployed the laboratory compute infrastructure at OPBG to support high throughput genomic data processing.
+
+::: {.a class=details data-bs-toggle="collapse" data-bs-target="#ONPREM" }
+Show Details
+:::
+
+::: {.collapse id="ONPREM"}
+
+-   Configured Ubuntu servers, network attached storage, and a shared file system across nodes with NFS, increasing compute and storage capacity by more than 3x.
+
+-   Enhanced parallelization by configuring the `HyperQueue` job scheduler, enabling concurrent multi-sample batch processing with both Nextflow and Snakemake.
+
+-   Deployed and validated the genomics pipelines on-premise, configuring the full software dependency stack (python virtual environments and containers) on the cluster and the PromethION instrument server.
+
+-   R and python environments are restored with `renv` and `venv` respectively, so analyses remain reproducible across platforms.
+
+:::
+
+### Cloud Platform Evaluation
+
+-   Coordinated an evaluation of major cloud providers to identify solutions for genomic workloads that comply with GDPR and Italian health data privacy requirements, in collaboration with OPBG IT.
+
+::: {.a class=details data-bs-toggle="collapse" data-bs-target="#CLOUD" }
+Show Details
+:::
+
+::: {.collapse id="CLOUD"}
+
+-   Deployed and benchmarked a test environment for genomic pipeline execution on Google Cloud HPC, validating VM configurations, software dependencies, and pipeline integration.
+
+-   Deployed test environments on Microsoft Azure, including validation of hybrid on-premise to cloud data transfer.
+
+-   Collaborated with Amazon AWS solutions architects and biomedical data managers to define HPC service requirements and cost models.
+
+-   All environments assessed for regulatory compliance with Italian health data privacy frameworks.
+
+:::
+
 # CI/CD and Reproducible Development Environments
 
 Use of [Github actions](https://github.com/features/actions) and [Gitpod](https://www.gitpod.io/) with DevContainers to automate tasks, like testing and building of applications or websites, as well as create shareable and reproducible development environments.
@@ -135,6 +259,12 @@ I am working on the [DevOps for Data Science](https://do4ds.com/) lab exercises 
 
 # Technical Skills and Courses
 
+### Databases and SQL
+
+-   PostgreSQL databases built from schema design through to querying, in the coursework listed below.
+
+-   Ongoing SQL study, with the relational database coursework below aimed at moving from queries against practice schemas to production use.
+
 Additional details about technical skills, including course completion or course progress:
 
 -   [**roadmap.sh**](https://roadmap.sh/u/jennylsmith)
@@ -155,11 +285,11 @@ Additional details about technical skills, including course completion or course
 
 -   [**freecodecamp**](https://www.freecodecamp.org/jennylsmith)
 
-    -   [Postgres SQL Database](https://github.com/jennylsmith/worldcup_database) for Toy Worldcup Data
+    -   [Postgres SQL Database](https://github.com/jennylsmith/worldcup_database): schema design, data import, and queries over tournament results
 
-    -   [Postgres SQL Database](https://github.com/jennylsmith/student_database) for Toy Student Data
+    -   [Postgres SQL Database](https://github.com/jennylsmith/student_database): relational schema with foreign keys, joins, and aggregate queries
 
-    -   [Postgres SQL Database](https://github.com/jennylsmith/celestial_bodies_db) for Toy Intergalactic Data
+    -   [Postgres SQL Database](https://github.com/jennylsmith/celestial_bodies_db): normalized multi-table schema built from the command line with `psql`
 
     -   Additional course/module completions listed in my profile
 

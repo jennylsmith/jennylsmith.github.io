@@ -1,9 +1,13 @@
 ---
 title: "Jenny Leopoldina Smith"
+description: "Computational Biologist, Consultant. Cancer genomics, Nextflow pipeline development, and next generation sequencing (NGS) data analysis."
 about: 
   template: trestles
   image: "assets/balsamroot_flowers.jpeg"
   links:
+  - icon: envelope
+    text: Email
+    url: "mailto:JennyL.Smith12@gmail.com"
   - icon: github
     text: GitHub
     url: "https://github.com/jennylsmith"
@@ -26,4 +30,4 @@ about:
 
 > Developing and adapting scalable [Nextflow](https://www.nextflow.io/) pipelines for RNA-seq quantification and gene fusion analysis, as well as, somatic and structural variant analysis from long-read whole genome sequencing.
 
-
+> **Currently open to new roles**, remote within the US or in Washington State. The best way to reach me is by [email](mailto:JennyL.Smith12@gmail.com).
