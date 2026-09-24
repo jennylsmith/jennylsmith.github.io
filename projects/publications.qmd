@@ -40,7 +40,7 @@ The [Data Viz](../projects/data_visualization.html) section is an overview some 
 
 # Speaker Presentations
 
--   **IGNITE**, panelist on careers in data science and technology to promote gender equity and representation in STEM. IGNITE Field Trip with Rainier Beach High School (Seattle Children’s Research Institute, 2024). [link](https://www.igniteworldwide.org/2024/02/06/seattle-childrens-research-institute-field-trip-with-rainier-beach-high-school/)
+-   **IGNITE**, panelist on careers in data science and technology to promote gender equity and representation in STEM. IGNITE Field Trip with Rainier Beach High School (Seattle Children’s Research Institute, Seattle, WA, 2024). [link](https://www.igniteworldwide.org/2024/02/06/seattle-childrens-research-institute-field-trip-with-rainier-beach-high-school/)
 
 -   **Molecular Medicine Tri-conference**, panelist on AI in Genomics and Precision Medicine (San Francisco, CA, 2020). [link](https://www.bio-itworldexpowest.com/20/AI-Drug-Discovery?instrck=eyJhIjoiNjJkYzc3YjUtOWZiYy03NGM2LThmNzktZDA1NDYzZjA1NjVlIiwicyI6bnVsbCwiZCI6IkNJSV9ERUMiLCJ0IjoxNzI3MTU5MzM5NzgzLCJzaSI6IjE3MjcxNTkzMzY1OTAtNGMzODJkMjYtYjVmNS00N2MzLWJhZjItYjMxMjE4NDVkODUxIn0=).
 

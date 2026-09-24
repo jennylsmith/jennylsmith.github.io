@@ -41,7 +41,7 @@ Unsupervised clustering figures including unsupervised hierarchical clustering, 
 
 [@Huang_2021]{.title.}
 
-![@Huang_2021](https://ash.silverchair-cdn.com/ash/content_public/journal/bloodadvances/5/23/10.1182_bloodadvances.2021004965/2/advancesadv2021004965f2.png?Expires=1730261659&Signature=HIeEpu8Z-RKLUDneKFM~ng-HBauh3plaGCE7A64RYO~ESwuPsFi3fWYl0gnpCrNuzukiC8CttpC0HcWv~R0TzkbkoHLSK0K73FKLirwKSu211OvBcEQ7T6uwYLg42~~QPUz3hDnszIjrKO63pOXOhHIDFoVpYLLVdhf3-WxG3QN5MLZpvjbjc~dDwNrSXihmef8gcpqvKeuNtt2yrc42lr~xLpV3mhHmb59O0CX2kJz3roMOtiLUltLLljJvngMOFbc~mleOC76HbxNXPN-ddp9kf2Tj3XsG1ed61rGTPvUwl1L6n9l74eg~YhHHkDrPvxqiBAy~u1sXkp3nCbE5IQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+![@Huang_2021](https://cdn.ncbi.nlm.nih.gov/pmc/blobs/717a/9153007/81d0783cddab/advancesADV2021004965f2.jpg)
 
 <hr class="hr-dark">
 
@@ -49,7 +49,7 @@ Unsupervised clustering figures including unsupervised hierarchical clustering, 
 
 [@Tarlock_2021]{.title.}
 
-![@Tarlock_2021](https://ash.silverchair-cdn.com/ash/content_public/journal/blood/138/13/10.1182_blood.2020009652/9/bloodbld2020009652f4.png?Expires=1730261274&Signature=NlncVp44SrVaOEV01DNCH1GAyLbzpejrMN1J3TMtxcd4Lqaxt2lhaMlvWcXXqWSLenkQOeULtdBjstYTxTtIxotXH9We1fsVJugY-C0Qqcy6UTXmxiijWraRWm8eJ9UXpVcqWpSK9Tb0YSgMe5nFYwD5wg3NKaPV8fAJNaUveA8B79Gyih42mNJBbxf6XSRfFPUoAz641zKmMxJTx2UIS1lWLLKO7lQ4~ZcLXn18z8xbYdpeIVTrrVKPXsya2kIIVrZXOZ~-cwFV1lmJDJ20EIq7uGeT4YY1pxFPGsb6XlgKvgnWYqbKlEidVYP1D8E52~ZQy2nsU~4B66kBKVoKGg__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+![@Tarlock_2021](https://cdn.ncbi.nlm.nih.gov/pmc/blobs/df55/8570058/210d5b6a5597/bloodBLD2020009652f4.jpg)
 
 <hr class="hr-dark">
 
@@ -73,7 +73,7 @@ Unsupervised clustering figures including unsupervised hierarchical clustering, 
 
 [@Noort_2018]{.title.}
 
-![@Noort_2018](https://ash.silverchair-cdn.com/ash/content_public/journal/blood/132/15/10.1182_blood-2018-05-849059/4/m_blood849059f2.png?Expires=1730211482&Signature=uNHdgEhz-qiPP4TXrnvB~7LZNLzZOuUabjKwRH1Gtfa2PhpCWneuLzebfgsBVgxMEthcozHPww5PYF8GdwIF3thYmAr471IK82ghDR7Hhlnvl5FUpjkD5dXJGzHl5~RpzPOB5f5JFZPimmTcaepMz70JnM7gi3RX408JEYZh9x2dzIvuaS5mzC5l-1hkELaDIgLj4PufkF-ts9Ze5I5s0GDA7FIyGEOVE2Gl7AWCCjHmrSGMU3qgxQCh6ZZrrPxdadlohekf8XE0Mn4JDrr3QY54KUzZwBINrgp0Az1XUyCy14K5tYAtA38bkc4d5ZTHB10Hn0oCk3asUG5Pi1r2Nw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+![@Noort_2018](https://cdn.ncbi.nlm.nih.gov/pmc/blobs/593e/6265640/b11fed502845/blood849059f2.jpg)
 
 ## Heatmaps and Genomic Rearrangments
 
@@ -85,7 +85,7 @@ Heatmaps illustrating effect size for changes in gene expression or enrichment o
 
 [@Smith_2021]{.title.}
 
-![@Smith_2021](https://ash.silverchair-cdn.com/ash/content_public/journal/blood/138/supplement%201/10.1182_blood-2021-148894/1/2356fig01.png?Expires=1730260594&Signature=woDFER9HmrEYktsytu6EJmFpUhkHNzJwB-5BkTTh8-GZ3ai91Jf~AFTWJYivr8hvrZx7dA~DrZDMN7lguBjtY7B-YU6OFxQXt8gdnjFywU26U~Xx2E7pKIdT8ShdfLQUOf2ruDIk~lGMVYto4N2NtNtxsWAjyv1tI5slDREcL7KqSI4AZ-oiAtrvb93cn3tynWFvxZqsu4si-P0xrTA~-XpqUhsgLZiOyhsGP9ux4assv-52v5ahErsjpboAkf3jV7ZSTdDDMPE~OzquAsisfz7LyH~1qsFiSvK~wXjkFwAhrwCnuBuMkBvEEnzvq5ox65~dpBE7UBP8gTiPs1ehxQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+*Figure not reproducible here: ASH conference abstracts are not deposited in PubMed Central, and the publisher image link has expired. See the [abstract](https://doi.org/10.1182/blood-2021-148894) for the figure.*
 
 <hr class="hr-dark">
 
@@ -101,7 +101,7 @@ Heatmaps illustrating effect size for changes in gene expression or enrichment o
 
 [@Chisholm_2023]{.title.}
 
-![@Chisholm_2023](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10038909/bin/nihms-1870608-f0002.jpg)
+![@Chisholm_2023](https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ff77/10038909/b30afaa89445/nihms-1870608-f0002.jpg)
 
 <hr class="hr-dark">
 
@@ -117,7 +117,7 @@ Heatmaps illustrating effect size for changes in gene expression or enrichment o
 
 [@Smith_2019]{.title.}
 
-![@Smith_2019](https://aacr.silverchair-cdn.com/aacr/content_public/journal/clincancerres/26/3/10.1158_1078-0432.ccr-19-1800/2/726fig4.jpeg?Expires=1730262203&Signature=VByPCnZicAOBadSKo-vJAQe-uk5~prlkPmww~fEQLa0zULhNrvwo1AHHnsPATj-UYPNLoV4ZR~Dx-JQVu7jOgkd5gr5dS4NUsN1abycR22tp4j8s76UUue95FkpmJbygEcLLHFWp6FnSTvg4CQmq-77hU7st3jIIrHAJze0Oio0x4t7K2iq8fRKnm6L2yl~o-YRsJrYBvLj5mnSUmp9c9BGf7kWTm0PX4ASTuKBIx1jpEh2DZf5ccOXgqiuUNtZxFYGow0mYcT4V5JQZEz98NnWAiRPXEgoVVeMhe6mcG1cxObBVUS6Q52dMJAvNhdrvDzOAruTYIgzbxX-bQT3EBQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+![@Smith_2019](https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4309/7002196/401012f6dc3d/nihms-1543033-f0004.jpg)
 
 <hr class="hr-dark">
 
@@ -133,7 +133,7 @@ Heatmaps illustrating effect size for changes in gene expression or enrichment o
 
 [@Tarlock_2021]{.title.}
 
-![@Tarlock_2021](https://ash.silverchair-cdn.com/ash/content_public/journal/blood/138/13/10.1182_blood.2020009652/9/bloodbld2020009652f2.png?Expires=1730261226&Signature=esv~Y1me-93JB2DFkndlRinisQgMS6OaiGIIWA5ty~2Ibp4QMuaxCnl2IRb9HJOj-q3E3dqUgnJkUb1PxiZySIrKxr184VTHjcUYZdbXwesvS-KSOPNfuU38x4CXPAxcD0HArt~~ITXf07QcTemzbBxJ0I6JiRf7TcdV0Ir4iuLIvF1ycCPb~4d1FuJAPVkZ1djo60Qur4E4c1U-7FVa8Pj2nHHR-a-Mr-2FD-JbWHutK88AKLJFmf8OZm90CZ40LiVaGyM~ii4OkBp9u8T5kQ2NLGjra3A-TzwIYssVExSEZ1yGt7rDjxO0t1hgk1PhQLCmCpploJX6XXWWCKlpSg__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+![@Tarlock_2021](https://cdn.ncbi.nlm.nih.gov/pmc/blobs/df55/8570058/6421e543c5f0/bloodBLD2020009652f2.jpg)
 
 <hr class="hr-dark">
 
@@ -141,7 +141,7 @@ Heatmaps illustrating effect size for changes in gene expression or enrichment o
 
 [@Smith_2019]{.title.}
 
-![@Smith_2019](https://aacr.silverchair-cdn.com/aacr/content_public/journal/clincancerres/26/3/10.1158_1078-0432.ccr-19-1800/2/726fig1.jpeg?Expires=1730262240&Signature=jMDKl8pR-UJ2bSsrju-ydYiEHPksf9D3jnHrp6faGx7FXXV9APYD3ZrU0iBFsVWlpb6-fBIF-Cxk26ADVeRAYNTXlLNnSnzjxIG9la~62S~TTTSikIh5wWM17VYo3V0kJ-pl7zuX4KufwY8sggSlC0n05CrliQFj5nBGCDTymenrxslmY2U0itoui66Rv10R7KSLL6-RsRFBNIY0D48aDcev14NXn-FUoo0ZmkeBRXzkY77326V-xUwQreTKo7PSNhX~eexe1Y9YywxqZnUE2W34fhiTo0Zc3ThArvNh2DzPSs8mJank2GZmRC5o3rxvUBr69~s~PD1Jfsmao18r-g__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+![@Smith_2019](https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4309/7002196/7d69b2a03bd8/nihms-1543033-f0001.jpg)
 
 ## Kaplan-Meier Curves
 
@@ -169,7 +169,7 @@ Time-to-event analysis, including overall survival and event-free survival, and 
 
 [@Farrar_2023]{.title.}
 
-![@Farrar_2023](https://ascopubs.org/cms/10.1200/JCO.22.01114/asset/8e1346f4-0978-45c1-8807-96ba2256416f/assets/images/large/jco.22.01114f1.jpg)
+![@Farrar_2023](https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e9c2/10414715/9aea7c3692f4/jco-41-2949-g002.jpg)
 
 ## Volcano Plots and Ribbon/Dot Plots
 
@@ -181,7 +181,7 @@ Time-to-event analysis, including overall survival and event-free survival, and 
 
 [@Smith_2019]{.title.}
 
-![@Smith_2019](https://aacr.silverchair-cdn.com/aacr/content_public/journal/clincancerres/26/3/10.1158_1078-0432.ccr-19-1800/2/726fig6.jpeg?Expires=1730262492&Signature=HB3i9MwTmFbb~huZXzBy8HuNR3lVkrZUZr2hAR1Bmv1nYmDTNqAFy74F77xOdci5boqPYWH3~oQTFYMK870Jd1Yp0Fzvd1ZrEnhX~bX5Wz4VhQjDbvCsfy8NJcQAJ27WxSpZqOl7SGM6pcBXSw7N138REge~~S8fWqwFMRUik20a1x7pxNH31mXXYwFH7tZm0UA3leKxRu4NwmaxBoqtKs6h0N1eMYdFffrUNLYtMoCrDVMWSTAV7U3ojKzZzDf5FX-BEhRVoLPzidd-8M7AHNhogPRhLsGtEMmVFaPH~stvd9bAeIHe0Iwcojs1Vi61EVf1wpCwmmzSf8MkWXkFHA__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+![@Smith_2019](https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4309/7002196/4c3256982caa/nihms-1543033-f0006.jpg)
 
 <hr class="hr-dark">
 
@@ -202,7 +202,7 @@ Distribution plots, such as boxplots, violin plots, histograms and ridge plots/d
 
 [@Smith_2019]{.title.}
 
-![@Smith_2019](https://aacr.silverchair-cdn.com/aacr/content_public/journal/clincancerres/26/3/10.1158_1078-0432.ccr-19-1800/2/726fig2.jpeg?Expires=1730262542&Signature=O4XGzni~T58t4eDrHE9kC4NQYDS5dxUbNY5KTlRSVGu9UgY9VSNbG25TELSDOdYjtV0KEWvT0E0Bi1ttE7Vx1~tSXGg30uw3mut2KcDkZfmJTF8xadAJAB64bUqYiBpya5XNm9QKnSx2bOv5YBDd5M6CklMJaJZhk7UgK0duWhy9nPSUeJePeJ~ozNht1wjyBHx~u9bp07sEO2Vx-lDj7ztVjFmlpqO3WOpFmuUBYCe73n0Ztv7ORS6wMb9lNEtg0CelDwNmJDh35dS10m0XzwXQhmlzib6Op9Rcuebl5hvmb9qbqLH68-JrgYoOuMaveVUJPBlots9WWZK~c5ydyQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+![@Smith_2019](https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4309/7002196/dfcd22aee5c6/nihms-1543033-f0002.jpg)
 
 <hr class="hr-dark">
 
@@ -210,7 +210,7 @@ Distribution plots, such as boxplots, violin plots, histograms and ridge plots/d
 
 [@Farrar_2023]{.title.}
 
-![@Farrar_2023](https://ascopubs.org/cms/10.1200/JCO.22.01114/asset/899c156f-56da-4afd-be60-7029a60cd916/assets/images/large/jco.22.01114f2.jpg)
+![@Farrar_2023](https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e9c2/10414715/608096aad39f/jco-41-2949-g003.jpg)
 
 <hr class="hr-dark">
 
@@ -218,12 +218,12 @@ Distribution plots, such as boxplots, violin plots, histograms and ridge plots/d
 
 [@Farrar_2023]{.title.}
 
-![@Farrar_2023](https://ascopubs.org/cms/10.1200/JCO.22.01114/asset/2c99b21b-0b78-46c4-ad96-32781bf0299d/assets/images/large/jco.22.01114f3.jpg)
+![@Farrar_2023](https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e9c2/10414715/d7d340dfcb68/jco-41-2949-g004.jpg)
 :::
 
 # References
 
-The majority of figures presented here are found in published journal articles, referenced here. The [publications page](../projects/data_visualization.html) lists additional articles for projects I supported.
+The majority of figures presented here are found in published journal articles, referenced here. The [publications page](../projects/publications.html) lists additional articles for projects I supported.
 
 ::: {#refs}
 :::
