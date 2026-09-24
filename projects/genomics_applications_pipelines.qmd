@@ -27,9 +27,9 @@ Show Details
 
 :::
 
--   Unit-tested Python and command line tools transform the variant calls into interactive genomic reports (IGV and JSON), following software development best practices and FAIR principles.
+-   Variant calls are surfaced to investigators through interactive Quarto dashboards, rather than as raw call sets. Each report combines the filtered variants with IGV genomic tracks for read level confirmation and ProteinPaint visualizations for protein domain context, so candidate variants can be reviewed and acted on in one place.
 
--   Automated QC and reporting workflows built with Quarto curate the variant and expression outputs and flag outliers or inconsistent samples and batches.
+-   Automated QC and reporting workflows built with Quarto curate the variant and expression outputs and flag outliers or inconsistent samples and batches, shortening the turnaround from pipeline run to actionable result.
 
 ### 2. Long-read Nanopore WGS Processing
 
